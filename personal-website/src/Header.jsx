@@ -3,7 +3,7 @@ function Header(){
 
     return(
         <header>
-            <h1>BaBaBunny's Epic Website</h1>
+            <h1>Welcome to BaBaBunny's Website</h1>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
