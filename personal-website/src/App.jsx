@@ -1,12 +1,10 @@
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
+import TopBar from './TopBar.jsx'
 
 function App() {
   
   return(
     <>
-      <Header/>
-      <Footer/>
+      <TopBar/>
     </>
 
   );
