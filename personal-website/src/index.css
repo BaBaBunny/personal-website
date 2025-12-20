@@ -11,7 +11,7 @@ body {
 }
 
 /* home styling */
-.home {
+.home-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ body {
 }
 
 /* home styling */
-.home h1 {
+.home-section h1 {
   font-size: 5rem;
   font-weight: 900;
   color: black;
