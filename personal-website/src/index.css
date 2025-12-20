@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 /* home styling */
@@ -63,7 +63,7 @@ body {
 /* page styling */
 .page-section {
   min-height: 100vh;
-  padding: 150px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -71,7 +71,7 @@ body {
 
   background-color: white;
 
-  scroll-margin-top: 70px; /* offset for navbar */;
+  scroll-margin-top: 60px; /* offset for navbar */;
 }
 
 /* page seperator line styling */
