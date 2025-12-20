@@ -48,3 +48,17 @@ body {
   align-items: center;
   gap: 50px;
 }
+
+/* styles each section of pages */
+.page-section {
+  min-height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about {
+  background-color: white;
+}
