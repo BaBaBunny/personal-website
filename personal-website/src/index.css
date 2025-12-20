@@ -63,11 +63,11 @@ body {
 /* page styling */
 .page-section {
   min-height: 100vh;
-  padding: 50px;
+  padding-top: 150;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: top;
+  justify-content: flex-start;
+  align-items: center;
 
   background-color: lavender;
 }
