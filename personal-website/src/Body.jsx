@@ -7,3 +7,5 @@ function Body(){
         </div>
     );
 }
+
+export default Body
