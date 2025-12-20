@@ -32,7 +32,11 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: white;
+  
+  /* navbar following */
   position: sticky;
+  top: 0;
+  z-index: 1000; /* keeps navbar floating on top of other elements */
 }
 
 /* removes links underline */
