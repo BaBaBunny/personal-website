@@ -10,16 +10,16 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* body styling */
-.body {
+/* home styling */
+.home {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
 }
 
-/* body styling */
-.body h1 {
+/* home styling */
+.home h1 {
   font-size: 5rem;
   font-weight: 900;
   color: black;

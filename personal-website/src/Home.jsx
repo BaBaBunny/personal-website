@@ -1,11 +1,10 @@
-function Body(){
+function Home(){
     return(
-        <div className = "body">
+        <main id = "home" className = "home-section">
             <h1>
                 BABABUNNY
             </h1>
-        </div>
-        
+        </main>
     );
 }
 

@@ -1,5 +1,5 @@
 import NavBar from './NavBar.jsx'
-import Body from './Body.jsx'
+import Home from './Home.jsx'
 import About from './About.jsx'
 import Resume from './Resume.jsx'
 import Portfolio from './Portfolio.jsx'
@@ -10,7 +10,7 @@ function App() {
   return(
     <div>
       <NavBar/>
-      <Body/>
+      <Home/>
       <About/>
       <Resume/>
       <Portfolio/>
