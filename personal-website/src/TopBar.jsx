@@ -17,4 +17,4 @@ function TopBar(){
     );
 }
 
-export default Header
+export default TopBar
