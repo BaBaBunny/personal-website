@@ -1,3 +1,5 @@
+import './index.css'
+
 function About() {
     return (
         <section id = "about" className = "page-section">
