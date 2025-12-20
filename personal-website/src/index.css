@@ -1,7 +1,7 @@
 /* the canvas/backgroun of the website */
 body {
-  /* margin: 0; */
-  background-color: bisque;
+  margin: 0;
+  background-color: darkgray;
   font-family: 'Times New Roman', Times, serif;
 }
 
