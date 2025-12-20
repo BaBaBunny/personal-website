@@ -1,10 +1,18 @@
 /* the canvas/background of the website */
 body {
   margin: 0;
-  background-color: darkgray;
+  background-color: rgb(85, 167, 97);
   font-family: 'Times New Roman', Times, serif;
 }
 
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* body styling */
 .body h1 {
   font-size: 5rem;
   font-weight: 900;
