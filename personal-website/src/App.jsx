@@ -1,13 +1,14 @@
-import TopBar from './TopBar.jsx'
+import NavBar from './NavBar.jsx'
 
 function App() {
-  
+
   return(
-    <>
-      <TopBar/>
-    </>
+    <div>
+      <NavBar/>
+    </div>
 
   );
+  
 }
 
 export default App
