@@ -1,4 +1,7 @@
-
+/* page smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
 
 /* the canvas/background of the website */
 body {
@@ -7,6 +10,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+/* body styling */
 .body {
   display: flex;
   justify-content: center;
