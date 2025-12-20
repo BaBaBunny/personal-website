@@ -1,6 +1,4 @@
-html {
-  scroll-behavior: smooth;
-}
+
 
 /* the canvas/background of the website */
 body {
@@ -30,6 +28,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: white;
+  position: sticky;
 }
 
 /* removes links underline */
