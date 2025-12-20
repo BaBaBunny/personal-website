@@ -1,10 +1,10 @@
 function Home(){
     return(
-        <main id = "home" className = "home-section">
+        <section id = "home" className = "home-section">
             <h1>
                 BABABUNNY
             </h1>
-        </main>
+        </section>
     );
 }
 
