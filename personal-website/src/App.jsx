@@ -11,9 +11,13 @@ function App() {
     <div>
       <NavBar/>
       <Home/>
+      <hr className='divider'/>
       <About/>
+      <hr className='divider'/>
       <Resume/>
+      <hr className='divider'/>
       <Portfolio/>
+      <hr className='divider'/>
       <Contact/>
     </div>
   );
