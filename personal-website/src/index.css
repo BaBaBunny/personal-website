@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 /* home styling */
@@ -65,9 +65,9 @@ body {
   min-height: 100vh;
   padding-top: 300px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
-  align-items: top;
+  align-items: center;
 
   background-color: white;
 
