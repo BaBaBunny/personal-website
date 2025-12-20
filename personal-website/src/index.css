@@ -2,6 +2,10 @@
 .navbar a {
   text-decoration: none;
   color: black;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 12px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
 }
 
 /* styles the navbar */
@@ -12,5 +16,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 50px;
+}
+
+.navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
   
