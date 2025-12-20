@@ -63,15 +63,15 @@ body {
 /* page styling */
 .page-section {
   min-height: 100vh;
-  padding-top: 300px;
+  padding: 150px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
   background-color: white;
 
-  scroll-margin-top: 100px; /* offset for navbar */;
+  scroll-margin-top: 70px; /* offset for navbar */;
 }
 
 /* page seperator line styling */
