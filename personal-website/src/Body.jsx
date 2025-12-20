@@ -1,9 +1,9 @@
 function Body(){
     return(
         <div className="body">
-            <hi>
+            <h1>
                 BABABUNNY
-            </hi>
+            </h1>
         </div>
     );
 }
