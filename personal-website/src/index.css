@@ -67,9 +67,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: top;
 
   background-color: white;
+
+  scroll-margin-top: 100px; /* offset for navbar */;
 }
 
 /* page seperator line styling */
