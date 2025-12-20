@@ -1,3 +1,16 @@
+/* the canvas/backgroun of the website */
+body {
+  /* margin: 0; */
+  background-color: bisque;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* navbar box itself */
+.navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* removes links underline */
 .navbar a {
   text-decoration: none;
@@ -18,9 +31,3 @@
   align-items: center;
   gap: 50px;
 }
-
-.navbar {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-  
