@@ -8,4 +8,4 @@ function Home(){
     );
 }
 
-export default Body
+export default Home
