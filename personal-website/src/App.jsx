@@ -5,8 +5,8 @@ function App() {
 
   return(
     <div>
-      <Body/>
       <NavBar/>
+      <Body/>
     </div>
 
   );
