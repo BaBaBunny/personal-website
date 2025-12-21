@@ -98,7 +98,7 @@ body {
   flex-direction: row; /*side by side*/
   align-items: center;
   gap: 50px; /*space between image and text*/
-  width: 80%;
+  width: 90%;
 }
 
 .about-image {
