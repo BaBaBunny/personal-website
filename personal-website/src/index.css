@@ -58,12 +58,13 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  word-spacing: -2px;
 }
 
 /* page styling */
 .page-section {
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -76,8 +77,10 @@ body {
 }
 
 .page-section h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
+  word-spacing: 10px
+
 }
 
 /* page seperator line styling */
