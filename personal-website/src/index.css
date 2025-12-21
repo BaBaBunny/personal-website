@@ -131,7 +131,7 @@ body {
   color: black;
 
   position: relative;
-  bottom: 100px;
+  bottom: 60px;
 
   animation: textSideSlide 3.8s ease-in-out forwards;
 }
