@@ -11,9 +11,9 @@ function Home(){
                 do {
                     newWord = Math.floor(Math.random() * wordList.length); //random number (0,1) * wordList, then rounded to lowest whole number
                 } while (newWord == prevWord); // checks if word is same as previous
+                
+                return newWord;
             })
-
-            return newWord
         }, 4000);
 
         return () => clearInterval(interval);
