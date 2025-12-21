@@ -24,7 +24,7 @@ body {
   font-weight: 900;
   color: black;
   letter-spacing: 4px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 
 /* navbar box itself */
@@ -32,6 +32,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   
   /* navbar following */
   position: sticky;
@@ -58,7 +59,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  word-spacing: -2px;
+  word-spacing: -10px;
 }
 
 /* page styling */
@@ -90,4 +91,19 @@ body {
   background-color: #ccc;
   width: 80%;
   margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row; /*side by side*/
+  align-items: center;
+  gap: 50px; /*space between image and text*/
+  width: 100%;
+}
+
+.about-content {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
