@@ -8,17 +8,19 @@ import './index.css'
 
 function App() {
   return(
-    <div>
+    <div id="home">
       <NavBar/>
-      <Home/>
-      <hr className='divider'/>
-      <About/>
-      <hr className='divider'/>
-      <Resume/>
-      <hr className='divider'/>
-      <Portfolio/>
-      <hr className='divider'/>
-      <Contact/>
+      <main>
+        <Home/>
+        <hr className='divider'/>
+        <About/>
+        <hr className='divider'/>
+        <Resume/>
+        <hr className='divider'/>
+        <Portfolio/>
+        <hr className='divider'/>
+        <Contact/>
+      </main>
     </div>
   );
 }
