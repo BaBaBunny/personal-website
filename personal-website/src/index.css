@@ -24,7 +24,7 @@ body {
   font-weight: 900;
   color: black;
   letter-spacing: 4px;
-  margin: 0;
+  padding-bottom: 10px;
 }
 
 /* navbar box itself */
