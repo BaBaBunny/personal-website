@@ -130,7 +130,7 @@ body {
   text-transform: uppercase;
   color: black;
 
-  margin: 0 auto;
+  margin-bottom: 100px;
 
   animation: textSideSlide 3.8s ease-in-out forwards;
 }
