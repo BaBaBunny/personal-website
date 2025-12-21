@@ -98,11 +98,11 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 50px; /*space between image and text*/
-  width: 90%;
+  width: 85%;
 }
 
 .about-image {
-  width: 600px;
+  width: 500px;
   height: auto;
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
