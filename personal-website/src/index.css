@@ -20,15 +20,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* home styling for center text*/
-/* .home-section h1 {
-  font-size: 5rem;
-  font-weight: 900;
-  color: black;
-  letter-spacing: 4px;
-  padding-bottom: 80px; /* moving text up */
-/* } */
-
 /* navbar box itself */
 .navbar {
   padding-top: 20px;
@@ -135,10 +126,11 @@ body {
 .home-text {
   font-family: "montserrat", sans-serif;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 8rem;
   text-transform: uppercase;
   color: black;
-  padding-bottom: 20px;
 
-  animation: textSideSlide 4s ease-in-out forwards;
+  margin: 0 auto;
+
+  animation: textSideSlide 3.8s ease-in-out forwards;
 }
