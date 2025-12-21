@@ -70,6 +70,7 @@ body {
   align-items: center;
 
   background-color: white;
+  transform: translateY(-20px);
 
   scroll-margin-top: 60px; /* offset for navbar */;
 }
