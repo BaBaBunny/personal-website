@@ -1,4 +1,4 @@
-import profilePic from './assets/bababunny.jpg';
+import profilePic from './assets/bababunny.png';
 
 function About() {
     return (
