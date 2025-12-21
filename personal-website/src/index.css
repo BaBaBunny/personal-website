@@ -61,7 +61,7 @@ body {
 }
 
 /* page styling */
-.page-section h1 {
+.page-section {
   min-height: 100vh;
   padding-top: 25px;
   display: flex;
