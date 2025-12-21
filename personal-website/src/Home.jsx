@@ -1,13 +1,20 @@
 import React, {useState, useEffect} from "react";
 
 function Home(){
-    const words = ["BABABUNNY", "MASSIVE", "WELCOME"];
+    const wordList = ["BABABUNNY", "MASSIVE", "WELCOME"];
     const [currentWord, setCurrentWord] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentWord((prevWord) => (prevWord + 1) % words.length);
-        }, 3000);
+            setCurrentWord((prevWord) => {
+                let newWord;
+                do {
+                    newWord = Math.floor(Math.random() * wordList.length); //random number (0,1) * wordList, then rounded to lowest whole number
+                } while (newWord == prevWord); // checks if word is same as previous
+            })
+
+            return newWord
+        }, 4000);
 
         return () => clearInterval(interval);
     }, []);
@@ -15,7 +22,7 @@ function Home(){
     return(
         <section id="home" className = "home-section">
             <h1 key={currentWord} className="home-text">
-                {words[currentWord]}
+                {wordList[currentWord]}
             </h1>
         </section>
     );
