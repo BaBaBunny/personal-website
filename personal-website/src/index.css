@@ -16,8 +16,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
-  /* scroll-margin-top: 0; no offset for home section */
 }
 
 /* home styling */
