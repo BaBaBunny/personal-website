@@ -7,24 +7,7 @@ html {
 body {
   margin: 0;
   background-color: rgb(202, 202, 202);
-  font-family: 'Times New Roman', Times, serif;
-}
-
-@keyframes slideUpFade {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-40px);
-  }
-}
-
-@keyframes float {
-  0% {transform: translateY(-55px);}
-  50% {transform: translateY(-40px);}
-  100% {transform: translateY(-55px);}
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* home styling */
@@ -34,7 +17,7 @@ body {
   align-items: center;
   min-height: 100vh;
 
-  overflow: hidden; /* forces anything poking out to be hidden */
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* home styling for center text*/
@@ -44,10 +27,6 @@ body {
   color: black;
   letter-spacing: 4px;
   padding-bottom: 70px; /* moving text up */
-
-  opacity: 0;
-
-  animation: slideUpFade 1s ease-out forwards, float 4s ease-in-out infinite 0.2s;
 }
 
 /* navbar box itself */
@@ -95,6 +74,8 @@ body {
 
   background-color: white;
   transform: translateY(-50px);
+
+  font-family: 'Montserrat', sans-serif;
 
   scroll-margin-top: 60px; /* offset for navbar */;
 }
