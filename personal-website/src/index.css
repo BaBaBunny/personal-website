@@ -96,6 +96,7 @@ body {
 .about-content {
   display: flex;
   flex-direction: row; /*side by side*/
+  justify-content: flex-start;
   align-items: center;
   gap: 50px; /*space between image and text*/
   width: 90%;
