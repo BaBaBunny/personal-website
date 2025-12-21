@@ -17,14 +17,14 @@ body {
   }
   100% {
     opacity: 1;
-    transform: translateY(-45px);
+    transform: translateY(-40px);
   }
 }
 
 @keyframes float {
-  0% {transform: translateY(-45px);}
-  50% {transform: translateY(-60px);}
-  100% {transform: translateY(-45px);}
+  0% {transform: translateY(-55px);}
+  50% {transform: translateY(-40px);}
+  100% {transform: translateY(-55px);}
 }
 
 /* home styling */
@@ -47,7 +47,7 @@ body {
 
   opacity: 0;
 
-  animation: slideUpFade 1s ease-out forwards, float 4s ease-in-out infinite 1s;
+  animation: slideUpFade 1s ease-out forwards, float 4s ease-in-out infinite 0.2s;
 }
 
 /* navbar box itself */
