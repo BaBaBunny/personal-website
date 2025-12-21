@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 function Home(){
-    const wordList = ["BABABUNNY", "MASSIVE", "WELCOME"];
+    const wordList = ["BABABUNNY", "MASSIVE", "WELCOME", "67", "CINEMA", "DEVELOPER"];
     const [currentWord, setCurrentWord] = useState(0);
 
     useEffect(() => {
