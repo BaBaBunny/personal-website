@@ -10,6 +10,17 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+}
+
 /* home styling */
 .home-section {
   display: flex;
@@ -25,6 +36,8 @@ body {
   color: black;
   letter-spacing: 4px;
   padding-bottom: 70px; /* moving text up */
+
+  animation: slideUpFade 1s ease-out forwards;
 }
 
 /* navbar box itself */
