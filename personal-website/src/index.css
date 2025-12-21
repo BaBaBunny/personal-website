@@ -63,7 +63,7 @@ body {
 /* page styling */
 .page-section {
   min-height: 100vh;
-  padding: 50px;
+  padding-top: 0px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
