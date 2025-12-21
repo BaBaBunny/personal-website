@@ -48,6 +48,7 @@ body {
   font-size: 12px;
   letter-spacing: 12px;
   text-transform: uppercase;
+  word-spacing: -10px;
 }
 
 /* styles the navbar */
@@ -59,7 +60,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  word-spacing: -50px;
 }
 
 /* page styling */
