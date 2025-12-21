@@ -46,9 +46,8 @@ body {
   color: black;
   font-family: 'Helvetica', sans-serif;
   font-size: 12px;
-  letter-spacing: 12px;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  word-spacing: -10px;
 }
 
 /* styles the navbar */
