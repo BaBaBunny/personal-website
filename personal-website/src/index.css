@@ -63,7 +63,7 @@ body {
 /* page styling */
 .page-section {
   min-height: 100vh;
-  padding-top: 25px;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -73,6 +73,11 @@ body {
   transform: translateY(-50px);
 
   scroll-margin-top: 60px; /* offset for navbar */;
+}
+
+.page-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 /* page seperator line styling */
