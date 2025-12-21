@@ -138,6 +138,7 @@ body {
   font-size: 5rem;
   text-transform: uppercase;
   color: black;
+  padding-bottom: 20px;
 
   animation: textSideSlide 4s ease-in-out forwards;
 }
