@@ -23,7 +23,7 @@ body {
   font-size: 5rem;
   font-weight: 900;
   color: black;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   margin: 0;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 /* page styling */
-.page-section {
+.page-section h1{
   min-height: 100vh;
   padding-top: 0px;
   display: flex;
