@@ -22,8 +22,8 @@ body {
 }
 
 @keyframes float {
-  0% {transform: translateY(-50px);}
-  50% {transform: translateY(-65px);}
+  0% {transform: translateY(-45px);}
+  50% {transform: translateY(-60px);}
   100% {transform: translateY(-50px);}
 }
 
