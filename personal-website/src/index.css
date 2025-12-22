@@ -10,12 +10,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 
   background: linear-gradient(
-    110deg,       /* Diagonal Angle */
-    #ffffff 35%,  /* Pure White (Wide Gap) */
-    #f0f0f0 45%,  /* Very Light Grey (Soft Edge) */
-    #fff8dc 50%,  /* "Cornsilk" (The Pale Yellow Shimmer) */
-    #f0f0f0 55%,  /* Very Light Grey (Soft Edge) */
-    #ffffff 65%   /* Pure White (Wide Gap) */
+    110deg,       
+    #dcdcdc 35%,  /* Darker Grey */
+    #f0f0f0 45%,  /* Light Grey */
+    #f5d0a9 50%,  /* Darker Champagne/Gold (More visible) */
+    #f0f0f0 55%,  /* Light Grey */
+    #dcdcdc 65%   /* Darker Grey */
   );
 
   background-size: 500% 100%;
