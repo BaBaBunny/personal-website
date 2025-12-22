@@ -84,18 +84,25 @@ body {
   border-radius: 20px; /* rounded corners */
 
   width: 90vw;
-  min-height: 200px;
+  height: 80vh;
   margin: 20px auto; /* centers left/right automatically */
 
-  min-height: 0;
+  display: flex;
+  flex-direction: column;
 
-  padding: 40px; /*space inside panel */
+  align-items: flex-start;
+
+  justify-content: center;
+
+  padding: 20px; /*space inside panel */
 }
 
 .page-section h1 {
   font-size: 2rem;
   text-transform: uppercase;
-  word-spacing: 10px
+  word-spacing: 10px;
+
+  text-align: center;
 }
 
 /* page seperator line styling */
@@ -117,8 +124,9 @@ body {
 }
 
 .about-image {
-  width: 400px;
-  height: auto;
+  width: auto;
+  height: 50vh;
+
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border: 4px solid #555;
