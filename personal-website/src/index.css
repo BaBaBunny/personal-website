@@ -166,8 +166,8 @@ body {
   border-radius: 20px; /* rounded corners */
 
   width: 90vw;
-  height: 70vh;
-  margin: 0 auto; /* centers left/right automatically */
+  min-height: 200px;
+  margin: 20px auto; /* centers left/right automatically */
 
   min-height: 0;
 
