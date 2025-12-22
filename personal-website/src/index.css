@@ -95,14 +95,14 @@ body {
   justify-content: center;
 
   padding: 20px; /*space inside panel */
+
+  scroll-margin-top: 80px; /* offset for sticky navbar */
 }
 
 .page-section h1 {
   font-size: 2rem;
   text-transform: uppercase;
   word-spacing: 10px;
-
-  text-align: center;
 }
 
 /* page seperator line styling */
