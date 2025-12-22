@@ -165,8 +165,8 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border-radius: 20px; /* rounded corners */
 
-  width: 95vw;
-  height: 95vh;
+  width: 90vw;
+  height: 70vh;
   margin: 0 auto; /* centers left/right automatically */
 
   min-height: 0;
