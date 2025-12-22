@@ -79,15 +79,15 @@ body {
 .page-section {
   background: linear-gradient(
     135deg, 
-    rgba(255, 255, 255, 0.7), /* Top-Left: Shiny & more opaque */
-    rgba(255, 255, 255, 0.3)  /* Bottom-Right: Clear & transparent */
+    rgba(210, 235, 255, 0.5), /* Top-Left: Shiny & more opaque */
+    rgba(255, 255, 255, 0.2)  /* Bottom-Right: Clear & transparent */
   );
   backdrop-filter: blur(20px); /* blurs things behind panel */
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow:
     0 12px 40px 0 rgba(0, 0, 0, 0.25),            /* The Drop Shadow (Lift) */
     inset 0 0 25px 0 rgba(255, 255, 255, 0.9);  /* The Inner Glow (Thickness) */;
-  border-radius: 20px; /* rounded corners */
+  border-radius: 25px; /* rounded corners */
 
   width: 90vw;
   height: 80vh;
