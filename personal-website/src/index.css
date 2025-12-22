@@ -26,10 +26,20 @@ body {
 
   font-family: 'Montserrat', sans-serif;
 
-  background: linear-gradient(45deg, #ffffff, #fdf5e6, #ffffff, #f0e68c);
-  background-size: 400% 400%;
+  background: linear-gradient(
+    110deg,       /* Diagonal Angle */
+    #e0e0e0 10%,  /* Light Silver */
+    #ffffff 30%,  /* Pure White Reflection */
+    #b0b0b0 48%,  /* Dark Silver (Shadow) */
+    #ffd700 50%,  /* THE GOLD BEAM (Sharp yellow line) */
+    #b0b0b0 52%,  /* Dark Silver (Shadow) */
+    #ffffff 70%,  /* Pure White Reflection */
+    #e0e0e0 90%   /* Light Silver */
+  );
 
-  animation: shimmer 10s ease infinite;
+  background-size: 200% 100%;
+
+  animation: shimmer 6s ease infinite;
 }
 
 /* navbar box itself */
