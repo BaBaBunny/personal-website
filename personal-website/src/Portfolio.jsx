@@ -1,6 +1,6 @@
 function Portfolio() {
     return (
-        <section id = "portfolio" className = "page-section">
+        <section id = "portfolio" className = "page-section glass-panel">
             <h1>Portfolio</h1>
             <p>my projects and creations</p>
         </section>
