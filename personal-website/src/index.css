@@ -77,10 +77,16 @@ body {
 
 /* page styling */
 .page-section {
-  background: rgba(255, 255, 255, 0.25); /* translucent panel */
-  backdrop-filter: blur(15px); /* blurs things behind panel */
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.4), /* Top-Left: Shiny & more opaque */
+    rgba(255, 255, 255, 0.1)  /* Bottom-Right: Clear & transparent */
+  );
+  backdrop-filter: blur(20px); /* blurs things behind panel */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.1),            /* The Drop Shadow (Lift) */
+    inset 0 0 20px 0 rgba(255, 255, 255, 0.1);  /* The Inner Glow (Thickness) */;
   border-radius: 20px; /* rounded corners */
 
   width: 90vw;
@@ -96,7 +102,7 @@ body {
 
   padding: 20px; /*space inside panel */
 
-  scroll-margin-top: 80px; /* offset for sticky navbar */
+  scroll-margin-top: 85px; /* offset for sticky navbar */
 }
 
 .page-section h1 {
