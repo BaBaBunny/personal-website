@@ -77,21 +77,19 @@ body {
 
 /* page styling */
 .page-section {
-  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.25); /* translucent panel */
+  backdrop-filter: blur(15px); /* blurs things behind panel */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* rounded corners */
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  width: 90vw;
+  min-height: 200px;
+  margin: 20px auto; /* centers left/right automatically */
 
-  background-color: white;
-  transform: translateY(-50px);
+  min-height: 0;
 
-  font-family: 'Montserrat', sans-serif;
-
-  scroll-margin-top: 60px; /* offset for navbar */;
-
-
+  padding: 20px; /*space inside panel */
 }
 
 .page-section h1 {
@@ -156,20 +154,4 @@ body {
   bottom: 50px;
 
   animation: textSideSlide 3.5s ease-in-out forwards;
-}
-
-.glass-panel {
-  background: rgba(255, 255, 255, 0.25); /* translucent panel */
-  backdrop-filter: blur(15px); /* blurs things behind panel */
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border-radius: 20px; /* rounded corners */
-
-  width: 90vw;
-  min-height: 200px;
-  margin: 20px auto; /* centers left/right automatically */
-
-  min-height: 0;
-
-  padding: 20px; /*space inside panel */
 }
