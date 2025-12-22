@@ -79,30 +79,26 @@ body {
 .page-section {
   background: linear-gradient(
     135deg, 
-    rgba(255, 255, 255, 0.4), /* Top-Left: Shiny & more opaque */
-    rgba(255, 255, 255, 0.1)  /* Bottom-Right: Clear & transparent */
+    rgba(255, 255, 255, 0.7), /* Top-Left: Shiny & more opaque */
+    rgba(255, 255, 255, 0.3)  /* Bottom-Right: Clear & transparent */
   );
   backdrop-filter: blur(20px); /* blurs things behind panel */
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow:
-    0 8px 32px 0 rgba(0, 0, 0, 0.1),            /* The Drop Shadow (Lift) */
-    inset 0 0 20px 0 rgba(255, 255, 255, 0.1);  /* The Inner Glow (Thickness) */;
+    0 12px 40px 0 rgba(0, 0, 0, 0.25),            /* The Drop Shadow (Lift) */
+    inset 0 0 25px 0 rgba(255, 255, 255, 0.9);  /* The Inner Glow (Thickness) */;
   border-radius: 20px; /* rounded corners */
 
   width: 90vw;
   height: 80vh;
   margin: 20px auto; /* centers left/right automatically */
+  padding: 20px; /*space inside panel */
+  scroll-margin-top: 85px; /* offset for sticky navbar */
 
   display: flex;
   flex-direction: column;
-
   align-items: flex-start;
-
   justify-content: center;
-
-  padding: 20px; /*space inside panel */
-
-  scroll-margin-top: 85px; /* offset for sticky navbar */
 }
 
 .page-section h1 {
