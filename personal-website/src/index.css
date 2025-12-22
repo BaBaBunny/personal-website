@@ -145,5 +145,7 @@ body {
   position: relative;
   bottom: 50px;
 
-  animation: textSideSlide 3.8s ease-in-out forwards;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+
+  animation: textSideSlide 3.5s ease-in-out forwards;
 }
