@@ -8,6 +8,19 @@ body {
   margin: 0;
   background-color: rgb(202, 202, 202);
   font-family: 'Open Sans', sans-serif;
+
+  background: linear-gradient(
+    110deg,       /* Diagonal Angle */
+    #ffffff 35%,  /* Pure White (Wide Gap) */
+    #f0f0f0 45%,  /* Very Light Grey (Soft Edge) */
+    #fff8dc 50%,  /* "Cornsilk" (The Pale Yellow Shimmer) */
+    #f0f0f0 55%,  /* Very Light Grey (Soft Edge) */
+    #ffffff 65%   /* Pure White (Wide Gap) */
+  );
+
+  background-size: 500% 100%;
+
+  animation: shimmer 8s ease infinite;
 }
 
 /* shimmer animation */
@@ -24,19 +37,6 @@ body {
   min-height: 100vh;
 
   font-family: 'Montserrat', sans-serif;
-
-  background: linear-gradient(
-    110deg,       /* Diagonal Angle */
-    #ffffff 35%,  /* Pure White (Wide Gap) */
-    #f0f0f0 45%,  /* Very Light Grey (Soft Edge) */
-    #fff8dc 50%,  /* "Cornsilk" (The Pale Yellow Shimmer) */
-    #f0f0f0 55%,  /* Very Light Grey (Soft Edge) */
-    #ffffff 65%   /* Pure White (Wide Gap) */
-  );
-
-  background-size: 500% 100%;
-
-  animation: shimmer 8s ease infinite;
 }
 
 /* navbar box itself */
