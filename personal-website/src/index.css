@@ -167,8 +167,11 @@ body {
 
   border-radius: 20px;
 
-  margin: 20px auto;
-  max-width: 90%;
-  max-height: 85vh;
-  padding: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  border-radius: 20px;
+
+  height: auto;
+  min-height: 0;
 }
