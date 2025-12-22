@@ -11,10 +11,10 @@ body {
 
   background: linear-gradient(
     110deg,       
-    #e8ecf1 35%,  /* "Silver Mist" (Cool, crisp, slightly blue-tinted gray) */
+    #e8ecf1 35%, /* "Silver Mist" (Cool, crisp, slightly blue-tinted gray) */
     #ffffff 45%,  /* Pure White (Creates a "glow" around the beam) */
-    #ffeeb3 40%,  /* "Sunlight" (A lively, buttery gold - brighter than before) */
-    #ffffff 45%,  /* Pure White (Glow) */
+    #ffeeb3 50%,  /* "Sunlight" (A lively, buttery gold - brighter than before) */
+    #ffffff 55%,  /* Pure White (Glow) */
     #e8ecf1 65%   /* Back to Silver Mist */
   );
 
