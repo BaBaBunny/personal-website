@@ -3,6 +3,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* the canvas/background of the website */
+body {
+  margin: 0;
+  background-color: rgb(202, 202, 202);
+  font-family: 'Open Sans', sans-serif;
+
+  background: linear-gradient(
+    110deg,       
+    #e8ecf1 35%,  /* "Silver Mist" (Cool, crisp, slightly blue-tinted gray) */
+    #ffffff 45%,  /* Pure White (Creates a "glow" around the beam) */
+    #ffeeb3 40%,  /* "Sunlight" (A lively, buttery gold - brighter than before) */
+    #ffffff 45%,  /* Pure White (Glow) */
+    #e8ecf1 65%   /* Back to Silver Mist */
+  );
+
+  background-size: 400% 100%;
+  animation: shimmer 8s linear infinite;
+  background-attachment: fixed;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -27,26 +47,6 @@ body::before {
   background-size: 500px 500px;
 
   animation: twinkle 5s ease-in-out infinite;
-}
-
-/* the canvas/background of the website */
-body {
-  margin: 0;
-  background-color: rgb(202, 202, 202);
-  font-family: 'Open Sans', sans-serif;
-
-  background: linear-gradient(
-    110deg,       
-    #e8ecf1 35%,  /* "Silver Mist" (Cool, crisp, slightly blue-tinted gray) */
-    #ffffff 45%,  /* Pure White (Creates a "glow" around the beam) */
-    #ffeeb3 50%,  /* "Sunlight" (A lively, buttery gold - brighter than before) */
-    #ffffff 55%,  /* Pure White (Glow) */
-    #e8ecf1 65%   /* Back to Silver Mist */
-  );
-
-  background-size: 400% 100%;
-  animation: shimmer 8s linear infinite;
-  background-attachment: fixed;
 }
 
 /* shimmer animation */
