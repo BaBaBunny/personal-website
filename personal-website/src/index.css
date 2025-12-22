@@ -159,21 +159,17 @@ body {
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(15px);
-
+  background: rgba(255, 255, 255, 0.25); /* translucent panel */
+  backdrop-filter: blur(15px); /* blurs things behind panel */
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* rounded corners */
 
-  border-radius: 20px;
+  width: 95vw;
+  height: 95vh;
+  margin: 0 auto; /* centers left/right automatically */
 
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto 50px auto;
-  border-radius: 20px;
-
-  height: auto;
   min-height: 0;
 
-  padding: 20px 40px;
+  padding: 20px; /*space inside panel */
 }
