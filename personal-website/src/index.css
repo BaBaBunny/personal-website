@@ -88,6 +88,19 @@ body {
   font-family: 'Montserrat', sans-serif;
 
   scroll-margin-top: 60px; /* offset for navbar */;
+
+  background: linear-gradient(
+    110deg,       /* Diagonal Angle */
+    #ffffff 35%,  /* Pure White (Wide Gap) */
+    #f0f0f0 45%,  /* Very Light Grey (Soft Edge) */
+    #fff8dc 50%,  /* "Cornsilk" (The Pale Yellow Shimmer) */
+    #f0f0f0 55%,  /* Very Light Grey (Soft Edge) */
+    #ffffff 65%   /* Pure White (Wide Gap) */
+  );
+
+  background-size: 500% 100%;
+
+  animation: shimmer 8s ease infinite;
 }
 
 .page-section h1 {
