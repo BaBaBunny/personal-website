@@ -51,7 +51,7 @@ body {
   height: 150px;
   
   background: linear-gradient(to bottom, transparent, white);
-  pointer-events: none; /* Allows clicks to pass through
+  pointer-events: none; /* Allows clicks to pass through */
 }
 
 /* navbar box itself */
