@@ -89,7 +89,7 @@ body {
 
   min-height: 0;
 
-  padding: 20px; /*space inside panel */
+  padding: 40px; /*space inside panel */
 }
 
 .page-section h1 {
@@ -103,7 +103,7 @@ body {
   border: none;
   height: 1px;
   background-color: #b7b6b6;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .about-image {
-  width: 470px;
+  width: 400px;
   height: auto;
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
