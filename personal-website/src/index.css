@@ -161,7 +161,7 @@ body {
 .glass-panel {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(15px);
-  
+
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
@@ -174,4 +174,6 @@ body {
 
   height: auto;
   min-height: 0;
+
+  padding: 20px 40px;
 }
