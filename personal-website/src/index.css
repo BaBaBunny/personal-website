@@ -11,17 +11,15 @@ body {
 
   background: linear-gradient(
     110deg,       
-    #dcdcdc 35%,  /* Darker Grey */
-    #f0f0f0 45%,  /* Light Grey */
-    #f5d0a9 50%,  /* Darker Champagne/Gold (More visible) */
-    #f0f0f0 55%,  /* Light Grey */
-    #dcdcdc 65%   /* Darker Grey */
+    #e8ecf1 35%,  /* "Silver Mist" (Cool, crisp, slightly blue-tinted gray) */
+    #ffffff 45%,  /* Pure White (Creates a "glow" around the beam) */
+    #ffeeb3 50%,  /* "Sunlight" (A lively, buttery gold - brighter than before) */
+    #ffffff 55%,  /* Pure White (Glow) */
+    #e8ecf1 65%   /* Back to Silver Mist */
   );
 
-  background-size: 500% 100%;
-
-  animation: shimmer 8s ease infinite;
-
+  background-size: 400% 100%;
+  animation: shimmer 8s linear infinite;
   background-attachment: fixed;
 }
 
@@ -79,8 +77,8 @@ body {
 .page-section {
   background: linear-gradient(
     135deg, 
-    rgba(210, 235, 255, 0.5), /* Top-Left: Shiny & more opaque */
-    rgba(255, 255, 255, 0.2)  /* Bottom-Right: Clear & transparent */
+    rgba(220, 235, 255, 0.4), /* Top-Left: Shiny & more opaque */
+    rgba(245, 245, 255, 0.2)  /* Bottom-Right: Clear & transparent */
   );
   backdrop-filter: blur(20px); /* blurs things behind panel */
   border: 1px solid rgba(255, 255, 255, 0.5);
