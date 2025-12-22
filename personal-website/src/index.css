@@ -26,8 +26,9 @@ body {
 
   font-family: 'Montserrat', sans-serif;
 
-  background: linear-gradient(-45deg, #ffffff, #f5f7fa, #e8ecf1, #ffffff);
+  /* background: linear-gradient(-45deg, #ffffff, #f5f7fa, #e8ecf1, #ffffff); */
   background-size: 400% 400%;
+  background: linear-gradient(45deg, blue, pink);
 
   animation: shimmer 10s ease infinite;
 }
