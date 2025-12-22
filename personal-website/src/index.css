@@ -42,7 +42,7 @@ body {
 }
 
 /* fog layer */
-.home-section::after {
+/* .home-section::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -52,7 +52,7 @@ body {
   
   background: linear-gradient(to bottom, transparent, white);
   pointer-events: none; /* Allows clicks to pass through */
-}
+/* } */
 
 /* navbar box itself */
 .navbar {
