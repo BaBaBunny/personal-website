@@ -12,9 +12,8 @@ body {
 
 /* shimmer animation */
 @keyframes shimmer {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% {background-position: 100% 0%;}
+  100% {background-position: -100% 0%;}
 }
 
 /* home styling */
@@ -28,18 +27,16 @@ body {
 
   background: linear-gradient(
     110deg,       /* Diagonal Angle */
-    #e0e0e0 10%,  /* Light Silver */
-    #ffffff 30%,  /* Pure White Reflection */
-    #b0b0b0 48%,  /* Dark Silver (Shadow) */
-    #ffd700 50%,  /* THE GOLD BEAM (Sharp yellow line) */
-    #b0b0b0 52%,  /* Dark Silver (Shadow) */
-    #ffffff 70%,  /* Pure White Reflection */
-    #e0e0e0 90%   /* Light Silver */
+    #ffffff 35%,  /* Pure White (Wide Gap) */
+    #f0f0f0 45%,  /* Very Light Grey (Soft Edge) */
+    #fff8dc 50%,  /* "Cornsilk" (The Pale Yellow Shimmer) */
+    #f0f0f0 55%,  /* Very Light Grey (Soft Edge) */
+    #ffffff 65%   /* Pure White (Wide Gap) */
   );
 
-  background-size: 200% 100%;
+  background-size: 500% 100%;
 
-  animation: shimmer 6s ease infinite;
+  animation: shimmer 8s ease infinite;
 }
 
 /* navbar box itself */
