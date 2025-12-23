@@ -44,7 +44,7 @@ body::before {
     radial-gradient(2px 2px at 60% 90%, rgba(218, 165, 32, 0.5), transparent);
 
   background-repeat: repeat;
-  background-size: 500px 500px;
+  background-size: 300px 300px;
 
   animation: twinkle 5s ease-in-out infinite;
 }
