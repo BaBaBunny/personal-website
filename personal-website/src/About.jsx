@@ -8,10 +8,19 @@ function About() {
                 <img src={profilePic} alt="Profile Picture" className="about-image"/>
                 <div className="about-text">
                     <p>
-                        Hello! I'm Bababunny, a passionate developer with a love for creating beautiful and functional web applications. With a background in computer science and a keen eye for design, I strive to build user-friendly experiences that make a difference.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Nisl tincidunt eget nullam non.
+                        Tincidunt arcu non sodales neque sodales ut etiam.
+                        Lectus arcu bibendum at varius vel pharetra.
+                        Morbi tristique senectus et netus et malesuada.
+
                     </p>
                     <p>
-                        When I'm not coding, you can find me exploring the outdoors, experimenting with new recipes in the kitchen, or indulging in my love for photography. I'm always eager to learn new technologies and take on exciting challenges.
+                        Universum et sit amet, consectetur adipiscing elit.
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
             </div>
