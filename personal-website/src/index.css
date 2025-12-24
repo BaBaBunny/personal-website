@@ -160,7 +160,10 @@ body::before {
 
 .about-image {
   width: auto;
-  height: 50vh;
+  object-fit: contain;
+
+  height: 60vh;
+  max-height: 100%;
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
