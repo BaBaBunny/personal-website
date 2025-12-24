@@ -152,7 +152,7 @@ body::before {
   display: flex;
   flex-direction: row; /*side by side*/
   justify-content: flex-start;
-  align-items: center;
+  align-items: top;
 
   gap: 40px; /*space between image and text*/
   width: 100%;
@@ -173,7 +173,7 @@ body::before {
 
 .about-text {
   font-family: "open sans", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   color: #333;
 
