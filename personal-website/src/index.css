@@ -152,7 +152,7 @@ body::before {
   display: flex;
   flex-direction: row; /*side by side*/
   justify-content: flex-start;
-  align-items: top;
+  align-items: flex-start;
 
   gap: 40px; /*space between image and text*/
   width: 100%;
