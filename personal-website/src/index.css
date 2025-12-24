@@ -116,7 +116,7 @@ body::before {
   width: 90vw;
   height: 80vh;
   margin: 20px auto; /* centers left/right automatically */
-  padding: 20px; /*space inside panel */
+  padding: 40px; /*space inside panel */
   scroll-margin-top: 85px; /* offset for sticky navbar */
 
   display: flex;
@@ -144,14 +144,15 @@ body::before {
   display: flex;
   flex-direction: row; /*side by side*/
   justify-content: flex-start;
-  align-items: center;
+  align-items: top;
+
   gap: 50px; /*space between image and text*/
-  width: 90%;
+  width: 90vw;
 }
 
 .about-image {
   width: auto;
-  height: 50vh;
+  height: 70vh;
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
