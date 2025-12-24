@@ -159,7 +159,7 @@ body::before {
 
 .about-image {
   width: auto;
-  height: 70vh;
+  height: 50vh;
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
