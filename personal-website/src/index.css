@@ -178,6 +178,8 @@ body::before {
   color: #333;
 
   flex: 1; /* take up remaining space */
+
+  padding-right: 20px;
 }
 
 @keyframes textSideSlide {
