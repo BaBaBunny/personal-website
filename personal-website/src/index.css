@@ -224,3 +224,24 @@ body::before {
     transform: scale(1.2);
   }
 }
+
+.experience {
+  font-family: "open sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.education {
+  font-family: "open sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.skills {
+  font-family: "open sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #333;
+}
