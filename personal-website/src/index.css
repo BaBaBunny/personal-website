@@ -117,7 +117,7 @@ body::before {
   height: 80vh;
   min-height: 500px;
   margin: 20px auto; /* centers left/right automatically */
-  padding: 40px 30px; /*space inside panel */
+  padding: 20px 40px; /*space inside panel */
   scroll-margin-top: 85px; /* offset for sticky navbar */
 
   display: flex;
