@@ -140,6 +140,13 @@ body::before {
   margin: 0 auto;
 }
 
+/* page title styling */
+.title {
+  font-family: "helvetica", sans-serif;
+  text-transform: uppercase;
+  color: black;
+}
+
 .about-content {
   display: flex;
   flex-direction: row; /*side by side*/

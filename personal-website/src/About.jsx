@@ -3,7 +3,7 @@ import profilePic from './assets/bababunny.png';
 function About() {
     return (
         <section id="about" className="page-section">
-            <h1>About Me</h1>
+            <h1 className="title">About Me</h1>
             <div className="about-content">
                 <img src={profilePic} alt="Profile Picture" className="about-image"/>
                 <div className="about-text">
