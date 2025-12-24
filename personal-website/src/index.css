@@ -115,20 +115,28 @@ body::before {
 
   width: 90vw;
   height: 80vh;
+  min-height: 500px;
   margin: 20px auto; /* centers left/right automatically */
   padding: 40px; /*space inside panel */
   scroll-margin-top: 85px; /* offset for sticky navbar */
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.page-section h1 {
+/* page title styling */
+.title {
+  font-family: "helvetica", sans-serif;
   font-size: 2rem;
+  
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+
   text-transform: uppercase;
-  word-spacing: 10px;
+  color: black;
 }
 
 /* page seperator line styling */
@@ -138,13 +146,6 @@ body::before {
   background-color: #b7b6b6;
   width: 85%;
   margin: 0 auto;
-}
-
-/* page title styling */
-.title {
-  font-family: "helvetica", sans-serif;
-  text-transform: uppercase;
-  color: black;
 }
 
 .about-content {
