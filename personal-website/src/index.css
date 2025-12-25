@@ -238,18 +238,12 @@ body::before {
 
 .resume-left {
   flex: 1;
-
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
   padding: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-
   overflow-y: auto;
 }
 
 .resume-right {
   flex: 1;
-
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -257,12 +251,7 @@ body::before {
 
 .resume-top, .resume-bottom {
   flex: 1;
-
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  padding: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-
+  padding: 20px;
   overflow-y: auto;
 }
 
