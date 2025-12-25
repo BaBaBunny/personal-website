@@ -265,3 +265,21 @@ body::before {
 
   overflow-y: auto;
 }
+
+.resume-grid h2 {
+  font-family: "montserrat", sans-serif;
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #000;
+  border-bottom: 2px solid rgba(0,0,0,0.1); /* Subtle divider line */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.resume-grid p {
+  font-family: "open sans", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 5px 0;
+}
