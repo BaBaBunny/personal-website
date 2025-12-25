@@ -225,23 +225,43 @@ body::before {
   }
 }
 
-.experience {
-  font-family: "open sans", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  color: #333;
+.resume-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
 }
 
-.education {
-  font-family: "open sans", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  color: #333;
+.resume-left {
+  flex: 1;
+
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  overflow-y: auto;
 }
 
-.skills {
-  font-family: "open sans", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  color: #333;
+.resume-right {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resume-top, .resume-bottom {
+  flex: 1;
+
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  overflow-y: auto;
 }
