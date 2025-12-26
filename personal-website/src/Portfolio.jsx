@@ -1,4 +1,4 @@
-import placeholder from './assets/placeholder.jpeg';
+import placeholder from './assets/placeholder.jpg';
 
 function Portfolio() {
     return (
