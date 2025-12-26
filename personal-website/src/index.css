@@ -288,16 +288,14 @@ body::before {
 .portfolio-left {
   flex: 1;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-right {
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.portfolio-top, .portfolio-bottom {
-  padding: 10px;
 }
 
 .portfolio-grid h2 {
@@ -320,7 +318,7 @@ body::before {
 
 .portfolio-featured {
   width: 100%;
-  height: 500px;
+  height: 450px;
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
