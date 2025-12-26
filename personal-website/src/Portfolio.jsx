@@ -14,13 +14,17 @@ function Portfolio() {
                     <div className="portfolio-top">
                         <h2>Programming Related Projects</h2>
                         <p className="subtitle">any sort of projects related to programming</p>
-                        <a href="projects.html"><img src={placeholder} alt="Placeholder" className="portfolio-image"/></a>
+                        <Link to="/projects">
+                            <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
+                        </Link>
                     </div>
                     <div className="portfolio-bottom">
                         <h2>Arts & Crafts</h2>
                         <p className="subtitle">other projects not-related to programming</p>
-                        <a href="arts&crafts.html"><img src={placeholder} alt="Placeholder" className="portfolio-image"/></a>
-                    </div> 
+                        <Link to="/arts-crafts">
+                            <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>
