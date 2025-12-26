@@ -310,21 +310,20 @@ body::before {
   font-size: 1.8rem;
   color: #000;
   border-bottom: 2px solid rgba(0,0,0,0.1); /* Subtle divider line */
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   margin-bottom: 15px;
 }
 
 .portfolio-grid p {
   font-family: "open sans", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1;
   color: #333;
-  margin: 5px 0;
+  margin: 5px;
 }
 
 .portfolio-featured {
   width: auto;
-  object-fit: contain;
 
   height: 60vh;
   max-height: 100%;
@@ -335,9 +334,8 @@ body::before {
 }
 
 .portfolio-image {
-  width: auto;
-
-  height: 50vh;
+  width: 50vw;
+  height: 40vh;
   max-height: 100%;
 
   border-radius: 25px; /* rounded corners */
