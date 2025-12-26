@@ -288,7 +288,6 @@ body::before {
 .portfolio-left {
   flex: 1;
   padding: 20px;
-  overflow-y: auto;
 }
 
 .portfolio-right {
@@ -299,8 +298,7 @@ body::before {
 }
 
 .portfolio-top, .portfolio-bottom {
-  flex: 1;
-  padding: 20px;
+  padding: 10px;
 }
 
 .portfolio-grid h2 {
@@ -310,7 +308,7 @@ body::before {
   color: #000;
   border-bottom: 2px solid rgba(0,0,0,0.1); /* Subtle divider line */
   padding-bottom: 5px;
-  margin-bottom: 15px;
+  margin: 5px;
 }
 
 .portfolio-grid p {
