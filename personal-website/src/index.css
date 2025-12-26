@@ -336,7 +336,6 @@ body::before {
 
 .portfolio-image {
   width: auto;
-  object-fit: contain;
 
   height: 50vh;
   max-height: 100%;
