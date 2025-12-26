@@ -301,7 +301,6 @@ body::before {
 .portfolio-top, .portfolio-bottom {
   flex: 1;
   padding: 20px;
-  overflow-y: auto;
 }
 
 .portfolio-grid h2 {
@@ -325,7 +324,7 @@ body::before {
 .portfolio-featured {
   width: auto;
 
-  height: 60vh;
+  height: 50vh;
   max-height: 100%;
 
   border-radius: 25px; /* rounded corners */
@@ -334,8 +333,8 @@ body::before {
 }
 
 .portfolio-image {
-  width: 50vw;
-  height: 40vh;
+  width: 20vw;
+  height: 30vh;
   max-height: 100%;
 
   border-radius: 25px; /* rounded corners */
