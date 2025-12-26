@@ -1,4 +1,5 @@
 import placeholder from './assets/placeholder.jpg';
+import { Link } from 'react-router-dom';
 
 function Portfolio() {
     return (
