@@ -1,18 +1,18 @@
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Link} from 'react-router-dom'
 import NavBar from './NavBar.jsx'
 import Home from './Home.jsx'
 import About from './About.jsx'
 import Resume from './Resume.jsx'
 import Portfolio from './Portfolio.jsx'
 import Contact from './Contact.jsx'
-import Projects from './Projects.jsx'
+import Projects from './projects.jsx'
 import './index.css'
 
 function App() {
   return(
     <>
       <NavBar/>
-      <Routes>
+        <Routes>
         <Route path="/" element={
         <>
           <Home/>
