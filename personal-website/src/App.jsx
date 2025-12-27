@@ -5,7 +5,7 @@ import About from './About.jsx'
 import Resume from './Resume.jsx'
 import Portfolio from './Portfolio.jsx'
 import Contact from './Contact.jsx'
-import Projects from './projects.jsx'
+import Projects from './Projects.jsx'
 import './index.css'
 
 function App() {
