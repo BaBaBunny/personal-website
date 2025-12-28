@@ -26,7 +26,7 @@ function App() {
           <Contact/>
         </>
         } />
-        <Route path="/projects" element={<Projects/>} />
+        <Route path="/projects.jsx" element={<Projects/>} />
       </Routes>
     </>
   );
