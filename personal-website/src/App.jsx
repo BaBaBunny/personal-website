@@ -14,11 +14,10 @@ function App() {
       <div>
         <NavBar/>
           <div>
-            <Switch>
-              <Route path="/">
-                <Home/>
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/about" element={<About/>}/>
+            </Routes>
           </div>
       </div>
     </Router>
