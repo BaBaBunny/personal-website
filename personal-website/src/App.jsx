@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'; // Removed 'Router' and 'Switch'
+import { Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
@@ -6,15 +6,16 @@ import Resume from './Resume.jsx';
 import Portfolio from './Portfolio.jsx';
 import Contact from './Contact.jsx';
 import Projects from './Projects.jsx';
+import ArtsCrafts from './Arts&Crafts.jsx';
 import './index.css';
 
 function App() {
   return (
     <div className="app-container">
-      {/* NavBar stays on all pages */}
+      /* NavBar stays on all pages */
       <NavBar />
       <Routes>
-        {/* main page */}
+        /* main page */
         <Route path="/" element={
           <>
             <Home />
@@ -28,7 +29,7 @@ function App() {
             <Contact />
           </>
         } />
-        {/* separate pages */}
+        /* separate pages */
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </div>
