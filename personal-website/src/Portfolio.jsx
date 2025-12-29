@@ -22,9 +22,9 @@ function Portfolio() {
                     <div className="portfolio-bottom">
                         <h2>Arts & Crafts</h2>
                         <p className="subtitle">other projects not-related to programming</p>
-            
+                        <Link to="/arts-crafts">
                             <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
-                        
+                        </Link>
                     </div>
                 </div>
             </div>
