@@ -8,4 +8,4 @@ function ArtsCrafts() {
     );    
 }
 
-export default Projects
+export default ArtsCrafts;
