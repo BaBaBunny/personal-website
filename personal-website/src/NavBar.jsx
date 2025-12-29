@@ -5,11 +5,11 @@ function NavBar(){
         <div className = "navbar">
             <nav>
                 <ul>
-                    <li><Hashlink smooth to="/#home">Home</Hashlink></li>
-                    <li><Hashlink smooth to="/#about">About</Hashlink></li>
-                    <li><Hashlink smooth to="/#resume">Resume</Hashlink></li>
-                    <li><Hashlink smooth to="/#portfolio">Portfolio</Hashlink></li>
-                    <li><Hashlink smooth to="/#contact">Contact</Hashlink></li>
+                    <li><HashLink smooth to="/#home">Home</HashLink></li>
+                    <li><HashLink smooth to="/#about">About</HashLink></li>
+                    <li><HashLink smooth to="/#resume">Resume</HashLink></li>
+                    <li><HashLink smooth to="/#portfolio">Portfolio</HashLink></li>
+                    <li><HashLink smooth to="/#contact">Contact</HashLink></li>
                 </ul>
             </nav>
         </div>
