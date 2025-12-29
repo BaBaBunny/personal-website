@@ -1,5 +1,5 @@
 import placeholder from './assets/placeholder.jpg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function Portfolio() {
     return (
@@ -9,21 +9,21 @@ function Portfolio() {
                 <div className="portfolio-left">
                     <h2>Current Projects</h2>
                     <p className="subtitle">projects im currently working on</p>
-                    {/* <img src={placeholder} alt="Placeholder" className="portfolio-featured"/> */}
+                    <img src={placeholder} alt="Placeholder" className="portfolio-featured"/>
                 </div>
                 <div className="portfolio-right">
                     <div className="portfolio-top">
                         <h2>Programming Related Projects</h2>
                         <p className="subtitle">any sort of projects related to programming</p>
-                        {/* <Link to="/projects">
+                        <Link to="/projects">
                             <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
-                        </Link> */}
+                        </Link>
                     </div>
                     <div className="portfolio-bottom">
                         <h2>Arts & Crafts</h2>
                         <p className="subtitle">other projects not-related to programming</p>
             
-                            {/* <img src={placeholder} alt="Placeholder" className="portfolio-image"/> */}
+                            <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
                         
                     </div>
                 </div>
