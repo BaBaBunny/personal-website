@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Projects() {
+function ArtsCrafts() {
     return (
         <div className="page-section">
-            <h1>Projects</h1>
+            <h1>Arts & Crafts</h1>
         </div>
     );    
 }
