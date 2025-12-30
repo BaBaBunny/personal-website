@@ -12,7 +12,7 @@ import './index.css';
 function App() {
   return (
     <div className="app-container">
-      /* NavBar stays on all pages */
+      { /* NavBar stays on all pages */}
       <NavBar />
       <Routes>
         /* main page */
@@ -29,7 +29,7 @@ function App() {
             <Contact />
           </>
         } />
-        /* separate pages */
+        {/* separate pages */}
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </div>

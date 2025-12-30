@@ -337,10 +337,23 @@ body::before {
 /* --- Contact Form Styles --- */
 .contact-container {
     width: 100%;
-    max-width: 600px; /* Limits width so it looks good on big screens */
+    max-width: 600px;
+
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+}
+
+.contact-left {
+  flex: 2;
+}
+
+.contact-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .contact-form {
