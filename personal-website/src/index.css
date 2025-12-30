@@ -343,9 +343,11 @@ body::before {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    
+    gap: 20px;
 }
 
-/* .contact-left {
+.contact-left {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -359,7 +361,7 @@ body::before {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-} */
+}
 
 .contact-form {
     width: 100%;
