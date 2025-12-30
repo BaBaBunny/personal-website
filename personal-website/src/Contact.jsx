@@ -57,7 +57,7 @@ function Contact() {
                             />
                         </div>
 
-                        <div className="form-group">
+                        <div className="form-box">
                             <label htmlFor="subject">Subject</label>
                             <input
                                 type="text"
@@ -69,7 +69,7 @@ function Contact() {
                             />
                         </div>
 
-                        <div className="form-group">
+                        <div className="form-box">
                             <label htmlFor="message">Message</label>
                             <textarea
                                 id="message"
