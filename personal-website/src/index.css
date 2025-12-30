@@ -403,15 +403,3 @@ body::before {
 .submit-btn:hover {
     background-color: #000;
 }
-
-.contact-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
