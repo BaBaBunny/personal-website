@@ -351,7 +351,7 @@ body::before {
     margin-top: 20px;
 }
 
-.form-group {
+.form-box {
     display: flex;
     flex-direction: column;
     gap: 5px; /* Space between label and box */
@@ -359,7 +359,7 @@ body::before {
     width: 100%;
 }
 
-.form-group label {
+.form-box label {
     font-size: 0.9rem;
     font-weight: bold;
     color: #333;
@@ -367,8 +367,8 @@ body::before {
     font-family: 'Montserrat', sans-serif;
 }
 
-.form-group input, 
-.form-group textarea {
+.form-box input, 
+.form-box textarea {
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -378,9 +378,9 @@ body::before {
     transition: all 0.3s ease;
 }
 
-/* Make the border blue when you click inside */
-.form-group input:focus, 
-.form-group textarea:focus {
+/* Make the border highlight when you click inside */
+.form-box input:focus, 
+.form-box textarea:focus {
     border-color: #555;
     background-color: #fff;
     outline: none;
@@ -392,7 +392,7 @@ body::before {
     background-color: #333;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -402,4 +402,16 @@ body::before {
 
 .submit-btn:hover {
     background-color: #000;
+}
+
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }

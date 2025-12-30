@@ -31,7 +31,7 @@ function Contact() {
             <div className="contact-box">
                 <div className="contact-left">
                     <form className="contact-form" onSubmit={handleSubmit}>
-                        <div className="form-group">
+                        <div className="form-box">
                             <label htmlFor="name">Name</label>
                             <input
                                 type="text"
@@ -44,7 +44,7 @@ function Contact() {
                             />
                         </div>
 
-                        <div className="form-group">
+                        <div className="form-box">
                             <label htmlFor="email">Email</label>
                             <input
                                 type="email"
@@ -86,7 +86,7 @@ function Contact() {
                     </form>
                 </div>
 
-                /* right column */
+                {/* right column */}
                 <div className="contact-right">
                     <div className="socials-box">
                         <h2>Socials</h2>
