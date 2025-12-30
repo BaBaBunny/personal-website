@@ -335,7 +335,7 @@ body::before {
 }
 
 /* --- Contact Form Styles --- */
-.contact-container {
+.contact-box {
     width: 100%;
     max-width: 600px;
 
@@ -343,11 +343,9 @@ body::before {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-
-    overflow: hidden;
 }
 
-.contact-left {
+/* .contact-left {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -361,7 +359,7 @@ body::before {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}
+} */
 
 .contact-form {
     width: 100%;
