@@ -13,7 +13,7 @@ function Portfolio() {
                 </div>
                 <div className="portfolio-right">
                     <div className="portfolio-top">
-                        <h2>Programming Related Projects</h2>
+                        <h2>Program Related</h2>
                         <p className="subtitle">any sort of projects related to programming</p>
                         <Link to="/projects">
                             <img src={placeholder} alt="Placeholder" className="portfolio-image"/>

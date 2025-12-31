@@ -113,11 +113,11 @@ body::before {
     inset 0 0 25px 0 rgba(255, 255, 255, 0.9);  /* The Inner Glow (Thickness) */;
   border-radius: 25px; /* rounded corners */
 
-  width: 60vw;
+  width: 70vw;
   height: 80vh;
   min-height: 500px;
   margin: 20px auto; /* centers left/right automatically */
-  padding: 20px 25px 30px 30px; /*space inside panel */
+  padding: 10px 25px 30px 30px; /*space inside panel */
   scroll-margin-top: 85px; /* offset for sticky navbar */
 
   display: flex;
@@ -129,7 +129,7 @@ body::before {
 /* page title styling */
 .title {
   font-family: "helvetica", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   
   margin-top: 10px;
   margin-bottom: 10px;
@@ -144,7 +144,7 @@ body::before {
   border: none;
   height: 1px;
   background-color: #b7b6b6;
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -161,10 +161,10 @@ body::before {
 
 .about-image {
   width: auto;
-  object-fit: contain;
-
   height: 70vh;
   max-height: 100%;
+
+  object-fit: contain;
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -173,13 +173,13 @@ body::before {
 
 .about-text {
   font-family: "open sans", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1;
   color: #333;
 
   flex: 1; /* take up remaining space */
 
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 @keyframes textSideSlide {
@@ -301,7 +301,7 @@ body::before {
 .portfolio-grid h2 {
   font-family: "montserrat", sans-serif;
   margin-top: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #000;
   border-bottom: 2px solid rgba(0,0,0,0.1); /* Subtle divider line */
   padding-bottom: 5px;
@@ -318,7 +318,7 @@ body::before {
 
 .portfolio-featured {
   width: 100%;
-  height: 450px;
+  height: 440px;
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -326,8 +326,8 @@ body::before {
 }
 
 .portfolio-image {
-  width: 95%;
-  height: 200px;
+  width: 90%;
+  height: 180px;
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -344,7 +344,7 @@ body::before {
     align-items: center;
     justify-content: flex-start;
     
-    gap: 20;
+    gap: 20px;
 }
 
 .contact-left {
