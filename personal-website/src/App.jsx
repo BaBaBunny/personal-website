@@ -31,6 +31,7 @@ function App() {
         } />
         {/* separate pages */}
         <Route path="/projects" element={<Projects />} />
+        <Route path="/arts-crafts" element={<ArtsCrafts />} />
       </Routes>
     </div>
   );
