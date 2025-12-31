@@ -88,28 +88,26 @@ function Contact() {
 
                 {/* right column */}
                 <div className="contact-right">
-                    <div className="socials-box">
-                        <h2>Socials</h2>
-                        <p>All my active socials:</p>
-                        <ul className="social-links">
-                            <li>
-                                <a href="https://github.com/" target="_blank" rel="noreferrer">
-                                    GitHub
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
-                                    LinkedIn
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://instagram.com/" target="_blank" rel="noreferrer">
-                                    Instagram
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </div>
+                    <h2>Socials</h2>
+                    <p>All my active socials:</p>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/" target="_blank" rel="noreferrer">
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/" target="_blank" rel="noreferrer">
+                                Instagram
+                            </a>
+                        </li>
+                        
+                    </ul>
                 </div>
             </div>
         </section>
