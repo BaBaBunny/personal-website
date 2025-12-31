@@ -113,7 +113,7 @@ body::before {
     inset 0 0 25px 0 rgba(255, 255, 255, 0.9);  /* The Inner Glow (Thickness) */;
   border-radius: 25px; /* rounded corners */
 
-  width: 90vw;
+  width: 60vw;
   height: 80vh;
   min-height: 500px;
   margin: 20px auto; /* centers left/right automatically */
