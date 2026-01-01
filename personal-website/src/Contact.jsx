@@ -13,7 +13,7 @@ export const Contact = () => {
     });
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const {name, value } = e.target;
         setFormInfo((prev) => ({
             ...prev,
             [name]: value
@@ -36,7 +36,12 @@ export const Contact = () => {
                 () => {
                     setStatus('success');
                     console.log('success');
-                    e.target.reset();
+                    setFormInfo({
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: ''
+                    });
                 },
                 (error) => {
                     setStatus('error');
@@ -107,6 +112,18 @@ export const Contact = () => {
                         <button type="submit" className="send-button" disabled={status === 'sending'}>
                             {status === 'sending' ? 'Sending...' : 'Send'}
                         </button>
+
+                        {status === 'success' && (
+                            <p style={{color: 'green', marginTop: '10px'}}>
+                                Message sent successfully!
+                            </p>
+                        )}
+
+                        {status === 'error' && (
+                            <p style={{color: 'red', marginTop: '10px'}}>
+                                Failed to send. Please try again.
+                            </p>
+                        )}
                     </form>
                 </div>
 
