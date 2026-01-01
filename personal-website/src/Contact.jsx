@@ -5,6 +5,21 @@ export const Contact = () => {
     const form = useRef();
     const [status, setStatus] = useState('');
 
+    const [formInfo, setFormInfo] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormInfo((prev) => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
     const sendEmail = (e) => {
         e.preventDefault();
         setStatus('sending');
