@@ -1,26 +1,33 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
+import emailjs from '@emailjs/browser';
 
-function Contact() {
-    const[formInfo, setFormInfo] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-    
-    const handleChange = (e) => {
-        const{name, value} = e.target;
-        setFormInfo(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+export const Contact = () => {
+    const form = useRef();
+    const [status, setStatus] = useState('');
 
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-        console.log("Form has been submitted:", formInfo);
-        alert("Message Sent!");
-        setFormInfo({name: '', email: '', subject: '', message: ''});
+        setStatus('sending');
+
+        const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+        
+        emailjs
+            .sendForm(serviceID, templateID, form.current, {
+                publicKey: publicKey,
+            })
+            .then(
+                () => {
+                    setStatus('success');
+                    console.log('success');
+                    e.target.reset();
+                },
+                (error) => {
+                    setStatus('error');
+                    console.log('failed...', error.text);
+                },
+            );
     };
 
     return (
@@ -30,7 +37,7 @@ function Contact() {
 
             <div className="contact-box">
                 <div className="contact-left">
-                    <form className="contact-form" onSubmit={handleSubmit}>
+                    <form className="contact-form" ref={form} onSubmit={sendEmail}>
                         <div className="form-box">
                             <label htmlFor="name">Name</label>
                             <input
@@ -82,7 +89,9 @@ function Contact() {
                             ></textarea>
                         </div>
 
-                        <button type="send" className="send-button">Send</button>
+                        <button type="submit" className="send-button" disabled={status === 'sending'}>
+                            {status === 'sending' ? 'Sending...' : 'Send'}
+                        </button>
                     </form>
                 </div>
 
@@ -102,7 +111,7 @@ function Contact() {
                             </a>
                         </li>
                         <li>
-                            <a href="https://instagram.com/" target="_blank" rel="noreferrer">
+                            <a href="https://instagram.com/at_bababunny" target="_blank" rel="noreferrer">
                                 Instagram
                             </a>
                         </li>
