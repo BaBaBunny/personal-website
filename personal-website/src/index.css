@@ -63,6 +63,8 @@ body::before {
   min-height: 100vh;
 
   font-family: 'Montserrat', sans-serif;
+  
+  scroll-margin-top: 100px;
 }
 
 /* navbar box itself */
