@@ -227,13 +227,13 @@ body::before {
 @keyframes shuffleMove {
   0% {
     transform: scale(0.95) translate(30px, 20px);
+    filter: brightness(1);
   }
   50% {
     transform: translateX(50%) translateY(-20px) scale(1.1) rotate(10deg);
   }
   100% {
     transform: translate(0,0) scale(1) rotate(0deg);
-    filter: brightness(1);
   }
 }
 
