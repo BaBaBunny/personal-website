@@ -74,9 +74,9 @@ body::before {
   justify-content: center;
   align-items: center;
 
-  left: 25%;
-  right: 25%;
-
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 100%;
   padding: 20px 0;
 
@@ -89,7 +89,7 @@ body::before {
 }
 
 .navbar.scrolled {
-  width: 70%;
+  width: 60%;
   top: 20px;
   
   border-radius: 50px;
