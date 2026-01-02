@@ -172,7 +172,7 @@ body::before {
 
 .about-content {
   display: flex;
-  flex-direction: row; /*side by side*/
+  flex-direction: column; /*side by side*/
   justify-content: flex-start;
   align-items: flex-start;
 
