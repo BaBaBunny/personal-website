@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 /* page smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -179,10 +181,20 @@ body::before {
   height: 100%;
 }
 
+.about-content p {
+  white-space: pre-line; /*no need for tags*/
+  
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: #333;
+}
+
 /* the card stack */
 .card-stack {
   position: relative;
-  width: 450px;
+  width: 400px;
   height: 550px;
   flex-shrink: 0; /*prevents image squishing*/
   perspective: 1000px; /*distortion*/
@@ -253,15 +265,6 @@ body::before {
         transform: scale(0.95) translate(30px, 20px);
         filter: brightness(0.6);
     }
-}
-
-.about-text {
-  font-family: "open sans", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.2;
-  color: #333;
-
-  flex: 1; /* take up remaining space */
 }
 
 @keyframes textSideSlide {
