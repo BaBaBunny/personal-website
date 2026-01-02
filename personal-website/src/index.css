@@ -95,10 +95,10 @@ body::before {
   
   border-radius: 50px;
 
-  margin-left: auto;
-  margin-right: auto;
-  left: 0; 
-  right: 0;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* left: 0; 
+  right: 0; */
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
