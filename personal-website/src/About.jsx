@@ -14,7 +14,7 @@ const About = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             triggerShuffle();
-        }, 5000);
+        }, 10000);
 
         return () => clearInterval(interval); //cleanup on unmount
     }, [currentIndex, isShuffling]);
@@ -25,7 +25,7 @@ const About = () => {
         setTimeout(() => {
             setCurrentIndex((prev) => (prev + 1) %images.length);
             setIsShuffling(false);
-        }, 600);
+        }, 400);
     }
 
     return (

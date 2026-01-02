@@ -225,12 +225,11 @@ body::before {
         transform: scale(1) translate(0,0);
     }
     50% {
-        /* Move LEFT to make room */
         transform: translateX(-100px) scale(0.95) rotate(-2deg);
     }
     100% {
         transform: scale(0.95) translate(30px, 20px);
-        filter: brightness(1);
+        filter: brightness(0.6);
     }
 }
 
