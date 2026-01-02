@@ -67,15 +67,36 @@ body::before {
 
 /* navbar box itself */
 .navbar {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  
-  /* navbar following */
   position: sticky;
   top: 0;
   z-index: 1000; /* keeps navbar floating on top of other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 20px 0;
+
+  background-color: rgba(255,255,255,0.9);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0;
+}
+
+.navbar.scrolled {
+  width: 500px;
+  top: 20px;
+  
+  border-radius: 50px;
+
+  margin-left: auto;
+  margin-right: auto;
+  left: 0; 
+  right: 0;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* removes links underline */
@@ -166,6 +187,8 @@ body::before {
   height: 550px;
   flex-shrink: 0; /*prevents image squishing*/
   perspective: 1000px; /*distortion*/
+
+  margin-top: 20px;
 }
 
 /* the images */

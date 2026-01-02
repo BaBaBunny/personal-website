@@ -135,12 +135,12 @@ export const Contact = () => {
                     <p>All my active socials:</p>
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank" rel="noreferrer">
+                            <a href="https://github.com/BaBaBunny" target="_blank" rel="noreferrer">
                                 GitHub
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+                            <a href="https://linkedin.com/www.linkedin.com/in/bababunny" target="_blank" rel="noreferrer">
                                 LinkedIn
                             </a>
                         </li>

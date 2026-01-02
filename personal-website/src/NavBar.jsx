@@ -1,9 +1,28 @@
 import { HashLink } from "react-router-hash-link";
+import React, {useState, useEffect} from 'react';
 
-function NavBar(){
+const NavBar = () => {
+    const [hasScrolled, setHasScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setHasScrolled(true);
+            }
+            else {
+                setHasScrolled(False);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, []);
+
     return(
         <div className = "navbar">
-            <nav>
+            <nav classname={`navbar ${isScrolled ? 'scrolled' : ''}`}>
                 <ul>
                     <li><HashLink smooth to="/#home">Home</HashLink></li>
                     <li><HashLink smooth to="/#about">About</HashLink></li>
@@ -14,6 +33,6 @@ function NavBar(){
             </nav>
         </div>
     );
-}
+};
 
-export default NavBar
+export default NavBar;
