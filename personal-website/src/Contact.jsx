@@ -42,6 +42,8 @@ export const Contact = () => {
                         subject: '',
                         message: ''
                     });
+                    
+                    setTimeout(() => setStatus(''), 3000);
                 },
                 (error) => {
                     setStatus('error');
