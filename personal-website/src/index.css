@@ -76,7 +76,7 @@ body::before {
 
   left: 25%;
   right: 25%;
-  /* transform: translateX(-25%); */
+  transform: translateX(-25%);
 
   width: 100%;
   padding: 20px 0;
