@@ -191,6 +191,10 @@ body::before {
   color: #333;
 }
 
+.about-content p:last-child {
+  font-style: italic;
+}
+
 /* the card stack */
 .card-stack {
   position: relative;
