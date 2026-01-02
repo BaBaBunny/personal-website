@@ -162,8 +162,8 @@ body::before {
 /* the card stack */
 .card-stack {
   position: relative;
-  width: auto;
-  height: 70vh;
+  width: 300px;
+  height: 300px;
   flex-shrink: 0; /*prevents image squishing*/
   perspective: 1000px;
 }
@@ -191,7 +191,7 @@ body::before {
 
 .back-card {
   z-index: 1;
-  transform: scale(0.92) translate (15px, 15px); /*push back and down */
+  transform: scale(0.92) translate(15px, 15px); /*push back and down */
   opacity: 0.8;
   filter: brightness(0.6);
 }
