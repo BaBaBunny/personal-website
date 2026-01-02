@@ -22,7 +22,7 @@ const NavBar = () => {
 
     return(
         <div className = "navbar">
-            <nav classname={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+            <nav classname={`navbar ${hasScrolled ? 'scrolled' : ''}`}>
                 <ul>
                     <li><HashLink smooth to="/#home">Home</HashLink></li>
                     <li><HashLink smooth to="/#about">About</HashLink></li>
