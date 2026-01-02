@@ -74,7 +74,8 @@ body::before {
   justify-content: center;
   align-items: center;
 
-  /* left: 50%; */
+  left: 25%;
+  right: 25%;
   transform: translateX(-50%);
 
   width: 100%;
