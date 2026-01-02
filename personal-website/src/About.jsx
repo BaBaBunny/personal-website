@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import img1 from './assets/bababunny.png';
 import img2 from './assets/lucas.png';
 
@@ -9,7 +9,7 @@ const About = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isShuffling, setIsShuffling] = useState(false);
 
-    const nextIndex = (activeIndex + 1) % images.length;
+    const nextIndex = (currentIndex + 1) % images.length;
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -17,13 +17,13 @@ const About = () => {
         }, 5000);
 
         return () => clearInterval(interval); //cleanup on unmount
-    }, [activeIndex, isShuffling]);
+    }, [currentIndex, isShuffling]);
 
     const triggerShuffle = () => {
         if (isShuffling) return; //prevents double clicks/triggers
         setIsShuffling(true);
         setTimeout(() => {
-            setActiveIndex((prev) => (prev + 1) %images.length);
+            setCurrentIndex((prev) => (prev + 1) %images.length);
             setIsShuffling(false);
         }, 600);
     }
@@ -41,7 +41,7 @@ const About = () => {
                     />
                     {/* Top card */}
                     <img
-                        src={images[activeIndex]}
+                        src={images[currentIndex]}
                         alt="current"
                         className="card front-card"
                     />
