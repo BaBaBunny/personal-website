@@ -163,9 +163,9 @@ body::before {
 .card-stack {
   position: relative;
   width: 450px;
-  height: 600px;
+  height: 550px;
   flex-shrink: 0; /*prevents image squishing*/
-  perspective: 500px; /*distortion*/
+  perspective: 1000px; /*distortion*/
 }
 
 /* the images */
@@ -186,33 +186,52 @@ body::before {
 /* depth/animation for cards */
 .front-card {
   z-index: 2;
-  transform: scale(1);
+  transform: scale(1) translate(0,0);
 }
 
 .back-card {
   z-index: 1;
-  transform: scale(0.92) translate(15px, 15px); /*push back and down */
+  transform: scale(0.92) translate(35px, 25px); /*push back and down */
   opacity: 0.8;
   filter: brightness(0.6);
 }
 
 /* shuffling animation */
 .back-card.shuffling {
-  animation: shuffleMove 0.6s ease-in-out forwards;
+  animation: shuffleMove 0.4s ease-in-out forwards;
   z-index: 3;
 }
 
 @keyframes shuffleMove {
   0% {
-    transform: scale(0.92) translate(15px, 15px);
+    transform: scale(0.92) translate(35px, 25px);
   }
   50% {
-    transform: translateX(120%) scale(1) rotate(5deg);
+    transform: translateX(60%) translateY(-20px) scale(1.1) rotate(10deg);
   }
   100% {
-    transform: translateX(0) scale(1) rotate(0deg);
+    transform: translate(0,0) scale(1) rotate(0deg);
     filter: brightness(1);
   }
+}
+
+.front-card.yielding {
+  animation: leftYield 0.4s ease-in-out forwards;
+  z-index: 1;
+}
+
+@keyframes leftYield {
+  0% {
+        transform: scale(1) translate(0,0);
+    }
+    50% {
+        /* Move LEFT to make room */
+        transform: translateX(-100px) scale(0.95) rotate(-2deg);
+    }
+    100% {
+        transform: scale(0.92) translate(35px, 25px);
+        filter: brightness(0.6);
+    }
 }
 
 .about-text {

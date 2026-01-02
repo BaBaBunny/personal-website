@@ -43,7 +43,7 @@ const About = () => {
                     <img
                         src={images[currentIndex]}
                         alt="current"
-                        className="card front-card"
+                        className={`card front-card ${isShuffling ? 'yielding' : ''}`}
                     />
                 </div>
 
