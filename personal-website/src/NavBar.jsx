@@ -10,7 +10,7 @@ const NavBar = () => {
                 setHasScrolled(true);
             }
             else {
-                setHasScrolled(False);
+                setHasScrolled(false);
             }
         };
 
@@ -21,17 +21,15 @@ const NavBar = () => {
     }, []);
 
     return(
-        <div className = "navbar">
-            <nav classname={`navbar ${hasScrolled ? 'scrolled' : ''}`}>
-                <ul>
-                    <li><HashLink smooth to="/#home">Home</HashLink></li>
-                    <li><HashLink smooth to="/#about">About</HashLink></li>
-                    <li><HashLink smooth to="/#resume">Resume</HashLink></li>
-                    <li><HashLink smooth to="/#portfolio">Portfolio</HashLink></li>
-                    <li><HashLink smooth to="/#contact">Contact</HashLink></li>
-                </ul>
-            </nav>
-        </div>
+        <nav className={`navbar ${hasScrolled ? 'scrolled' : ''}`}>
+            <ul>
+                <li><HashLink smooth to="/#home">Home</HashLink></li>
+                <li><HashLink smooth to="/#about">About</HashLink></li>
+                <li><HashLink smooth to="/#resume">Resume</HashLink></li>
+                <li><HashLink smooth to="/#portfolio">Portfolio</HashLink></li>
+                <li><HashLink smooth to="/#contact">Contact</HashLink></li>
+            </ul>
+        </nav>
     );
 };
 
