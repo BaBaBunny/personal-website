@@ -191,7 +191,7 @@ body::before {
 
 .back-card {
   z-index: 1;
-  transform: scale(0.92) translate(35px, 25px); /*push back and down */
+  transform: scale(0.95) translate(30px, 20px); /*push back and down */
   opacity: 0.8;
   filter: brightness(0.6);
 }
@@ -204,10 +204,10 @@ body::before {
 
 @keyframes shuffleMove {
   0% {
-    transform: scale(0.92) translate(35px, 25px);
+    transform: scale(0.95) translate(30px, 20px);
   }
   50% {
-    transform: translateX(60%) translateY(-20px) scale(1.1) rotate(10deg);
+    transform: translateX(50%) translateY(-20px) scale(1.1) rotate(10deg);
   }
   100% {
     transform: translate(0,0) scale(1) rotate(0deg);
@@ -229,8 +229,8 @@ body::before {
         transform: translateX(-100px) scale(0.95) rotate(-2deg);
     }
     100% {
-        transform: scale(0.92) translate(35px, 25px);
-        filter: brightness(0.6);
+        transform: scale(0.95) translate(30px, 20px);
+        filter: brightness(1);
     }
 }
 
