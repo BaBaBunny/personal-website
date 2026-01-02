@@ -1,11 +1,52 @@
-import profilePic from './assets/bababunny.png';
+import React, {useState} from 'react';
+import img1 from './assets/bababunny.png';
+import img2 from './assets/lucas.png';
 
-function About() {
+
+const About = () => {
+    const images = [img1, img2]
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isShuffling, setIsShuffling] = useState(false);
+
+    const nextIndex = (activeIndex + 1) % images.length;
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            triggerShuffle();
+        }, 5000);
+
+        return () => clearInterval(interval); //cleanup on unmount
+    }, [activeIndex, isShuffling]);
+
+    const triggerShuffle = () => {
+        if (isShuffling) return; //prevents double clicks/triggers
+        setIsShuffling(true);
+        setTimeout(() => {
+            setActiveIndex((prev) => (prev + 1) %images.length);
+            setIsShuffling(false);
+        }, 600);
+    }
+
     return (
         <section id="about" className="page-section">
             <h1 className="title">About Me</h1>
             <div className="about-content">
-                <img src={profilePic} alt="Profile Picture" className="about-image"/>
+                <div className="card-stack" onClick={triggerShuffle}>
+                    {/* Bottom card */}
+                    <img
+                        src={images[nextIndex]}
+                        alt="next"
+                        className={`card back-card ${isShuffling ? 'shuffling' : ''}`}
+                    />
+                    {/* Top card */}
+                    <img
+                        src={images[activeIndex]}
+                        alt="current"
+                        className="card front-card"
+                    />
+                </div>
+
                 <div className="about-text">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -28,4 +69,4 @@ function About() {
     );
 }
 
-export default About
+export default About;
