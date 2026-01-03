@@ -334,6 +334,11 @@ body::before {
   overflow: hidden;
 }
 
+.resume-left, .resume-right {
+  display: flex;
+  flex-direction: column;
+}
+
 .edu-section {
   display: flex;
   flex-direction: column;
