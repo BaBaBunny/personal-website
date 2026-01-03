@@ -51,8 +51,8 @@ const About = () => {
                         Greetings & Salutations!
                     </p>
                     <p>
-                        I'm a 2nd-year Computer Science at Queen's (or as they call it: Computing).
-                        This website is actually the very first project I've ever built*!
+                        I'm a 2nd-year Computing student at Queen's University.
+                        This website is actually the very first project I've ever built (officially)!
                     </p>
                     <p>
                         <strong>I love making stuff.</strong> 
