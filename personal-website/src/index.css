@@ -159,6 +159,8 @@ body::before {
 
   text-transform: uppercase;
   color: black;
+  
+  border-bottom: 3px solid #333;
 }
 
 /* page seperator line styling */
@@ -185,6 +187,8 @@ body::before {
   flex: 1;
   display: flex;
   flex-direction: column;
+  
+  padding: 20px;
 }
 
 .about-content p {
@@ -208,6 +212,7 @@ body::before {
   perspective: 1000px; /*distortion*/
 
   margin-top: 20px;
+  margin-left: 20px;
 }
 
 /* the images */
