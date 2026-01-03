@@ -369,7 +369,7 @@ body::before {
 .edu-content {
   flex: 1; /* Takes up all remaining width */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .edu-header {
