@@ -375,14 +375,6 @@ body::before {
   width: 100%;
 }
 
-.edu-header {
-  display: flex;
-  justify-content: space-between; /* Pushes Date to the far right */
-  align-items: baseline; /* Aligns text on the text-line */
-  
-  margin-bottom: 0;
-}
-
 .edu-date {
   font-family: 'Nunito', sans-serif;
   font-size: 0.9rem;

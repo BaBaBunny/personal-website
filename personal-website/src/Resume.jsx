@@ -19,10 +19,8 @@ function Resume() {
                                 <img src={queensLogo} alt="Queen's University"/>
                             </div>
                             <div className="edu-content">
-                                <div className="edu-header">
-                                    <h3>Queen's University</h3>
-                                    <span className="edu-date">Fall 2024 - Present</span>
-                                </div>
+                                <h3>Queen's University</h3>
+                                <p className="edu-date">Fall 2024 - Present</p>
                                 <p className="edu-desc">Bachelor's of Computing (Honours) in Computing</p>
                             </div>
                             <div className="edu-logo">

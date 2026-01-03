@@ -55,7 +55,7 @@ const About = () => {
                         This website is actually the very first project I've ever built (officially)!
                     </p>
                     <p>
-                        <strong>I love making stuff. </strong>
+                        <strong>I like making stuff. </strong>
                         Whether it's digital art, physical art, or video editing and content creation for my YouTube channel, I love the creative process.
                         I play the guitar and violin! And I'm also a huge film guy.
                         I love movies (and other forms of visual media).
