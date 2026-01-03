@@ -15,22 +15,24 @@ function Resume() {
                     <div className="resume-top">
                         <h2>Education</h2>
                         <div className="edu-section">
-                            <div className="edu-logo">
-                                <img src={queensLogo} alt="Queen's University"/>
+                            <div className="edu-card">
+                                <div className="edu-logo">
+                                    <img src={queensLogo} alt="Queen's University"/>
+                                </div>
+                                <div className="edu-header">
+                                    <h3>Queen's University</h3>
+                                    <span className="edu-date">Fall 2024 - Present</span>
+                                </div>
+                                <p className="edu-desc">Bachelor's of Computing (Honours) in Computing</p>
+                                <div className="edu-logo">
+                                    <img src={laurelHeightsLogo} alt="Laurel Heights Secondary School"/>
+                                </div>
+                                <div className="edu-header">
+                                    <h3>Laurel Heights Secondary School</h3>
+                                    <span className="edu-date">September 2020 - June 2024</span>
+                                </div>
+                                <p className="edu-desc">Secondary School</p>
                             </div>
-                            <div className="edu-header">
-                                <h3>Queen's University</h3>
-                                <span className="edu-date">Fall 2024 - Present</span>
-                            </div>
-                            <p className="edu-desc">Bachelor's of Computing (Honours) in Computing</p>
-                            <div className="edu-logo">
-                                <img src={laurelHeightsLogo} alt="Laurel Heights Secondary School"/>
-                            </div>
-                            <div className="edu-header">
-                                <h3>Laurel Heights Secondary School</h3>
-                                <span className="edu-date">September 2020 - June 2024</span>
-                            </div>
-                            <p className="edu-desc">Secondary School</p>
                         </div>
                     </div>
                     <div className="resume-bottom">

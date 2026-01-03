@@ -140,7 +140,7 @@ export const Contact = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/www.linkedin.com/in/bababunny" target="_blank" rel="noreferrer">
+                            <a href="https://www.linkedin.com/in/bababunny" target="_blank" rel="noreferrer">
                                 LinkedIn
                             </a>
                         </li>
