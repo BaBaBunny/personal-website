@@ -350,7 +350,7 @@ body::before {
 .edu-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
 }
 
@@ -358,7 +358,7 @@ body::before {
   display: flex;
   flex-direction: row;
   align-items: flex-start; /*aligns at top*/
-  gap: 20px;
+  gap: 5px;
   width: 100%;
 }
 
@@ -381,9 +381,17 @@ body::before {
   width: 100%;
 }
 
+.edu-content h3 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: black;
+}
+
 .edu-date {
   font-family: 'Nunito', sans-serif;
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: #333;
   font-weight: 300;
 }
