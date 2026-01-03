@@ -369,7 +369,7 @@ body::before {
 .edu-content {
   flex: 1; /* Takes up all remaining width */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   gap: 20px;
   width: 100%;
