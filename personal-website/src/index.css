@@ -347,14 +347,6 @@ body::before {
   gap: 20px;
 }
 
-.edu-card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  width: 100%;
-}
-
 .edu-section {
   display: flex;
   flex-direction: column;
@@ -378,6 +370,9 @@ body::before {
   flex: 1; /* Takes up all remaining width */
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
 }
 
 .edu-header {
