@@ -39,9 +39,18 @@ function Resume() {
                         </div>
                     </div>
         
-                    <div className="resume-bottom">
-                        <h2>Skills & Software</h2>
-                        <p>Software I know how to use & Skills</p>
+                    <div className="skills-section">
+                        <h2>Skills</h2>
+                        <ul className="skills-list">
+                            <li>Web Development - JavaScript, React, HTML, CSS</li>
+                            <li>Programming Languages - Python, Java, C</li>
+                            <li>VS Code for as Text Editor, Figma for UI</li>
+                            <li>Game Development - Unity</li>
+                            <li>DaVinci Resolve for video production</li>
+                            <li>Blender for 3D assets & animations</li>
+                            <li>Krita or any drawing softwares</li>
+                            <li>Pixlr or any photo editing/creation softwares</li>
+                        </ul>
                     </div> 
                 </div>
             </div>

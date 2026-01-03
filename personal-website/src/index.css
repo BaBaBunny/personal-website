@@ -402,11 +402,30 @@ body::before {
   margin-bottom: 5px;  
 }
 
-.resume-bottom {
+.skills-section {
   flex: 1;
   margin: 20px;
 }
 
+.skills-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.skills-list li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.skills-list li:marker {
+  color: #555;
+}
+
+/* PORTFOLIO PAGE */
 .portfolio-grid {
   display: flex;
   flex-direction: row;
