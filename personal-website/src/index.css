@@ -349,15 +349,14 @@ body::before {
 
 .edu-section {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: flex-start;
-  margin-bottom: 30px;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
 
 .edu-logo img {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
 
   background-color: white;
@@ -377,13 +376,14 @@ body::before {
   display: flex;
   justify-content: space-between; /* Pushes Date to the far right */
   align-items: baseline; /* Aligns text on the text-line */
-  margin-bottom: 5px;
+  
+  margin-bottom: 0;
 }
 
 .edu-date {
   font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  color: #333;
+  font-size: 0.9rem;
+  color: #666;
   font-weight: 600;
 }
 
@@ -391,7 +391,10 @@ body::before {
   font-family: 'Nunito', sans-serif;
   font-size: 1.05rem;
   color: #333;
-  margin: 0 0 10px 0;
+
+  margin-top: 2px; 
+  margin-bottom: 5px; 
+  line-height: 1.2;
 }
 
 .resume-top, .resume-bottom {

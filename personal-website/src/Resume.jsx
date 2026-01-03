@@ -24,13 +24,13 @@ function Resume() {
                             </div>
                             <p className="edu-desc">Bachelor's of Computing (Honours) in Computing</p>
                             <div className="edu-logo">
-                                <img src={queensLogo} alt="Queen's University"/>
+                                <img src={laurelHeightsLogo} alt="Laurel Heights Secondary School"/>
                             </div>
                             <div className="edu-header">
-                                <h3>Queen's University</h3>
-                                <span className="edu-date">Fall 2024 - Present</span>
+                                <h3>Laurel Heights Secondary School</h3>
+                                <span className="edu-date">September 2020 - June 2024</span>
                             </div>
-                            <p className="edu-desc">highschool</p>
+                            <p className="edu-desc">Secondary School</p>
                         </div>
                     </div>
                     <div className="resume-bottom">
@@ -41,6 +41,6 @@ function Resume() {
             </div>
         </section>
     );
-}
+};
 
-export default Resume
+export default Resume;
