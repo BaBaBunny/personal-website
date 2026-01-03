@@ -382,7 +382,7 @@ body::before {
 }
 
 .edu-content h3 {
-  margin: 0;
+  margin-left: 10px;
   font-family: 'Nunito', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
@@ -391,30 +391,31 @@ body::before {
 
 .edu-date {
   font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
+  font-size: 0.7rem;
   color: #333;
   font-weight: 300;
 }
 
 .edu-desc {
   font-family: 'Nunito', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 500;
   color: #666;
 
   margin-top: 2px; 
-  margin-bottom: 5px; 
+  margin-bottom: 5px;  
 }
 
 .resume-top {
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 
 .resume-bottom {
   flex: 1;
-  padding: 20px;
-  overflow-y: auto;
+  margin: 20px;
 }
 
 .portfolio-grid {
