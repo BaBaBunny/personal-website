@@ -558,7 +558,7 @@ body::before {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(15px);
