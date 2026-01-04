@@ -14,6 +14,6 @@ function ArtsCrafts() {
             </section>
         </>
     );    
-}
+};
 
 export default ArtsCrafts;
