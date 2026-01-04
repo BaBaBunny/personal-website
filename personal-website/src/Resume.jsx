@@ -8,9 +8,16 @@ function Resume() {
             <div className="resume-grid">
                 <div className="resume-left">
                     <h2>Experience</h2>
-                    <p>N/A, not found.</p>
-                    <p>Status: homeless</p>
-                    <p>Please hire me.</p>
+                    <ul className="exp-list">
+                        <li>please hire me</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
                 <div className="resume-right">
                     <div className="edu-section">

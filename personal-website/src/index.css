@@ -343,14 +343,32 @@ body::before {
   height: 100%;
 }
 
-.resume-right h2 {
+.resume-left, .resume-right h2 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1.6rem;
   border-bottom: 3px solid rgba(0,0,0,0.1);
 
+  font-family: 'Nunito', sans-serif;
+
   padding-bottom: 5px;
   margin-bottom: 10px;
+}
+
+.exp-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.exp-list li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
 }
 
 .edu-section {
@@ -423,14 +441,10 @@ body::before {
 
 .skills-list li {
   font-family: 'Nunito', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333;
   line-height: 1.2;
   margin-bottom: 8px;
-}
-
-.skills-list li:marker {
-  color: #555;
 }
 
 /* PORTFOLIO PAGE */
