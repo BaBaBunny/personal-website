@@ -134,7 +134,7 @@ export const Contact = () => {
                                 rel="noopener noreferrer" 
                                 className="social-btn github"
                             >
-                                <i className="fa-brands fa-github"></i> GitHub
+                                <i className="fa-brands fa-github"></i>GitHub
                             </a>
                         </li>
                         <li>
@@ -143,7 +143,7 @@ export const Contact = () => {
                                 rel="noopener noreferrer" 
                                 className="social-btn linkedin"
                             >
-                                <i className="fa-brands fa-linkedin"></i> LinkedIn
+                                <i className="fa-brands fa-linkedin"></i>LinkedIn
                             </a>
                         </li>
                         <li>
@@ -152,7 +152,7 @@ export const Contact = () => {
                                 rel="noopener noreferrer" 
                                 className="social-btn instagram"
                             >
-                                <i className="fa-brands fa-instagram"></i> Instagram
+                                <i className="fa-brands fa-instagram"></i>Instagram
                             </a>
                         </li>
                         <li>

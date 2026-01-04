@@ -122,9 +122,9 @@ body::before {
 }
 
 .back-button {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+  position: fixed;
+  top: 25px;
+  left: 40px;
 
   width: 50px;
   height: 50px;
@@ -145,7 +145,7 @@ body::before {
   text-decoration: none;
 
   transition: all 0.3s ease;
-  z-index: 10;
+  z-index: 2000;
 }
 
 .back-button:hover {
@@ -656,7 +656,7 @@ body::before {
 .send-button {
   width: 80%;
   padding: 15px;
-  margin-top: 10px;
+  margin: 10px auto;
 
   background-color: rgba(255,255,255,0.3);
   backdrop-filter: blur(10px);
@@ -773,7 +773,7 @@ body::before {
 
 .socials-btn i{
   font-size: 1.4rem;
-  gap: 5px;
+  margin-right: 5px;
 }
 
 .social-btn.github:hover {
