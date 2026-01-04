@@ -24,7 +24,7 @@ const NavBar = () => {
     }, []);
 
     const isMainPage = location.pathname === "/";
-    const navbarClass = (!isMainPage || scrolled) ? 'navbar scrolled' : 'navbar';
+    const navbarClass = (!isMainPage || hasScrolled) ? 'navbar scrolled' : 'navbar';
 
     return(
         <nav className={navbarClass}>
