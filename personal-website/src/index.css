@@ -544,6 +544,15 @@ body::before {
   align-items: stretch; /*stretch inputs to fill width*/
 }
 
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    flex: 1;
+}
+
 .contact-right {
   flex: 1;
   display: flex;
@@ -551,30 +560,41 @@ body::before {
   justify-content: flex-start;
   align-items: center;
 
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 
+  padding: 40px 30px;
   margin: 20px;
 
   height: auto;
-  min-height: 400px;
+  min-height: 500px;
+  width: 100%
 }
 
 .contact-right h2 {
-  font-family: "montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333;
+
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  border-bottom: 3px solid #333;
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
 .contact-right p {
-  font-family: "open sans", sans-serif;
-  font-size: 1rem;
-  line-height: 1;
-  color: #333;
-  margin: 5px auto;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+  font-style: italic;
 }
 
 .contact-right ul li a{
@@ -591,7 +611,7 @@ body::before {
   font-weight: 700;
 
   border: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 6px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 5px black;
   transition: all 0.2s ease;
 }
 
@@ -602,13 +622,45 @@ body::before {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.socials-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.socials-list li {
+  width: 100%;
+}
+
+.socials-btn i{
+  font-size: 1.4rem;
+}
+
+.social-btn.github:hover {
+  background-color: #4c00ff;
+  color: white;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.social-btn.linkedin:hover {
+  background-color: #0077b5;
+  color: white;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
+}
+
+.social-btn.instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
+  border-color: transparent;
 }
 
 .form-box {

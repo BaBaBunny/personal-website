@@ -132,24 +132,44 @@ export const Contact = () => {
                 {/* right column */}
                 <div className="contact-right">
                     <h2>Socials</h2>
-                    <p>All my active socials:</p>
-                    <ul>
+                    <p>Here is where you'll find me digitally!</p>
+                    <ul className="socials-list">
                         <li>
-                            <a href="https://github.com/BaBaBunny" target="_blank" rel="noreferrer">
-                                GitHub
+                            <a href="https://github.com/BaBaBunny" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                classname="social-btn github"
+                            >
+                                <i className="fa-brands fa-github"></i>GitHub
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/bababunny" target="_blank" rel="noreferrer">
-                                LinkedIn
+                            <a href="https://www.linkedin.com/in/bababunny" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                classname="social-btn linkedin"
+                            >
+                                <i className="fa-brands fa-linkedin"></i>LinkedIn
                             </a>
                         </li>
                         <li>
-                            <a href="https://instagram.com/at_bababunny" target="_blank" rel="noreferrer">
-                                Instagram
+                            <a href="https://instagram.com/at_bababunny" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                classname="social-btn instagram"
+                            >
+                                <i className="fa-brands fa-instagram"></i>Instagram
                             </a>
                         </li>
-                        
+                        <li>
+                            <a href="https://youtube.ca/bababunny"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-btn youtube"
+                            >
+                                <i className="fa-brands fa-youtube"></i>YouTube
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
