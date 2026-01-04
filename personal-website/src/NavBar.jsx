@@ -1,8 +1,11 @@
-import { HashLink } from "react-router-hash-link";
+import {HashLink} from "react-router-hash-link";
 import React, {useState, useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
 
 const NavBar = () => {
     const [hasScrolled, setHasScrolled] = useState(false);
+
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,6 +22,9 @@ const NavBar = () => {
             window.removeEventListener('scroll', handleScroll)
         }
     }, []);
+
+    const isMainPage = location.pathname="/";
+    const navbarClass = (!isMainPage || scrolled) ? 'navbar scrolled' : 'navbar';
 
     return(
         <nav className={`navbar ${hasScrolled ? 'scrolled' : ''}`}>
