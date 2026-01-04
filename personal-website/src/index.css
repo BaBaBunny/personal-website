@@ -300,7 +300,7 @@ body::before {
 }
 
 .home-text {
-  font-family: "montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 8rem;
   text-transform: uppercase;
@@ -485,7 +485,7 @@ body::before {
 }
 
 .portfolio-grid h2 {
-  font-family: "montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin-top: 0;
   font-size: 1.5rem;
   color: #000;
@@ -495,7 +495,7 @@ body::before {
 }
 
 .portfolio-grid p {
-  font-family: "open sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1rem;
   line-height: 1;
   color: #333;
@@ -540,7 +540,7 @@ body::before {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    
+
     gap: 40px;
     margin-top: 0;
 }
@@ -587,7 +587,7 @@ body::before {
   font-size: 2rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #333;
 
   margin-top: 0;
@@ -663,6 +663,13 @@ body::before {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
   border-color: transparent;
+}
+
+.social-btn.youtube:hover {
+  background-color: red;
+  color: white;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .form-box {
