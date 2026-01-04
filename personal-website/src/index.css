@@ -334,13 +334,23 @@ body::before {
   overflow: hidden;
 }
 
-.resume-left, .resume-right {
+.resume-right {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 
   height: 100%;
+}
+
+.resume-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+  padding-left: 20px;
 }
 
 .resume-left h2, .resume-right h2 {
@@ -354,7 +364,7 @@ body::before {
   padding-bottom: 5px;
   margin-bottom: 10px;
 
-  width: 80%;
+  width: 90%;
 }
 
 .exp-list {
