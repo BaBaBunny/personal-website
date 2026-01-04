@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 function Projects() {
     return (
         <section className="page-section">
-            <Link to="/" className="back-button">
+            <Link to="/#portfolio" className="back-button">
                 <i className="fa solid fa-xmark"></i>
             </Link>
             <h1 className="title">Projects</h1>
