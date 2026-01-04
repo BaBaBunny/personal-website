@@ -343,7 +343,7 @@ body::before {
   height: 100%;
 }
 
-.resume-left, .resume-right h2 {
+.resume-left h2, .resume-right h2 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1.6rem;
