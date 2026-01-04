@@ -111,21 +111,15 @@ export const Contact = () => {
                             ></textarea>
                         </div>
 
-                        <button type="submit" className="send-button" disabled={status === 'sending'}>
-                            {status === 'sending' ? 'Sending...' : 'Send'}
+                        <button type="submit"
+                            className={`send-button ${status}`}
+                            disabled={status === 'sending' || status === 'success'}
+                        >
+                            {status === 'sending' ? 'Sending...' :
+                            status === 'success' ? 'Sent!' :
+                            status === 'error' ? 'Failed, Try Again' :
+                            'Send'}
                         </button>
-
-                        {status === 'success' && (
-                            <p style={{color: 'green', marginTop: '10px'}}>
-                                Message sent successfully!
-                            </p>
-                        )}
-
-                        {status === 'error' && (
-                            <p style={{color: 'red', marginTop: '10px'}}>
-                                Failed to send. Please try again.
-                            </p>
-                        )}
                     </form>
                 </div>
 
