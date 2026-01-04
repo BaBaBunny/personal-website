@@ -156,7 +156,7 @@ export const Contact = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="https://youtube.ca/bababunny"
+                            <a href="https://youtube.ca/@bababunny"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="social-btn youtube"
