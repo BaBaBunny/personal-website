@@ -152,10 +152,12 @@ body::before {
 
 .fading {
   opacity: 0;
-  transform: translateY(20vh);
+  transform: translateY(20vh);  
   visibility: hidden;
   transition: opacity 0.8s ease-out, transform 1.2s ease-out;
   will-change: opacity, visibility; /*lets system know earlier*/
+
+  min-height: 50px;
 }
 
 .fading.visible {
@@ -682,7 +684,7 @@ body::before {
 
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .send-button:hover {

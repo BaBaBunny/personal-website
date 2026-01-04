@@ -11,7 +11,7 @@ export default function Fading({children}) {
                 //If it leaves screen, set visible to false (fade out)
                 setIsVisible(entry.isIntersecting);
             });
-        });
+        }, {threshold: 0.1});
 
         const {current} = domRef;
         if (current) observer.observe(current);
