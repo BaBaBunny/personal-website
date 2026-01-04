@@ -26,14 +26,17 @@ function App() {
               <hr className='divider'/>
               <About />
             </Fading>
+            
             <Fading>
               <hr className='divider'/>
               <Resume />  
             </Fading>
+
             <Fading>
               <hr className='divider'/>
               <Portfolio />
             </Fading>
+
             <Fading>
               <hr className='divider'/>
               <Contact />

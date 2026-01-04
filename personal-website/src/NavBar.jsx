@@ -23,11 +23,11 @@ const NavBar = () => {
         }
     }, []);
 
-    const isMainPage = location.pathname="/";
+    const isMainPage = location.pathname === "/";
     const navbarClass = (!isMainPage || scrolled) ? 'navbar scrolled' : 'navbar';
 
     return(
-        <nav className={`navbar ${hasScrolled ? 'scrolled' : ''}`}>
+        <nav className={navbarClass}>
             <ul>
                 <li><HashLink smooth to="/#home">Home</HashLink></li>
                 <li><HashLink smooth to="/#about">About</HashLink></li>
