@@ -118,7 +118,7 @@ body::before {
 
 .back-button {
   position: fixed;
-  top: 25px;
+  top: 5px;
   left: 30px;
 
   width: 50px;
