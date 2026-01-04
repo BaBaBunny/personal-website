@@ -353,6 +353,8 @@ body::before {
 
   padding-bottom: 5px;
   margin-bottom: 10px;
+
+  width: 80%;
 }
 
 .exp-list {
