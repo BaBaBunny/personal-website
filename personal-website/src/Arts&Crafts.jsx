@@ -1,5 +1,5 @@
 import React from 'react';
-import {HasLink as Link} from 'react-router-hash-link';
+import {HashLink as Link} from 'react-router-hash-link';
 
 function ArtsCrafts() {
     return (
