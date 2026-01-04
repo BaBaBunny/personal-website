@@ -523,6 +523,15 @@ body::before {
 }
 
 /* Contact Page */
+#contact .title {
+  margin-bottom: 5px;
+}
+
+#contact p {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
 .contact-box {
     width: 100%;
     max-width: 1000px;
@@ -530,10 +539,10 @@ body::before {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-center;
+    justify-content: center;
     
     gap: 40px;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .contact-left {
@@ -569,7 +578,7 @@ body::before {
   margin: 20px;
 
   height: auto;
-  min-height: 500px;
+  min-height: 400px;
   width: 100%
 }
 

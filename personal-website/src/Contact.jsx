@@ -55,7 +55,7 @@ export const Contact = () => {
     return (
         <section id="contact" className="page-section">
             <h1 className="title">Contact</h1>
-            <p>get in and touch me</p>
+            <p>Get in contact with me!</p>
 
             <div className="contact-box">
                 <div className="contact-left">
@@ -138,27 +138,27 @@ export const Contact = () => {
                             <a href="https://github.com/BaBaBunny" 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                classname="social-btn github"
+                                className="social-btn github"
                             >
-                                <i className="fa-brands fa-github"></i>GitHub
+                                <i className="fa-brands fa-github"></i> GitHub
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/bababunny" 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                classname="social-btn linkedin"
+                                className="social-btn linkedin"
                             >
-                                <i className="fa-brands fa-linkedin"></i>LinkedIn
+                                <i className="fa-brands fa-linkedin"></i> LinkedIn
                             </a>
                         </li>
                         <li>
                             <a href="https://instagram.com/at_bababunny" 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                classname="social-btn instagram"
+                                className="social-btn instagram"
                             >
-                                <i className="fa-brands fa-instagram"></i>Instagram
+                                <i className="fa-brands fa-instagram"></i> Instagram
                             </a>
                         </li>
                         <li>
@@ -167,7 +167,7 @@ export const Contact = () => {
                                 rel="noopener noreferrer"
                                 className="social-btn youtube"
                             >
-                                <i className="fa-brands fa-youtube"></i>YouTube
+                                <i className="fa-brands fa-youtube"></i> YouTube
                             </a>
                         </li>
                     </ul>
