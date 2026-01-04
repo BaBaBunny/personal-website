@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 function Home(){
-    const wordList = ["BABABUNNY", "MASSIVE", "WELCOME", "67", "CINEMA", "DEVELOPER"];
+    const wordList = ["BABABUNNY", "MASSIVE", "WELCOME"];
     const [currentWord, setCurrentWord] = useState(0);
 
     useEffect(() => {
@@ -14,7 +14,7 @@ function Home(){
                 
                 return newWord;
             })
-        }, 4000);
+        }, 6000);
 
         return () => clearInterval(interval);
     }, []);

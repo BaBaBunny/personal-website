@@ -55,7 +55,7 @@ export const Contact = () => {
     return (
         <section id="contact" className="page-section">
             <h1 className="title">Contact</h1>
-            <p>Get in contact with me!</p>
+            <p>Reach Out & Get in Touch!</p>
 
             <div className="contact-box">
                 <div className="contact-left">

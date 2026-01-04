@@ -1,10 +1,15 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 function Projects() {
     return (
-        <div className="page-section">
-            <h1>Projects</h1>
-        </div>
+        <section className="page-section">
+            <Link to="/" className="back-button">
+                <i className="fa solid fa-xmark"></i>
+            </Link>
+            <h1 className="title">Projects</h1>
+            <p>Here is where you'll find of my program-related creations.</p>
+        </section>
     );    
 }
 
