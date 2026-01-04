@@ -571,7 +571,9 @@ body::before {
   text-align: left;
   width: 100%;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  border: 2px solid rgba(0,0,0,0.7);
 }
 
 .form-box label {
@@ -593,7 +595,7 @@ body::before {
 
   background-color: rgba(255, 255, 255, 0.7); /* Slightly see-through white */
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.8);
+  border: 2px solid rgba(225, 225, 225, 0.8);
   border-radius: 15px;
 
   font-size: 1rem;
@@ -619,27 +621,33 @@ body::before {
   padding: 15px;
   margin-top: 20px;
 
-  background-color: #333;
-  color: white;
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  color: #333;
 
-  border: none;
+  border: 2px solid rgba(255,255,255,0.6);
   border-radius: 50px;
 
   font-family: 'Nunito', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 
   cursor: pointer;
-  transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .submit-btn:hover {
-    background-color: #000;
+    background-color: rgba(255,255,255,0.6);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-color: #333;
+}
+
+.send-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .send-button:disabled {
@@ -727,6 +735,7 @@ body::before {
 
 .socials-btn i{
   font-size: 1.4rem;
+  gap: 5px;
 }
 
 .social-btn.github:hover {
