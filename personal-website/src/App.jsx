@@ -1,14 +1,14 @@
-import { Routes, Route } from 'react-router-dom';
-import NavBar from './NavBar.jsx';
-import Home from './Home.jsx';
+import { Route, Routes } from 'react-router-dom';
 import About from './About.jsx';
-import Resume from './Resume.jsx';
-import Portfolio from './Portfolio.jsx';
-import Contact from './Contact.jsx';
-import Projects from './Projects.jsx';
 import ArtsCrafts from './Arts&Crafts.jsx';
+import Contact from './Contact.jsx';
 import Fading from './Fading.jsx';
+import Home from './Home.jsx';
 import './index.css';
+import NavBar from './NavBar.jsx';
+import Portfolio from './Portfolio.jsx';
+import Projects from './Projects.jsx';
+import Resume from './Resume.jsx';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       { /* NavBar stays on all pages */}
       <NavBar />
       <Routes>
-        /* main page */
+        {/* main page */}
         <Route path="/" element={
           <>
             <Fading>
@@ -29,7 +29,7 @@ function App() {
             
             <Fading>
               <hr className='divider'/>
-              <Resume />  
+              <Resume />
             </Fading>
 
             <Fading>
