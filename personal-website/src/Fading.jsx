@@ -25,7 +25,7 @@ export default function Fading({children}) {
         <div
             className={`fading ${isVisible ? 'visible' : ''}`}
             ref={domRef}
-            // style={{ minHeight: '50px', width: '100%' }} /*to make sure observer can see*/
+            style={{ minHeight: '50px', width: '100%' }} /*to make sure observer can see*/
         >
             {children}
         </div>
