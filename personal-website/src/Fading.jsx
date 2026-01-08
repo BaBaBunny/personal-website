@@ -23,7 +23,7 @@ export default function Fading({children}) {
 
     return (
         <div
-            className={`fade-in-section ${isVisible ? 'visible' : ''}`}
+            className={`fading ${isVisible ? 'visible' : ''}`}
             ref={domRef}
             // style={{ minHeight: '50px', width: '100%' }} /*to make sure observer can see*/
         >
