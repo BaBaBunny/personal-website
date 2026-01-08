@@ -1,12 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Fading({children}) {
     const [isVisible, setIsVisible] = useState(false);
     const domRef = useRef();
 
     useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
                 //If it's on screen (isIntersecting), set visible to true
                 //If it leaves screen, set visible to false (fade out)
                 setIsVisible(entry.isIntersecting);
