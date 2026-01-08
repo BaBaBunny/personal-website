@@ -19,9 +19,7 @@ function App() {
         {/* main page */}
         <Route path="/" element={
           <>
-            <Fading>
               <Home />
-            </Fading>
             <Fading>
               <hr className='divider'/>
               <About />
