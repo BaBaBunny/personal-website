@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import { useEffect, useState } from "react";
+import Fading from './Fading';
 
 function Home(){
     const wordList = ["BABABUNNY", "MASSIVE", "WELCOME"];
@@ -21,11 +22,13 @@ function Home(){
 
     return(
         <section id="home" className = "home-section">
-            <h1 key={currentWord} className="home-text">
-                {wordList[currentWord]}
-            </h1>
+            <Fading>
+                <h1 key={currentWord} className="home-text">
+                    {wordList[currentWord]}
+                </h1>
+            </Fading>
         </section>
     );
-}
+};
 
-export default Home
+export default Home;
