@@ -156,13 +156,14 @@ body::before {
   visibility: hidden;
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
   will-change: opacity, visibility; /*lets system know earlier*/
-
+  visibility: hidden;
   min-height: 50px;
 }
 
 .fading.visible {
   opacity: 1;
   transform: none;
+  visibility: visible;
 }
 
 /* page styling */
