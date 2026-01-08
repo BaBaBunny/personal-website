@@ -30,7 +30,7 @@ const About = () => {
 
     return (
         <section id="about" className="page-section">
-            <Fading>
+            {/* <Fading> */}
             <h1 className="title">About Me</h1>
             <div className="about-content">
                 <div className="card-stack" onClick={triggerShuffle}>
@@ -72,7 +72,7 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            </Fading>
+            {/* </Fading> */}
         </section>
     );
 }
