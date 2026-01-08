@@ -152,7 +152,7 @@ body::before {
 
 .fading {
   opacity: 0;
-  transform: translateY(40px);  
+  transform: translateY(15px);  
   visibility: hidden;
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
   will-change: opacity, visibility; /*lets system know earlier*/
