@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import About from './About.jsx';
 import ArtsCrafts from './Arts&Crafts.jsx';
 import Contact from './Contact.jsx';
+import DarkMode from './DarMode.jsx';
 import Fading from './Fading.jsx';
 import Home from './Home.jsx';
 import './index.css';
@@ -15,6 +16,7 @@ function App() {
     <div className="app-container">
       { /* NavBar stays on all pages */}
       <NavBar />
+      <DarkMode/>
       <Routes>
         {/* main page */}
         <Route path="/" element={

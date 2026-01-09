@@ -123,12 +123,13 @@ body::before {
   width: 100%;
   padding: 20px 0;
 
-  background-color: rgba(255,255,255,0.7);
+  background-color: var(--glass-surface);
   backdrop-filter: blur(15px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 0;
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .navbar.scrolled {
@@ -142,7 +143,7 @@ body::before {
 /* removes links underline */
 .navbar a {
   text-decoration: none;
-  color: black;
+  color: var(--text-primary);
   font-family: 'Helvetica', sans-serif;
   font-size: 12px;
   letter-spacing: 6px;
@@ -158,6 +159,38 @@ body::before {
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+
+/* Button Styling */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  /* Use the variables we defined earlier */
+  background-color: var(--glass-surface); 
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  
+  cursor: pointer;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Text color variable ensures icon is black in day, white in night */
+  color: var(--text-primary); 
+  
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  background-color: var(--bg-white);
 }
 
 .back-button {
@@ -214,14 +247,14 @@ body::before {
 .page-section {
   background: linear-gradient(
     135deg, 
-    rgba(220, 235, 255, 0.4), /* Top-Left: Shiny & more opaque */
-    rgba(245, 245, 255, 0.2)  /* Bottom-Right: Clear & transparent */
+    var(--panel-gradient-1),
+    var(--panel-gradient-2)
   );
   backdrop-filter: blur(20px); /* blurs things behind panel */
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--glass-border);
   box-shadow:
     0 12px 40px 0 rgba(0, 0, 0, 0.25),            /* The Drop Shadow (Lift) */
-    inset 0 0 25px 0 rgba(255, 255, 255, 0.9);  /* The Inner Glow (Thickness) */;
+    inset 0 0 25px 0 rgba(255, 255, 255, 0.1);  /* The Inner Glow (Thickness) */;
   border-radius: 25px; /* rounded corners */
 
   width: 70vw;
@@ -250,16 +283,16 @@ body::before {
   text-align: center;
 
   text-transform: uppercase;
-  color: black;
+  color: var(--text-primary);
   
-  border-bottom: 3px solid #333;
+  border-bottom: 3px solid var(--text-primary);
 }
 
 /* page seperator line styling */
 .divider {
   border: none;
   height: 1px;
-  background-color: #b7b6b6;
+  background-color: var(--divider-color);
   width: 75%;
   margin: 0 auto;
 }
@@ -685,14 +718,14 @@ body::before {
   width: 100%;
   margin-top: 5px;
 
-  background-color: rgba(255, 255, 255, 0.7); /* Slightly see-through white */
+  background-color: var(--input-bg); /* Slightly see-through white */
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(225, 225, 225, 0.8);
+  border: 2px solid var(--glass-border);
   border-radius: 15px;
 
   font-size: 1rem;
   font-family: 'Nunito', sans-serif;
-  color: #333;
+  color: var(--text-primary);
 
   transition: all 0.3s ease;
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
@@ -701,8 +734,8 @@ body::before {
 /* Make the border highlight when you click inside */
 .form-box input:focus, 
 .form-box textarea:focus {
-  border-color: #333;
-  background-color: #ffffff;
+  border-color: var(--text-primary);
+  background-color: var(--bg-white);
   box-shadow: 0 5px 15px rgba(0,0,0,0,1);
 
   outline: none;
