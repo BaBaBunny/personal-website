@@ -1,18 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+:root {
+  --bg-mist: #e8ecf1;
+  --bg-white: #ffffff;
+  --bg-sun: #fff1c0;
+  
+  --star-color: 218, 165, 32;
+
+  --glass-surface: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.8);
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+
+  --divider-color: #b7b6b6;
+  --input-bg: rgba(255, 255, 255, 0.7);
+
+  --panel-gradient-1: rgba(245, 245, 255, 0.2);
+  --panel-gradient-2: rgba(245, 245, 255, 0.2);
+}
+
+[data-theme='dark'] {
+  --bg-mist: #0f172a;
+  --bg-white: #1e293b;
+  --bg-sun: #6366f1;
+
+  --star-color: 148, 163, 184;
+
+  --glass-surface: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --divider-color: #475569;
+  --input-bg: rgba(30, 41, 59, 0.7);
+
+  --panel-gradient-1: rgba(30, 41, 59, 0.7);
+  --panel-gradient-2: rgba(15, 23, 42, 0.4);
+}
+
+
 /* the canvas/background of the website */
 body {
   margin: 0;
-  background-color: rgb(202, 202, 202);
+  background-color: var(--bg-mist); /* Fallback */
   font-family: 'Open Sans', sans-serif;
+  color: var(--text-primary); /* Sets default text color */
+  transition: color 0.3s ease, background-color 0.3s ease;
 
   background: linear-gradient(
-    110deg,       
-    #e8ecf1 35%, /* "Silver Mist" (Cool, crisp, slightly blue-tinted gray) */
-    #ffffff 45%,  /* Pure White (Creates a "glow" around the beam) */
-    #fff1c0 50%,  /* "Sunlight" (A lively, buttery gold - brighter than before) */
-    #ffffff 55%,  /* Pure White (Glow) */
-    #e8ecf1 65%   /* Back to Silver Mist */
+    110deg,
+    var(--bg-mist) 35%,
+    var(--bg-white) 45%,
+    var(--bg-sun) 50%,
+    var(--bg-white) 55%,
+    var(--bg-mist) 65%
   );
 
   background-size: 400% 100%;
@@ -30,7 +75,7 @@ body::before {
   pointer-events: none;
   z-index: 0;
 
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 10% 20%, rgba(218, 165, 32, 0.6), transparent),
     radial-gradient(2px 2px at 35% 50%, rgba(218, 165, 32, 0.5), transparent),
     radial-gradient(3px 3px at 70% 15%, rgba(218, 165, 32, 0.7), transparent),
@@ -42,7 +87,6 @@ body::before {
 
   background-repeat: repeat;
   background-size: 300px 300px;
-
   animation: twinkle 5s ease-in-out infinite;
 }
 
