@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react';
 
 const DarkMode = () => {
-  // 1. Initialize state from LocalStorage or default to 'light'
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) return savedTheme;
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return 'dark';
+  }
+  return 'light';
   });
 
   // 2. Effect: Run this every time 'theme' changes
@@ -22,7 +27,7 @@ const DarkMode = () => {
   return (
     <button 
       onClick={toggle} 
-      className="theme-toggle-btn"
+      className="dark-mode-btn"
       aria-label="Toggle Dark Mode"
     >
       {/* React Logic: Show Sun if Dark, Moon if Light */}
