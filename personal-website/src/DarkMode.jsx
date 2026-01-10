@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 const DarkMode = () => {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) return savedTheme;
+    if (savedTheme) return savedTheme;
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    return 'dark';
-  }
-  return 'light';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
   });
 
   // 2. Effect: Run this every time 'theme' changes
