@@ -102,10 +102,20 @@ body::before {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
-  font-family: 'Montserrat', sans-serif;
-  
   scroll-margin-top: 100px;
+}
+
+.home-text {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+
+  position: relative;
+  bottom: 50px;
+
+  animation: textSideSlide 3.5s ease-in-out forwards;
 }
 
 /* navbar box itself */
@@ -144,7 +154,7 @@ body::before {
 .navbar a {
   text-decoration: none;
   color: var(--text-primary);
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 12px;
   letter-spacing: 6px;
   text-transform: uppercase;
@@ -164,9 +174,9 @@ body::before {
 /* Button Styling */
 .dark-mode-btn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
   height: 50px;
   border-radius: 50%;
   
@@ -189,7 +199,7 @@ body::before {
 }
 
 .dark-mode-btn:hover {
-  transform: scale(1.1) rotate(15deg);
+  transform: scale(1.2) rotate(15deg);
   background-color: var(--bg-white);
 }
 
@@ -203,7 +213,7 @@ body::before {
 
   border-radius: 50%;
 
-  background-color: rgba(255,255,255,0.6);
+  background-color: var(--bg-white);
   backdrop-filter: blur(5px);
   border: 2px solid rgba(255,255,255,0.8);
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
@@ -212,7 +222,7 @@ body::before {
   align-items: center;
   justify-content: center;
 
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.2rem;
   text-decoration: none;
 
@@ -221,10 +231,10 @@ body::before {
 }
 
 .back-button:hover {
-  background-color: white;
+  background-color: var(--glass-surface);
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  color: black;
+  color: var(--text-primary);
 }
 
 .fading {
@@ -321,7 +331,7 @@ body::before {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.4;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .about-content p:last-child {
@@ -424,19 +434,6 @@ body::before {
   }
 }
 
-.home-text {
-  font-family: "Nunito", sans-serif;
-  font-weight: 900;
-  font-size: 8rem;
-  text-transform: uppercase;
-  color: black;
-
-  position: relative;
-  bottom: 50px;
-
-  animation: textSideSlide 3.5s ease-in-out forwards;
-}
-
 @keyframes twinkle {
   0%, 100% {
     opacity: 0.4;
@@ -503,7 +500,7 @@ body::before {
 .exp-list li {
   font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.5;
   margin-bottom: 15px;
 }
@@ -529,7 +526,7 @@ body::before {
   height: 50px;
   object-fit: contain;
 
-  background-color: white;
+  background-color: var(--bg-white);
   border: 1px solid #e0e0e0;
   border-radius: 50%;
   padding: 5px;
@@ -541,7 +538,7 @@ body::before {
   font-family: 'Nunito', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: black;
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
@@ -549,7 +546,7 @@ body::before {
   white-space: nowrap;
   font-family: 'Nunito', sans-serif;
   font-size: 0.85rem;
-  color: #333;
+  color: (var(--text-secondary));
   font-weight: 400;
   margin: 0;
 }
@@ -558,7 +555,7 @@ body::before {
   font-family: 'Nunito', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #666;
+  color: var(--text-muted);
   margin: 0;
   line-height: 1.2;
 }
@@ -579,7 +576,7 @@ body::before {
 .skills-list li {
   font-family: 'Nunito', sans-serif;
   font-size: 1.1rem;
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.2;
   margin-bottom: 8px;
 }
@@ -615,7 +612,7 @@ body::before {
   margin-top: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #000;
+  color: var(--text-primary);
   border-bottom: 2px solid rgba(0,0,0,0.1); /* Subtle divider line */
   padding-bottom: 5px;
   margin: 5px;
@@ -625,7 +622,7 @@ body::before {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
   line-height: 1;
-  color: #333;
+  color: var(--text-secondary);
   margin: 5px;
 }
 
@@ -635,7 +632,7 @@ body::before {
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border: 3px solid #555;
+  border: 3px solid var(--glass-border);
 }
 
 .portfolio-image {
@@ -644,7 +641,7 @@ body::before {
 
   border-radius: 25px; /* rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border: 3px solid #555;
+  border: 3px solid var(--glass-border);
 
   margin-bottom: 20px;
 }
@@ -709,7 +706,7 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 1px;
   
-  color: #555;
+  color: var(--text-primary);
   margin-left: 5px;
 }
 
@@ -746,7 +743,7 @@ body::before {
   padding: 10px;
   align-self: center;
 
-  background-color: rgba(255,255,255,0.3);
+  background-color: var(--bg-white);
   backdrop-filter: blur(10px);
   color: #333;
 
@@ -765,10 +762,10 @@ body::before {
 }
 
 .send-button:hover {
-    background-color: rgba(255,255,255,0.6);
+    background-color: var(--glass-surface);
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    border-color: #333;
+    border-color: var(--glass-border);
 }
 
 .send-button:active {
