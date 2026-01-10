@@ -107,7 +107,7 @@ body::before {
 
 .home-text {
   font-family: "Nunito", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 8rem;
   text-transform: uppercase;
   color: var(--text-primary);
@@ -155,8 +155,9 @@ body::before {
   text-decoration: none;
   color: var(--text-primary);
   font-family: 'Nunito', sans-serif;
-  font-size: 12px;
-  letter-spacing: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
 
@@ -773,7 +774,13 @@ body::before {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.send-button:disabled {
+.send-button.success:disabled {
+    background-color: #21c737;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.send-button.error:disabled {
     background-color: #bc3737;
     cursor: not-allowed;
     transform: none;
