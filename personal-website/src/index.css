@@ -147,6 +147,7 @@ body::before {
   top: 12px;
   
   border-radius: 50px;
+  border: var(--glass-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -155,10 +156,14 @@ body::before {
   text-decoration: none;
   color: var(--text-primary);
   font-family: 'Nunito', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 5px;
   text-transform: uppercase;
+
+  display: inline-block;
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .navbar a:hover {
