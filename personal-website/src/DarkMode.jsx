@@ -13,11 +13,13 @@ const DarkMode = () => {
 
   // 2. Effect: Run this every time 'theme' changes
   useEffect(() => {
-    // This updates the HTML tag: <html data-theme="dark">
-    document.documentElement.setAttribute('data-theme', theme);
-    // This saves it to the browser's memory
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      setTheme(saved);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
+    }
+  }, []);
 
   // 3. The Toggle Function
   const toggle = () => {
