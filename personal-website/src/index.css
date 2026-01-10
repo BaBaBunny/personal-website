@@ -161,6 +161,12 @@ body::before {
   text-transform: uppercase;
 }
 
+.navbar a:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 10px var(--glass-border);
+  font-weight: 600;
+}
+
 /* styles the navbar */
 .navbar ul {
   list-style: none;
