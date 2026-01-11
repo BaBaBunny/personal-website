@@ -29,7 +29,7 @@
   --star-color: 148, 163, 184;
 
   --glass-surface: rgba(15, 23, 42, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
 
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
@@ -136,7 +136,7 @@ body::before {
   background-color: var(--glass-surface);
   backdrop-filter: blur(15px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  
+  border: var(--glass-border);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 0;
   border-bottom: 1px solid var(--glass-border);
