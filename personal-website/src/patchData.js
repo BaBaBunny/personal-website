@@ -15,4 +15,12 @@ export const patchnotes = [
             "Added dark mode with toggle button."
         ]
     },
+    {
+        version: "1.2",
+        date: "January 14th, 2026",
+        title: "Footer",
+        changes: [
+            "Added footer at the bottom of the page with copyright trademark, access to patch notes of the website, and a visitor counter that tracks one visitor per device."
+        ]
+    },
 ];

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { patchnotes } from './patchData';
-import PatchNotes from './Patchnotes';
+import PatchNotes from './PatchNotes';
 
 
 const Footer = () => {
