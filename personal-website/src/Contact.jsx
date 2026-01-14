@@ -1,5 +1,5 @@
-import React, {useState, useRef} from 'react';
 import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
 
 export const Contact = () => {
     const form = useRef();
@@ -134,13 +134,13 @@ export const Contact = () => {
                                 rel="noopener noreferrer" 
                                 className="social-btn github"
                             >
-                                <i className="fa-brands fa-github"></i>GitHub
+                                <i className="fa-brands fa-github"></i> GitHub
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/bababunny" 
                                 target="_blank" 
-                                rel="noopener noreferrer" 
+                                rel="noopener noreferrer"
                                 className="social-btn linkedin"
                             >
                                 <i className="fa-brands fa-linkedin"></i>LinkedIn

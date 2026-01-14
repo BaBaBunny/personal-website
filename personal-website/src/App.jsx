@@ -4,6 +4,7 @@ import ArtsCrafts from './Arts&Crafts.jsx';
 import Contact from './Contact.jsx';
 import DarkMode from './DarkMode.jsx';
 import Fading from './Fading.jsx';
+import Footer from './Footer.jsx';
 import Home from './Home.jsx';
 import './index.css';
 import NavBar from './NavBar.jsx';
@@ -40,6 +41,10 @@ function App() {
             <Fading>
               <hr className='divider'/>
               <Contact />
+            </Fading>
+
+            <Fading>
+              <Footer />
             </Fading>
           </>
         }/>
