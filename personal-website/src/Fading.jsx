@@ -7,11 +7,12 @@ export default function Fading({children}) {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                //If it's on screen (isIntersecting), set visible to true
-                //If it leaves screen, set visible to false (fade out)
-                setIsVisible(entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
             });
-        }, {threshold: 0.1});
+        }, {threshold: 0.05});
 
         const {current} = domRef;
         if (current) observer.observe(current);

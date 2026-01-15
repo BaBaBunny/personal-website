@@ -43,9 +43,7 @@ function App() {
               <Contact />
             </Fading>
 
-            <Fading>
-              <Footer />
-            </Fading>
+            <Footer />
           </>
         }/>
         {/* separate pages */}

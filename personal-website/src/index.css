@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+html {
+  scroll-padding-top: 15px;
+}
+
 :root {
   --bg-mist: #e8ecf1;
   --bg-white: #ffffff;
@@ -251,18 +255,16 @@ body::before {
 
 .fading {
   opacity: 0;
-  transform: translateY(20px);  
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  will-change: opacity, visibility; /*lets system know earlier*/
-  visibility: hidden;
-  min-height: 50px;
+  transition: opacity 1s ease-out;
+  transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: blur(8px);
 }
 
 .fading.visible {
   opacity: 1;
-  transform: none;
-  visibility: visible;
+  transform: translateY(0);
+  filter: blur(0);
 }
 
 /* page styling */
@@ -738,6 +740,8 @@ body::before {
 
   transition: all 0.3s ease;
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+
+  resize: none;
 }
 
 /* Make the border highlight when you click inside */
@@ -997,6 +1001,7 @@ body::before {
   z-index: 9999;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease;
@@ -1004,7 +1009,7 @@ body::before {
 
 .patch-content {
   width: 90%;
-  max-width: 600px;
+  max-width: 700px;
   padding: 20px;
 
   background-color: var(--glass-surface);
@@ -1025,7 +1030,7 @@ body::before {
 .patch-content h2 {
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -1045,8 +1050,8 @@ body::before {
 
 .patch-body {
   width: 90%;
-  max-width: 600px;
-  max-height: 60vh;
+  max-width: 700px;
+  max-height: 80vh;
   padding: 20px;
 
   background-color: var(--glass-surface);
@@ -1065,6 +1070,11 @@ body::before {
   margin-bottom: 20px;
 }
 
+.patch-entry:hover {
+  background-color: var(--input-bg);
+  cursor: pointer;
+}
+
 .patch-header {
   display: flex;
   justify-content: space-between;
@@ -1074,7 +1084,7 @@ body::before {
 
 .version-badge {
   background-color: var(--bg-sun);
-  color: #fff;
+  color: var(--text-primary);
   padding: 2px 8px;
   border-radius: 6px;
   font-size: 0.8rem;

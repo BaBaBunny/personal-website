@@ -9,6 +9,8 @@ const Footer = () => {
     const [visitCount, setVisitCount] = useState('...');
     const hasRan = useRef(false);
 
+    const latestVersion = patchnotes.length > 0 ? patchnotes[patchnotes.length - 1].version : "v1.0";
+
     useEffect(() => {
         if (hasRan.current) return;
         hasRan.current = true;
@@ -49,7 +51,7 @@ const Footer = () => {
 
                 <div className="footer-links">
                     <button className="footer-btn-link" onClick={() => setIsPatchOpen(true)}>
-                        Patch Notes v1.1
+                        Patch Notes: v{latestVersion}
                     </button>
                 </div>
 
