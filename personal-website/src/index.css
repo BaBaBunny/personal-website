@@ -2,6 +2,7 @@
 
 html {
   scroll-padding-top: 15px;
+  overflow-x: hidden; /* Prevents accidental horizontal scroll */
 }
 
 :root {
@@ -52,7 +53,7 @@ body {
   margin: 0;
   background-color: var(--bg-mist); /* Fallback */
   font-family: 'Open Sans', sans-serif;
-  color: var(--text-primary); /* Sets default text color */
+  color: var(--text-primary); 
   transition: color 0.3s ease, background-color 0.3s ease;
 
   background: linear-gradient(
@@ -105,17 +106,18 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* changed to min-height for safety */
   scroll-margin-top: 100px;
+  padding: 0 20px;
 }
 
 .home-text {
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  font-size: 8rem;
+  font-size: clamp(3rem, 10vw, 12rem); /* Adjusted for better scaling */
   text-transform: uppercase;
   color: var(--text-primary);
-
+  text-align: center;
   position: relative;
   bottom: 50px;
 
@@ -126,7 +128,7 @@ body::before {
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 2; /* keeps navbar floating on top of other elements */
+  z-index: 999; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,23 +137,21 @@ body::before {
   right: 0;
   margin: 0 auto;
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0; /* Changed from fixed height to padding */
 
   background-color: var(--panel-gradient-1);
   backdrop-filter: blur(15px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border: var(--glass-border);
+
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 0;
   border-bottom: 1px solid var(--glass-border);
 }
 
 .navbar.scrolled {
-  width: 60%;
+  width: 60%; /* Will become 95% on mobile via media query */
   top: 12px;
-  
   border-radius: 50px;
-  border: var(--glass-border);
+  border: 1px solid var(--glass-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -160,20 +160,17 @@ body::before {
   text-decoration: none;
   color: var(--text-primary);
   font-family: 'Nunito', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 5px;
+  font-size: clamp(0.7rem, 0.9vw, 1.2rem); /* Tweaked for readability */
+  font-weight: 600;
+  letter-spacing: 2px;
   text-transform: uppercase;
-
   display: inline-block;
-
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .navbar a:hover {
   transform: scale(1.2);
   text-shadow: 0 0 10px var(--glass-border);
-  font-weight: 600;
 }
 
 /* styles the navbar */
@@ -184,33 +181,28 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: clamp(15px, 3vw, 50px);
+  flex-wrap: wrap; /* Allows wrapping on tiny screens */
 }
 
 /* Button Styling */
 .dark-mode-btn {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 30px;
+  right: 30px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  
-  /* Use the variables we defined earlier */
   background-color: var(--glass-surface); 
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  
   cursor: pointer;
   z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  /* Text color variable ensures icon is black in day, white in night */
   color: var(--text-primary); 
-  
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -221,27 +213,21 @@ body::before {
 
 .back-button {
   position: fixed;
-  top: 10px;
-  left: 25px;
-
-  width: 50px;
-  height: 50px;
-
+  top: 15px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-
   background-color: var(--bg-white);
   backdrop-filter: blur(5px);
   border: 2px solid rgba(255,255,255,0.8);
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: var(--text-primary);
   font-size: 1.2rem;
   text-decoration: none;
-
   transition: all 0.3s ease;
   z-index: 2000;
 }
@@ -255,7 +241,6 @@ body::before {
 
 .fading {
   opacity: 0;
-  transition: opacity 1s ease-out;
   transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   filter: blur(8px);
@@ -274,78 +259,75 @@ body::before {
     var(--panel-gradient-1),
     var(--panel-gradient-2)
   );
-  backdrop-filter: blur(20px); /* blurs things behind panel */
+  backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   box-shadow:
-    0 12px 40px 0 rgba(0, 0, 0, 0.25),            /* The Drop Shadow (Lift) */
-    inset 0 0 25px 0 rgba(255, 255, 255, 0.1);  /* The Inner Glow (Thickness) */;
-  border-radius: 25px; /* rounded corners */
+    0 12px 40px 0 rgba(0, 0, 0, 0.25),
+    inset 0 0 25px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
 
-  width: 70vw;
-  height: 80vh;
-  min-height: 500px;
-  margin: 20px auto; /* centers left/right automatically */
-  padding: 10px 25px 30px 30px; /*space inside panel */
-  scroll-margin-top: 85px; /* offset for sticky navbar */
+  /* Responsive Width Logic */
+  width: 70vw; 
+  /* Responsive Height Logic */
+  height: auto; 
+  min-height: 80vh;
+
+  margin: 40px auto;
+  padding: 30px;
+  scroll-margin-top: 100px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
   position: relative;
+  overflow: visible; /* Allows content to flow out if needed */
 }
 
 /* page title styling */
 .title {
+  font-size: clamp(2rem, 3vw, 3rem);
   font-family: "Nunito", sans-serif;
-  font-size: 2.2rem;
   font-weight: 700;
-  
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
-
   text-transform: uppercase;
   color: var(--text-primary);
-  
   border-bottom: 3px solid var(--text-primary);
 }
 
-/* page seperator line styling */
 .divider {
   border: none;
   height: 1px;
   background-color: var(--divider-color);
   width: 75%;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 }
 
 .about-content {
   display: flex;
-  flex-direction: row; /*side by side*/
-  justify-content: flex-start;
-  align-items: flex-start;
-
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
   width: 100%;
-  height: 100%;
 }
 
 .about-text {
   flex: 1;
   display: flex;
   flex-direction: column;
-  
-  padding: 20px;
+  padding: 10px;
 }
 
 .about-content p {
   font-family: 'Nunito', sans-serif;
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  line-height: 1.6;
   color: var(--text-primary);
+  margin-bottom: 15px;
 }
 
 .about-content p:last-child {
@@ -355,168 +337,117 @@ body::before {
 /* the card stack */
 .card-stack {
   position: relative;
-  width: 400px;
-  height: 550px;
-  flex-shrink: 0; /*prevents image squishing*/
-  perspective: 1000px; /*distortion*/
+  width: 350px;  /* Fixed base width */
+  height: 500px; /* Fixed base height */
+  flex-shrink: 0;
+  perspective: 1000px;
+  margin: 20px;
 
-  margin-top: 20px;
-  margin-left: 20px;
+
 }
 
-/* the images */
 .card {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-
+  object-fit: cover; /* Ensures image fills card */
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-
   transition: transform 0.3s ease;
+
+  object-fit: fill;
 }
 
-/* depth/animation for cards */
-.front-card {
-  z-index: 2;
-  transform: scale(1) translate(0,0);
-}
-
+/* Card Animations */
+.front-card { z-index: 2; transform: scale(1) translate(0,0); }
 .back-card {
   z-index: 1;
-  transform: scale(0.95) translate(30px, 20px); /*push back and down */
+  transform: scale(0.95) translate(30px, 20px);
   opacity: 0.8;
   filter: brightness(0.6);
 }
 
-/* shuffling animation */
 .back-card.shuffling {
   animation: shuffleMove 0.4s ease-in-out forwards;
   z-index: 3;
 }
-
-@keyframes shuffleMove {
-  0% {
-    transform: scale(0.95) translate(30px, 20px);
-    filter: brightness(1);
-  }
-  50% {
-    transform: translateX(50%) translateY(-20px) scale(1.1) rotate(10deg);
-  }
-  100% {
-    transform: translate(0,0) scale(1) rotate(0deg);
-  }
-}
-
 .front-card.yielding {
   animation: leftYield 0.4s ease-in-out forwards;
   z-index: 1;
 }
 
+@keyframes shuffleMove {
+  0% { transform: scale(0.95) translate(30px, 20px); filter: brightness(1); }
+  50% { transform: translateX(50%) translateY(-20px) scale(1.1) rotate(10deg); }
+  100% { transform: translate(0,0) scale(1) rotate(0deg); }
+}
+
 @keyframes leftYield {
-  0% {
-        transform: scale(1) translate(0,0);
-    }
-    50% {
-        transform: translateX(-100px) scale(0.95) rotate(-2deg);
-    }
-    100% {
-        transform: scale(0.95) translate(30px, 20px);
-        filter: brightness(0.6);
-    }
+  0% { transform: scale(1) translate(0,0); }
+  50% { transform: translateX(-100px) scale(0.95) rotate(-2deg); }
+  100% { transform: scale(0.95) translate(30px, 20px); filter: brightness(0.6); }
 }
 
 @keyframes textSideSlide {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  20% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  80% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
+  0% { opacity: 0; transform: translateX(-100px); }
+  20% { opacity: 1; transform: translateX(0); }
+  80% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(100px); }
 }
 
 @keyframes twinkle {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
 
+/* RESUME SECTION */
 .resume-grid {
   display: flex;
   flex-direction: row;
-  margin: 20px;
-
-  width: 100%;
-  height: 100%;
-
-  overflow: hidden;
+  margin: 20px 0;
+  width: 100%; 
+  height: auto;
 }
 
 .resume-right {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-
-  height: 100%;
 }
 
 .resume-left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-
-  height: 100%;
   padding-left: 20px;
 }
 
+/* Typography Clamps for Resume */
 .resume-left h2, .resume-right h2 {
   margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 600;
   border-bottom: 3px solid var(--divider-color);
-
   font-family: 'Nunito', sans-serif;
-
   padding-bottom: 5px;
-  margin-bottom: 10px;
-
   width: 90%;
 }
 
-.exp-list {
+.exp-list, .skills-list {
   list-style-type: disc;
   padding-left: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
-.exp-list li {
+.exp-list li, .skills-list li {
   font-family: 'Nunito', sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
   color: var(--text-primary);
   line-height: 1.5;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .edu-section {
@@ -531,15 +462,15 @@ body::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
 }
 
 .edu-logo img {
   width: 50px;
   height: 50px;
+  aspect-ratio: 1/1;
   object-fit: contain;
-
   background-color: var(--bg-white);
   border: 1px solid #e0e0e0;
   border-radius: 50%;
@@ -550,76 +481,45 @@ body::before {
 .edu-content h3 {
   margin: 0;
   font-family: 'Nunito', sans-serif;
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
 }
 
 .edu-date {
-  white-space: nowrap;
   font-family: 'Nunito', sans-serif;
-  font-size: 0.85rem;
-  color: (var(--text-secondary));
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  color: var(--text-secondary);
   font-weight: 400;
   margin: 0;
 }
 
 .edu-desc {
   font-family: 'Nunito', sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   font-weight: 500;
   color: var(--text-muted);
   margin: 0;
   line-height: 1.2;
 }
 
-.skills-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.skills-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.skills-list li {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.1rem;
-  color: var(--text-primary);
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-
 /* PORTFOLIO PAGE */
 .portfolio-grid {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-
+  gap: 30px;
   width: 100%;
   height: 100%;
-
-  overflow: hidden;
 }
 
-.portfolio-left {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.portfolio-right {
+.portfolio-left, .portfolio-right {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
 }
+
+.portfolio-right { padding-top: 15px; }
 
 .portfolio-grid h2 {
   font-family: "Nunito", sans-serif;
@@ -627,70 +527,46 @@ body::before {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
-  border-bottom: 2px solid var(--divider-color); /* Subtle divider line */
+  border-bottom: 2px solid var(--divider-color);
   padding-bottom: 5px;
-  margin: 5px;
+  margin: 5px 0 10px 0;
 }
 
 .portfolio-grid p {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.4;
   color: var(--text-secondary);
-  margin: 5px;
+  margin: 5px 0 20px 0;
 }
 
-.portfolio-featured {
+.portfolio-featured, .portfolio-image {
   width: 100%;
-  height: 440px;
-
-  border-radius: 25px; /* rounded corners */
+  height: auto;
+  aspect-ratio: 16 / 9; /* Keeps standard video/image shape */
+  object-fit: cover;
+  border-radius: 25px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border: 3px solid var(--glass-border);
-}
-
-.portfolio-image {
-  width: 90%;
-  height: 180px;
-
-  border-radius: 25px; /* rounded corners */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border: 3px solid var(--glass-border);
-
   margin-bottom: 20px;
 }
 
 /* Contact Page */
-#contact .title {
-  margin-bottom: 5px;
-}
-
-#contact p {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
-}
-
 .contact-box {
   width: 100%;
-  max-width: 1000px;
-
+  max-width: 1100px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-
   gap: 40px;
-  margin-top: 0;
 }
 
 .contact-left {
   flex: 1.5;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: stretch; /*stretch inputs to fill width*/
+  width: 100%;
 }
 
 .contact-form {
@@ -698,8 +574,6 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 15px;
-
-  flex: 1;
 }
 
 .form-box {
@@ -708,7 +582,6 @@ body::before {
   gap: 5px;
   text-align: left;
   width: 100%;
-
   margin-bottom: 10px;
 }
 
@@ -716,89 +589,58 @@ body::before {
   font-size: 0.85rem;
   font-weight: 700;
   font-family: 'Nunito', sans-serif;
-
   text-transform: uppercase;
   letter-spacing: 1px;
-  
   color: var(--text-primary);
   margin-left: 5px;
 }
 
 .form-box input, .form-box textarea {
-  padding: 12px 20px;
+  padding: 15px;
   width: 100%;
+  box-sizing: border-box; /* IMPORTANT: Keeps padding inside width */
   margin-top: 5px;
-
-  background-color: var(--input-bg); /* Slightly see-through white */
+  background-color: var(--input-bg);
   backdrop-filter: blur(10px);
   border: 2px solid var(--glass-border);
   border-radius: 15px;
-
   font-size: 1rem;
   font-family: 'Nunito', sans-serif;
   color: var(--text-primary);
-
   transition: all 0.3s ease;
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
-
-  resize: none;
+  resize: vertical;
 }
 
-/* Make the border highlight when you click inside */
-.form-box input:focus, 
-.form-box textarea:focus {
+.form-box input:focus, .form-box textarea:focus {
   border-color: var(--text-primary);
   background-color: var(--bg-white);
-  box-shadow: 0 5px 15px rgba(0,0,0,0,1);
-
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   outline: none;
 }
 
 .send-button {
-  width: 80%;
-  padding: 10px;
-  align-self: center;
-
+  width: 100%;
+  padding: 15px;
   background-color: var(--bg-white);
   backdrop-filter: blur(10px);
   color: var(--text-primary);
-
   border: 2px solid rgba(255,255,255,0.6);
   border-radius: 50px;
-
   font-family: 'Nunito', sans-serif;
   font-weight: 800;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .send-button:hover {
-    background-color: var(--glass-surface);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    border-color: var(--glass-border);
-}
-
-.send-button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.send-button.success:disabled {
-    background-color: #21c737;
-    cursor: not-allowed;
-    transform: none;
-}
-
-.send-button.error:disabled {
-    background-color: #bc3737;
-    cursor: not-allowed;
-    transform: none;
+  background-color: var(--glass-surface);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .contact-right {
@@ -807,19 +649,15 @@ body::before {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
   background-color: var(--glass-surface);
   backdrop-filter: blur(15px);
   border-radius: 25px;
   border: 1px solid var(--glass-border);
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-
   padding: 40px 30px;
-  margin: 20px;
-
   height: auto;
-  min-height: 400px;
-  width: 100%
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-right h2 {
@@ -829,36 +667,23 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-primary);
-
   margin-top: 0;
   margin-bottom: 5px;
-
   border-bottom: 3px solid var(--divider-color);
   padding-bottom: 5px;
-  display: inline-block;
-}
-
-.contact-right p {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-bottom: 40px;
-  font-style: italic;
 }
 
 .contact-right ul li a{
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 15px 20px;
-  text-decoration: none; /*removes underline*/
+  text-decoration: none;
   border-radius: 12px;
   background-color: var(--bg-white);
   color: var(--text-primary);
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
-
   border: 1px solid var(--glass-border);
   box-shadow: 0 6px 5px rgba(0,0,0,0.5);
   transition: all 0.2s ease;
@@ -869,80 +694,44 @@ body::before {
   padding: 0;
   margin: 0;
   width: 100%;
-
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
-.socials-list li i{
-  width: 30px;
-  display: flex;
-  justify-content:  center;
-  align-items: center;
-}
-
-.socials-btn i{
-  font-size: 1.4rem;
-  margin-right: 5px;
-}
-
-.social-btn.github:hover {
-  background-color: #4c00ff;
-  color: white;
+.social-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.social-btn.linkedin:hover {
-  background-color: #0077b5;
   color: white;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
 }
-
-.social-btn.instagram:hover {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  color: white;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
-  border-color: transparent;
-}
-
-.social-btn.youtube:hover {
-  background-color: red;
-  color: white;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
+.social-btn.github:hover { background-color: #4c00ff; }
+.social-btn.linkedin:hover { background-color: #0077b5; }
+.social-btn.instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.social-btn.youtube:hover { background-color: red; }
 
 /* --- GLASS FOOTER --- */
 .footer {
-  width: 74%;
-  left: 13%;
-  height: 15px;
-  padding: 20px 20px;
-  margin-top: 50px;
-  gap: 40px;
-
-  /* Glass Effect */
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  
   background-color: var(--glass-surface);
   backdrop-filter: blur(15px);
   border: 2px solid var(--glass-border);
-  border-bottom: none;
-  border-radius: 7px;
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative; 
   z-index: 10;
+  flex-wrap: wrap; /* Allows stacking on mobile */
+  gap: 20px;
 }
 
 .footer-content {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -950,189 +739,111 @@ body::before {
   gap: 15px;
 }
 
-.footer-text {
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.footer-text p:hover {
-  transform: scale(1.1);
-}
-
 .footer-links {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
-.footer-links a, 
-.footer-btn-link {
-  text-decoration: none;
+.footer-text, .footer-links a {
   font-family: 'Nunito', sans-serif;
   font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  transition: color 0.3s ease;
-  
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.footer-links a:hover,
-.footer-btn-link:hover {
-  color: var(--bg-sun);
-  transform: scale(1.1);
-}
-
-/* Patch Notes */
-.patch-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  backdrop-filter: blur(5px);
-  z-index: 9999;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 0.3s ease;
-}
-
-.patch-content {
-  width: 90%;
-  max-width: 700px;
-  padding: 20px;
-
-  background-color: var(--glass-surface);
-  border: 1px solid var(--glass-border);
-  border-bottom: 1px solid var(--divider-color);
-  border-radius: 20px 20px 0 0;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  color: var(--text-primary);
-  font-family: 'Nunito', sans-serif;
-
-  animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.patch-content h2 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 2rem;
   color: var(--text-secondary);
-  cursor: pointer;
-  transition: color 0,2s;
-  line-height: 1;
-}
-
-.close-btn:hover {
-  color: var(--text-primary);
-}
-
-.patch-body {
-  width: 90%;
-  max-width: 700px;
-  max-height: 80vh;
-  padding: 20px;
-
-  background-color: var(--glass-surface);
-  border: 1px solid var(--glass-border);
-  border-top: none;
-  border-radius: 0 0 20px 20px;
-
-  overflow-y: auto;
-  color: var(--text-primary);
-  font-family: 'Nunito', sans-serif;
-
-  animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.patch-entry {
-  margin-bottom: 20px;
-}
-
-.patch-entry:hover {
-  background-color: var(--input-bg);
-  cursor: pointer;
-}
-
-.patch-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.version-badge {
-  background-color: var(--bg-sun);
-  color: var(--text-primary);
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.patch-date {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.patch-title {
-  margin: 5px 0 10px 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.patch-list {
-  padding-left: 20px;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.patch-list li {
-  margin-bottom: 5px;
-}
-
-.patch-divider {
-  border: 0;
-  height: 1px;
-  background: var(--divider-color);
-  margin-top: 20px;
-}
-
-/* Animations */
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes scaleUp { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
-.visitor-count {
-  font-size: 0.85 rem;
-  opacity: 0.8;
-  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
   font-weight: 600;
-  color: #f33a3a;
 }
 
-.visitor-count:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  cursor: default;
+/* Patch Notes & Visitor Count (Kept mostly same) */
+.patch-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6); backdrop-filter: blur(5px);
+  z-index: 9999; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; animation: fadeIn 0.3s ease;
+}
+.patch-content, .patch-body {
+  width: 90%; max-width: 700px; background-color: var(--glass-surface);
+  border: 1px solid var(--glass-border); color: var(--text-primary);
+  font-family: 'Nunito', sans-serif;
+}
+.patch-content {
+  border-radius: 20px 20px 0 0; padding: 20px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.patch-body {
+  border-radius: 0 0 20px 20px; padding: 20px; max-height: 60vh; overflow-y: auto;
+}
+.close-btn { background: none; border: none; font-size: 2rem; cursor: pointer; color: var(--text-primary); }
+.visitor-count { font-weight: 600; color: #f33a3a; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS
+   (Styles for phones and tablets under 768px width)
+   ========================================================================== */
+@media screen and (max-width: 1000px) {
+
+  /* 1. Global Layout: Stack everything */
+  .about-content,
+  .resume-grid,
+  .portfolio-grid,
+  .contact-box,
+  .footer-content {
+    flex-direction: column !important; /* Forces vertical stacking */
+    align-items: center;
+  }
+
+  /* 2. Glass Panel fits the screen */
+  .page-section {
+    width: 90vw;       /* Wider on mobile */
+    min-height: auto;  /* Remove rigid height restrictions */
+    height: auto;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  /* 3. Hero Text Adjustment */
+  .home-text {
+    font-size: 15vw; /* Fluid text for "HI" */
+    bottom: 0;
+  }
+
+  /* 4. Navbar Fixes */
+  .navbar.scrolled { width: 95%; }
+  .navbar ul { gap: 15px; }
+  
+  /* 5. About Me Section */
+  .card-stack {
+    width: 100%; 
+    height: 400px;
+    margin: 0 0 30px 0;
+  }
+  .about-text { padding: 0; text-align: left; }
+
+  /* 6. Resume Fixes */
+  .resume-left, .resume-right {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  /* 7. Portfolio Fixes */
+  .portfolio-grid { flex-direction: column-reverse !important; }
+  .portfolio-image, .portfolio-featured { height: 250px; }
+
+  /* 8. Contact Form */
+  .contact-left, .contact-right { width: 100%; flex: none; }
+  .contact-right { margin-top: 20px; padding: 20px; }
+
+  /* 9. Buttons position */
+  .dark-mode-btn { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+  .back-button { top: 10px; left: 10px; width: 40px; height: 40px; }
+  
+  /* 10. Footer */
+  .footer { 
+    flex-direction: column; 
+    text-align: center; 
+    margin-bottom: 80px; /* Space for dark mode button */
+  }
+  .footer-links { justify-content: center; }
 }
