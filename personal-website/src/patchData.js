@@ -38,12 +38,12 @@ export const patchnotes = [
             "No longer able to scroll in main site while patchnotes page is up."
         ]
     },
-    {
-        version: "0.5",
-        date: "January 16th, 2026",
-        title: "Site Responsiveness",
-        changes: [
-            "Implemented basic site responsiveness so that any screen size is compatible."
-        ]
-    },
+    // {
+    //     version: "0.5",
+    //     date: "January 16th, 2026",
+    //     title: "Site Responsiveness",
+    //     changes: [
+    //         "Implemented basic site responsiveness so that any screen size is compatible."
+    //     ]
+    // },
 ];
