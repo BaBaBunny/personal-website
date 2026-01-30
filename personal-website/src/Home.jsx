@@ -21,9 +21,21 @@ function Home(){
 
     return(
         <section id="home" className = "home-section">
-                <h1 key={currentWord} className="home-text">
-                    {wordList[currentWord]}
-                </h1>
+                <div>
+                    <h1 key={currentWord} className="home-text">
+                        {wordList[currentWord]}
+                    </h1>
+                </div>
+                <div className="webring">
+                    <a href='https://queensu-webring.ca/#bababunny.vercel.app?nav=prev'>←</a>
+                    <a href='https://queensu-webring.ca/#bababunny.vercel.app' target='_blank'>
+                        <img
+                            src='https://queensu-webring.ca/assets/icons/cs/icon-blue.png'
+                            alt="Queen's Computing Webring"
+                        />
+                    </a>
+                    <a href='https://queensu-webring.ca/#bababunny.vercel.app?nav=next'>→</a>
+                </div>
         </section>
     );
 };

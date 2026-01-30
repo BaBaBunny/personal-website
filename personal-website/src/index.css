@@ -104,6 +104,7 @@ body::before {
 /* home styling */
 .home-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -120,9 +121,42 @@ body::before {
   position: relative;
   bottom: 50px;
 
+  margin: 0;
+
   animation: textSideSlide 3.5s ease-in-out forwards;
 }
 
+.webring {
+  margin-top: 20px;
+  display: flex;       /* Aligns arrows and image side-by-side */
+  align-items: center; /* Vertically centers them */
+  gap: 15px;           /* Spacing between items */
+  z-index: 10;
+}
+
+/* 2. The Image (Styling) */
+.webring img {
+  width: 100px;
+  height: auto;
+  opacity: 0.8;
+  
+  /* Optional: Smooth fade effect on hover */
+  transition: opacity 0.2s ease;
+}
+
+/* Optional: Make it brighter when you hover over it */
+.webring img:hover {
+  opacity: 1;
+}
+
+.webring a {
+  text-decoration: none;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+
+}
 /* navbar box itself */
 .navbar {
   position: sticky;
