@@ -29,9 +29,10 @@ function Home(){
                 <div className="webring">
                     <a href='https://queensu-webring.ca/#bababunny.vercel.app?nav=prev'>←</a>
                     <a href='https://queensu-webring.ca/#bababunny.vercel.app' target='_blank'>
-                        <img
-                            src='https://queensu-webring.ca/assets/icons/cs/icon-blue.png'
-                            alt="Queen's Computing Webring"
+                        <div
+                            className="webring-icon" 
+                            role="img" 
+                            aria-label="Queen's Computing Webring"
                         />
                     </a>
                     <a href='https://queensu-webring.ca/#bababunny.vercel.app?nav=next'>→</a>

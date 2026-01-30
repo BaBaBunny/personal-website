@@ -24,6 +24,8 @@ html {
 
   --panel-gradient-1: rgba(245, 245, 255, 0.2);
   --panel-gradient-2: rgba(245, 245, 255, 0.2);
+
+  --webring-img: url(https://queensu-webring.ca/assets/icons/cs/icon-blue.png);
 }
 
 [data-theme='dark'] {
@@ -45,6 +47,8 @@ html {
 
   --panel-gradient-1: rgba(30, 41, 59, 0.7);
   --panel-gradient-2: rgba(15, 23, 42, 0.4);
+
+  --webring-img: url(https://queensu-webring.ca/assets/icons/cs/icon-white.png);
 }
 
 
@@ -135,13 +139,22 @@ body::before {
 }
 
 /* 2. The Image (Styling) */
-.webring img {
-  width: 100px;
-  height: auto;
-  opacity: 0.8;
+.webring-icon {
+  /* This pulls the URL from your variable defined in the screenshot */
+  background-image: var(--webring-img);
   
-  /* Optional: Smooth fade effect on hover */
-  transition: opacity 0.2s ease;
+  /* Ensures the image scales correctly */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Background images need explicit size to show up */
+  width: 50px;
+  height: 50px;
+  
+  /* Keeps it inline like the original image */
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Optional: Make it brighter when you hover over it */
