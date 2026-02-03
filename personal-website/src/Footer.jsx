@@ -19,9 +19,10 @@ const Footer = () => {
         const key = 'visits';
         const storageKey = 'page_viewed';
 
+        const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
         const hasVisited = localStorage.getItem(storageKey);
 
-        if (!hasVisited) {
+        if (!hasVisited && !isLocal) {
             console.log("New visitor detected! Incrementing count...")
 
             localStorage.setItem(storageKey, 'true');

@@ -49,13 +49,21 @@ export const patchnotes = [
     {
         version: "1.4",
         date: "February 2nd, 2026",
-        title: "Visual Fixes + Mobile compatibility",
+        title: "Visual Changes + Mobile compatibility",
         changes: [
             "Reduced panel widths to make content more compact and comfortable to read.",
             "Reduced navbar width for above reason.",
             "Fixed footer being uncentered, as well as reduced width to match site.",
             "Made the site compatible with all screen sizes (for the most part).",
             "Removed shining light that was going across screen."
+        ]
+    },
+    {
+        version: "1.41",
+        date: "February 3rd, 2026",
+        title: "Fading Fixes",
+        changes: [
+            "Fixed fading when scrolling between panels so that it always fades rather than just once."
         ]
     },
 ];

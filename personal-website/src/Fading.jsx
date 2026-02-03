@@ -9,10 +9,11 @@ export default function Fading({children}) {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     setIsVisible(true);
-                    observer.unobserve(entry.target);
+                } else {
+                    setIsVisible(false);
                 }
             });
-        }, {threshold: 0.05});
+        }, {threshold: 0.1});
 
         const {current} = domRef;
         if (current) observer.observe(current);
