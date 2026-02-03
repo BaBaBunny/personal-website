@@ -23,7 +23,7 @@ body {
 :root {
   --bg-mist: #e8ecf1;
   --bg-white: #ffffff;
-  --bg-sun: #caa210;
+  --bg-sun: #ffd53c;
   
   --star-color: 218, 165, 32;
 
@@ -85,7 +85,7 @@ body {
   );
 
   background-size: 400% 100%;
-  animation: shimmer 8s linear infinite;
+  /* animation: shimmer 8s linear infinite; */
   background-attachment: fixed;
 }
 
@@ -976,14 +976,13 @@ body::before {
   width: 52.5vw;
   height: 15px;
   padding: 20px 20px;
-  margin: 20px auto 1px auto;
+  margin: 20px auto 0px auto;
   gap: 50px;
 
   /* Glass Effect */
   background-color: var(--glass-surface);
   backdrop-filter: blur(15px);
   border: 2px solid var(--glass-border);
-  border-bottom: none;
   border-radius: 7px;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
 
@@ -1078,7 +1077,7 @@ body::before {
   color: var(--text-primary);
   font-family: 'Nunito', sans-serif;
 
-  animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: scaleUp 0.s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .patch-content h2 {
@@ -1094,7 +1093,7 @@ body::before {
   font-size: 2rem;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: color 0,2s;
+  transition: color 0.1s;
   line-height: 1;
 }
 
@@ -1117,7 +1116,7 @@ body::before {
   color: var(--text-primary);
   font-family: 'Nunito', sans-serif;
 
-  animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: scaleUp 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .patch-entry {
@@ -1182,7 +1181,7 @@ body::before {
   opacity: 0.8;
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  color: #463a08;
+  color: var(--text-secondary);
 }
 
 .visitor-count:hover {

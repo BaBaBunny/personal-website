@@ -54,7 +54,8 @@ export const patchnotes = [
             "Reduced panel widths to make content more compact and comfortable to read.",
             "Reduced navbar width for above reason.",
             "Fixed footer being uncentered, as well as reduced width to match site.",
-            "Made the site compatible with all screen sizes (for the most part)."
+            "Made the site compatible with all screen sizes (for the most part).",
+            "Removed shining light that was going across screen."
         ]
     },
 ];
