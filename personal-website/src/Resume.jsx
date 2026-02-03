@@ -1,5 +1,5 @@
-import queensLogo from './assets/queens-logo.png'
-import laurelHeightsLogo from './assets/laurel-heights-logo.png'
+import laurelHeightsLogo from './assets/laurel-heights-logo.png';
+import queensLogo from './assets/queens-logo.png';
 
 function Resume() {
     return (
@@ -10,7 +10,7 @@ function Resume() {
                     <h2>Experience</h2>
                     <ul className="exp-list">
                         <li>please hire me</li>
-                        <li></li>
+                        <li>tbd...</li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -55,7 +55,7 @@ function Resume() {
                             <li>Game Development - Unity</li>
                             <li>DaVinci Resolve for video production</li>
                             <li>Blender for 3D assets & animations</li>
-                            <li>Krita or any drawing softwares</li>
+                            <li>Krita, Canva & any other drawing softwares</li>
                             <li>Pixlr or any photo editing/creation softwares</li>
                         </ul>
                     </div> 
