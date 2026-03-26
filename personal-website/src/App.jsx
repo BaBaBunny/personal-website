@@ -1,16 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
-import About from './About.jsx';
-import ArtsCrafts from './Arts&Crafts.jsx';
-import Contact from './Contact.jsx';
-import DarkMode from './DarkMode.jsx';
-import Fading from './Fading.jsx';
-import Footer from './Footer.jsx';
-import Home from './Home.jsx';
+import About from './About/About.jsx';
+import ArtsCrafts from './Portfolio/Arts&Crafts.jsx';
+import Contact from './Contact/Contact.jsx';
+import DarkMode from './DarkMode/DarkMode.jsx';
+import Fading from './Fading/Fading.jsx';
+import Footer from './Footer/Footer.jsx';
+import Home from './Home/Home.jsx';
 import './index.css';
-import NavBar from './NavBar.jsx';
-import Portfolio from './Portfolio.jsx';
-import Projects from './Projects.jsx';
-import Resume from './Resume.jsx';
+import NavBar from './NavBar/NavBar.jsx';
+import Portfolio from './Portfolio/Portfolio.jsx';
+import Projects from './Portfolio/Projects.jsx';
+import Resume from './Resume/Resume.jsx';
 
 function App() {
   return (

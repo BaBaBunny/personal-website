@@ -1,0 +1,148 @@
+.patch-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.patch-content {
+  width: 90%;
+  max-width: 700px;
+  padding: 20px;
+
+  background-color: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--divider-color);
+  border-radius: 20px 20px 0 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--text-primary);
+  font-family: 'Nunito', sans-serif;
+
+  animation: scaleUp 0.s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.patch-content h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.1s;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: var(--text-primary);
+}
+
+.patch-body {
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  padding: 20px;
+
+  background-color: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+
+  overflow-y: auto;
+  color: var(--text-primary);
+  font-family: 'Nunito', sans-serif;
+
+  animation: scaleUp 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.patch-entry {
+  margin-bottom: 20px;
+}
+
+.patch-entry:hover {
+  background-color: var(--input-bg);
+  cursor: pointer;
+}
+
+.patch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.version-badge {
+  background-color: var(--bg-sun);
+  color: var(--text-primary);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.patch-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.patch-title {
+  margin: 5px 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.patch-list {
+  padding-left: 20px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.patch-list li {
+  margin-bottom: 5px;
+}
+
+.patch-divider {
+  border: 0;
+  height: 1px;
+  background: var(--divider-color);
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

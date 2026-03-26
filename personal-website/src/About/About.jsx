@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import img1 from './assets/bababunny.png';
-import img2 from './assets/lucas.png';
+import img1 from '../assets/bababunny.png';
+import img2 from '../assets/lucas.png';
+import './About.css';
 
 const About = () => {
     const images = [img1, img2]
