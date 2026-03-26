@@ -1,16 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import About from './About/About.jsx';
-import ArtsCrafts from './Portfolio/Arts&Crafts.jsx';
-import Blender from './Portfolio/Blender.jsx';
 import Contact from './Contact/Contact.jsx';
-import ContentCreation from './Portfolio/Content-Creation.jsx';
-import CS from './Portfolio/CS-Projects.jsx';
 import DarkMode from './DarkMode/DarkMode.jsx';
 import Fading from './Fading/Fading.jsx';
 import Footer from './Footer/Footer.jsx';
 import Home from './Home/Home.jsx';
 import './index.css';
 import NavBar from './NavBar/NavBar.jsx';
+import ArtsCrafts from './Portfolio/Arts&Crafts.jsx';
+import Blender from './Portfolio/Blender.jsx';
+import ContentCreation from './Portfolio/Content-Creation.jsx';
+import CS from './Portfolio/CS-Projects/CS-Projects.jsx';
 import Portfolio from './Portfolio/Portfolio.jsx';
 import Resume from './Resume/Resume.jsx';
 

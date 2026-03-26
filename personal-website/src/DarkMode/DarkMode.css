@@ -61,7 +61,9 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
   cursor: pointer;
-  z-index: 3;
+  z-index: 10001;
+  pointer-events: auto;
+  touch-action: manipulation;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -66,4 +66,19 @@ export const patchnotes = [
             "Fixed fading when scrolling between panels so that it always fades rather than just once."
         ]
     },
+    {
+        version: "1.5",
+        date: "March 26th, 2026",
+        title: "Visual & Portfolio Updates",
+        changes: [
+            "Made about section images inverted when in dark mode.",
+            "Adjusted panel width.",
+            "Reorganized the portfolio page to have 4 sections.",
+            "Revamped the CS projects page as a gallery of projects with popups for details/images.",
+            "Project popup has check it out and github repo buttons, along with an image carousel.",
+            "Image carousel has infinite looping and you can drag to spin it.",
+            "Added 20/20/20 Rest Reminder project to CS projects page.",
+            "Made light/dark mode button able to be pressed even when popups are open."
+        ]
+    },
 ];

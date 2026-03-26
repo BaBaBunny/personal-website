@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { patchnotes } from '../patchData';
+import { patchnotes } from '../PatchNotes/patchData';
 import PatchNotes from '../PatchNotes/PatchNotes.jsx';
 import './Footer.css';
 
