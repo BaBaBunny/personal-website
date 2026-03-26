@@ -67,7 +67,7 @@ const About = () => {
                         And as a I learn and create more, I'm hoping that this site will grow into a library of wealth and knowledge.
                     </p>
                     <p>
-                        (As of January 2nd, 2025)
+                        (As of January 2nd, 2026)
                     </p>
                 </div>
             </div>

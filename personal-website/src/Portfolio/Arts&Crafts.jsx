@@ -10,7 +10,7 @@ function ArtsCrafts() {
             <section className="page-section">
                 
                 <h1 className="title">Arts & Crafts</h1>
-                <p>Here is where you'll find of my more artistic creations.</p>
+                <p>Here is where you'll find of my other creations/projects that I've worked on.</p>
             </section>
         </>
     );    

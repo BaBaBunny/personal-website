@@ -20,52 +20,6 @@ body {
   width: 100%;
 }
 
-:root {
-  --bg-mist: #e8ecf1;
-  --bg-white: #ffffff;
-  --bg-sun: #ffd53c;
-
-  --star-color: 218, 165, 32;
-
-  --glass-surface: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.8);
-
-  --text-primary: #1a1a1a;
-  --text-secondary: #333333;
-  --text-muted: #666666;
-
-  --divider-color: #b7b6b6;
-  --input-bg: rgba(255, 255, 255, 0.7);
-
-  --panel-gradient-1: rgba(245, 245, 255, 0.2);
-  --panel-gradient-2: rgba(245, 245, 255, 0.2);
-
-  --webring-img: url(https://queensu-webring.ca/assets/icons/cs/icon-blue.png);
-}
-
-[data-theme='dark'] {
-  --bg-mist: #0f172a;
-  --bg-white: #1e293b;
-  --bg-sun: #6366f1;
-
-  --star-color: 148, 163, 184;
-
-  --glass-surface: rgba(15, 23, 42, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.2);
-
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-
-  --divider-color: #475569;
-  --input-bg: rgba(30, 41, 59, 0.7);
-
-  --panel-gradient-1: rgba(30, 41, 59, 0.7);
-  --panel-gradient-2: rgba(15, 23, 42, 0.4);
-
-  --webring-img: url(https://queensu-webring.ca/assets/icons/cs/icon-white.png);
-}
-
 /* the canvas/background of the website */
 body {
   margin: 0;
@@ -126,9 +80,9 @@ body::before {
     inset 0 0 25px 0 rgba(255, 255, 255, 0.1);
   border-radius: 25px;
 
-  width: 52vw;
-  height: 82vh;
-  min-height: 400px;
+  width: 70vw;
+  height: auto;
+  min-height: auto;
   margin: 20px auto;
   padding: 10px 25px 20px 30px;
   scroll-margin-top: 85px;

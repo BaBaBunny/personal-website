@@ -8,21 +8,32 @@ function Portfolio() {
             <h1 className="title">Portfolio</h1>
             <div className="portfolio-grid">
                 <div className="portfolio-left">
-                    <h2>Current Projects</h2>
-                    <p className="subtitle">projects im currently working on</p>
-                    <img src={placeholder} alt="Placeholder" className="portfolio-featured"/>
-                </div>
-                <div className="portfolio-right">
                     <div className="portfolio-top">
-                        <h2>Program Related</h2>
+                        <h2>CS Projects</h2>
                         <p className="subtitle">any sort of projects related to programming</p>
-                        <Link to="/projects">
+                        <Link to="/cs-projects">
                             <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
                         </Link>
                     </div>
                     <div className="portfolio-bottom">
-                        <h2>Arts & Crafts</h2>
-                        <p className="subtitle">other projects not-related to programming</p>
+                        <h2>Blender Projects</h2>
+                        <p className="subtitle">3D modeling & animation related</p>
+                        <Link to="/blender">
+                            <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
+                        </Link>
+                    </div>
+                </div>
+                <div className="portfolio-right">
+                    <div className="portfolio-top">
+                        <h2>Content Creation</h2>
+                        <p className="subtitle">youtube, filmmaking & video editing related</p>
+                        <Link to="/content-creation">
+                            <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
+                        </Link>
+                    </div>
+                    <div className="portfolio-bottom">
+                        <h2>Arts n' Crafts</h2>
+                        <p className="subtitle">random side stuff I do</p>
                         <Link to="/arts-crafts">
                             <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
                         </Link>
