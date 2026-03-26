@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { patchnotes } from './patchData';
-import PatchNotes from './PatchNotes';
+import { patchnotes } from '../PatchNotes/patchData';
+import PatchNotes from '../PatchNotes/PatchNotes.jsx';
+import './Footer.css';
 
 
 const Footer = () => {

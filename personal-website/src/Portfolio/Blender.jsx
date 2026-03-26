@@ -1,7 +1,7 @@
 import React from 'react';
 import {HashLink as Link} from 'react-router-hash-link';
 
-function ArtsCrafts() {
+function Blender() {
     return (
         <>
             <Link to="/#portfolio" className="back-button">
@@ -9,11 +9,11 @@ function ArtsCrafts() {
             </Link>
             <section className="page-section">
                 
-                <h1 className="title">Arts & Crafts</h1>
-                <p>Here is where you'll find of my more artistic creations.</p>
+                <h1 className="title">Blender Projects</h1>
+                <p>Here is where you'll find my 3D modeling and animation projects.</p>
             </section>
         </>
     );    
 };
 
-export default ArtsCrafts;
+export default Blender;

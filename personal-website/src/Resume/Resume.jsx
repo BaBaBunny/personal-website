@@ -1,5 +1,6 @@
-import laurelHeightsLogo from './assets/laurel-heights-logo.png';
-import queensLogo from './assets/queens-logo.png';
+import laurelHeightsLogo from '../assets/laurel-heights-logo.png';
+import queensLogo from '../assets/queens-logo.png';
+import './Resume.css';
 
 function Resume() {
     return (

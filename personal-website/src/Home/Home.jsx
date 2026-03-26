@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './Home.css';
 
 function Home(){
     const wordList = ["BABABUNNY", "MASSIVE", "WELCOME"];

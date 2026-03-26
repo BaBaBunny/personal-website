@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './PatchNotes.css';
 
 const PatchEntry = ({patch, isLast}) => {
     const [isExpanded, setIsExpanded] = useState(false);

@@ -1,6 +1,7 @@
 import {HashLink} from "react-router-hash-link";
 import React, {useState, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = () => {
     const [hasScrolled, setHasScrolled] = useState(false);

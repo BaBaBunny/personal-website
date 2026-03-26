@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import './Fading.css';
 
 export default function Fading({children}) {
     const [isVisible, setIsVisible] = useState(false);

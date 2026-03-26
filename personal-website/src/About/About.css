@@ -1,0 +1,104 @@
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.about-content p {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.about-content p:last-child {
+  font-style: italic;
+}
+
+.card-stack {
+  position: relative;
+  width: 40%;
+  height: 550px;
+  flex-shrink: 0;
+
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: var(--about-image-invert);
+
+  transition: transform 0.3s ease;
+}
+
+.front-card {
+  z-index: 2;
+  transform: scale(1) translate(0, 0);
+}
+
+.back-card {
+  z-index: 1;
+  transform: scale(0.95) translate(30px, 20px);
+  opacity: 0.8;
+  filter: var(--about-image-invert) brightness(0.6);
+}
+
+.back-card.shuffling {
+  animation: shuffleMove 0.4s ease-in-out forwards;
+  z-index: 3;
+}
+
+.front-card.yielding {
+  animation: leftYield 0.4s ease-in-out forwards;
+  z-index: 1;
+}
+
+@keyframes shuffleMove {
+  0% {
+    transform: scale(0.95) translate(30px, 20px);
+    filter: var(--about-image-invert) brightness(1);
+  }
+  50% {
+    transform: translateX(50%) translateY(-20px) scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes leftYield {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: translateX(-100px) scale(0.95) rotate(-2deg);
+  }
+  100% {
+    transform: scale(0.95) translate(30px, 20px);
+    filter: var(--about-image-invert) brightness(0.6);
+  }
+}

@@ -1,0 +1,136 @@
+.resume-grid {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.resume-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+}
+
+.resume-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+  padding-left: 20px;
+}
+
+.resume-left h2,
+.resume-right h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 3px solid var(--divider-color);
+
+  font-family: 'Nunito', sans-serif;
+
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+
+  width: 90%;
+}
+
+.exp-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.exp-list li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.edu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.edu-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.edu-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+
+  background-color: var(--bg-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.edu-content h3 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.edu-date {
+  white-space: nowrap;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  color: (var(--text-secondary));
+  font-weight: 400;
+  margin: 0;
+}
+
+.edu-desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.skills-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.skills-list li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
