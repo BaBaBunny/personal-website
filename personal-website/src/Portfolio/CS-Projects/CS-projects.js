@@ -1,7 +1,7 @@
 import restReminderLogo from '../../assets/eyeHD.png';
 import restReminderLockup from '../../assets/lookaway.jpeg';
 import placeholderBanner from '../../assets/placeholder.jpg';
-import restReminderPopup from '../../assets/restReminderPopup.jpeg';
+import restReminderPopup from '../../assets/restreminderPopup.jpeg';
 
 export const csProjects = [
     {
