@@ -1,8 +1,32 @@
-import placeholder from '../assets/placeholder.jpg';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import placeholder from '../assets/placeholder.jpg';
+import { csProjects } from './CS-Projects/CS-projects.js';
 import './Portfolio.css';
 
 function Portfolio() {
+    const csGalleryImages = useMemo(() => {
+        const images = csProjects
+            .map((project) => project.banner)
+            .filter(Boolean);
+
+        return images.length ? [...new Set(images)] : [placeholder];
+    }, []);
+
+    const [csImageIndex, setCsImageIndex] = useState(0);
+
+    useEffect(() => {
+        if (csGalleryImages.length <= 1) return undefined;
+
+        const intervalId = setInterval(() => {
+            setCsImageIndex((prev) => (prev + 1) % csGalleryImages.length);
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, [csGalleryImages]);
+
+    const currentCsImage = csGalleryImages[csImageIndex] ?? placeholder;
+
     return (
         <section id = "portfolio" className = "page-section">
             <h1 className="title">Portfolio</h1>
@@ -12,7 +36,12 @@ function Portfolio() {
                         <h2>CS Projects</h2>
                         <p className="subtitle">any sort of projects related to programming</p>
                         <Link to="/cs-projects">
-                            <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
+                            <img
+                                key={csImageIndex}
+                                src={currentCsImage}
+                                alt="CS Projects preview"
+                                className="portfolio-image cs-portfolio-image"
+                            />
                         </Link>
                     </div>
                     <div className="portfolio-bottom">
