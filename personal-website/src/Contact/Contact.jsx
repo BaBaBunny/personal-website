@@ -165,6 +165,15 @@ export const Contact = () => {
                                 <i className="fa-brands fa-youtube"></i> YouTube
                             </a>
                         </li>
+                        <li>
+                            <a href="https://letterboxd.com/bababunny/" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="social-btn letterboxd"
+                            >
+                                <i className="fa-brands fa-letterboxd"></i> Letterboxd
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

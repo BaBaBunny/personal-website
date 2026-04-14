@@ -1,7 +1,8 @@
-import {HashLink} from "react-router-hash-link";
-import React, {useState, useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link";
 import './NavBar.css';
+import SpotifyWidget from './Spotify/SpotifyWidget';
 
 const NavBar = () => {
     const [hasScrolled, setHasScrolled] = useState(false);
@@ -36,6 +37,9 @@ const NavBar = () => {
                 <li><HashLink smooth to="/#portfolio">Portfolio</HashLink></li>
                 <li><HashLink smooth to="/#contact">Contact</HashLink></li>
             </ul>
+            <div className="navbar-widget-container">
+                <SpotifyWidget />
+            </div>
         </nav>
     );
 };

@@ -4,8 +4,14 @@ import './Resume.css';
 
 function Resume() {
     return (
-        <section id = "resume" className = "page-section">
-            <h1 className="title">Resume</h1>
+        <section id="resume" className="page-section">
+            <a href="https://docs.google.com/document/d/1JZEP4uQv_MWBkUA6Hmpah0GNI2xSC-pV0etKLs6u4o8/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="title"
+            >
+                Resume
+            </a>
             <div className="resume-grid">
                 <div className="resume-left">
                     <h2>Experience</h2>

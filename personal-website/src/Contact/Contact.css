@@ -260,3 +260,16 @@
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+.social-btn.letterboxd:hover {
+  background: linear-gradient(
+    90deg,
+    #00e054 0%,
+    #40bcf4 50%,
+    #ff8000 100%
+  );
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 128, 0, 0.35);
+  border-color: transparent;
+}

@@ -81,4 +81,14 @@ export const patchnotes = [
             "Made light/dark mode button able to be pressed even when popups are open."
         ]
     },
+    {
+        version: "1.51",
+        date: "April 14th, 2026",
+        title: "More Ways to Connect",
+        changes: [
+            "Added Letterboxd social to contact page.",
+            "Made resume title clickable to access resume.",
+            "Added Spotify widget to navbar (note css is wonky and will be fixed/polished in the future)."
+        ]
+    },
 ];

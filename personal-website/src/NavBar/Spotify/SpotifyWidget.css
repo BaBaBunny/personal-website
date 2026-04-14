@@ -1,0 +1,65 @@
+/* SpotifyWidget.css */
+.spotify-widget {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 1px solid var(--glass-border, rgba(255,255,255,0.1));
+  transition: all 0.3s ease;
+  max-width: 200px;
+}
+
+.spotify-widget:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.spotify-cover {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  animation: spin 12s linear infinite;
+}
+
+.spotify-cover.paused {
+  animation-play-state: paused;
+}
+
+.spotify-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.spotify-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1DB954;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify-title:hover {
+  text-decoration: underline;
+}
+
+.spotify-artist {
+  font-family: 'Nunito', sans-serif;
+  font-size: 9px;
+  color: var(--text-primary, #ccc);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
