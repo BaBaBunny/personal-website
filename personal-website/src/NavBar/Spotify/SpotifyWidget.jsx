@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import './SpotifyWidget.css';
 
-export default function SpotifyWidget() {
+export default function SpotifyWidget({ compact = false }) {
     const [song, setStong] = useState(null);
     const [loading, setLoading] = useState(true);
+    const spotifyProfileUrl = song?.profileUrl || "https://open.spotify.com/";
 
     useEffect(() => {
         const fetchSong = () => {
@@ -27,7 +28,49 @@ export default function SpotifyWidget() {
     }, []);
 
     if (!song || !song.isPlaying) {
-        return <p>not listening rn :|</p>;
+        if (compact) {
+            return (
+                <a
+                    href={spotifyProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="spotify-widget compact not-playing"
+                    aria-label="Open Spotify profile"
+                >
+                    <i className="fa-brands fa-spotify" aria-hidden="true"></i>
+                </a>
+            );
+        }
+
+        return (
+            <a
+                href={spotifyProfileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="spotify-widget not-playing"
+                aria-label="Open Spotify profile"
+            >
+                <i className="fa-brands fa-spotify" aria-hidden="true"></i>
+            </a>
+        );
+    }
+
+    if (compact) {
+        return (
+            <a
+                href={song.songUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="spotify-widget compact"
+                aria-label={`Now playing: ${song.title} by ${song.artist}`}
+            >
+                <img
+                    src={song.albumImageUrl}
+                    alt={song.album}
+                    className={`spotify-cover ${!song.isPlaying ? 'paused' : ''}`}
+                />
+            </a>
+        );
     }
 
     return (
@@ -41,7 +84,7 @@ export default function SpotifyWidget() {
                 <a href={song.songUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="spotify-song-link"
+                    className="spotify-title"
                 >
                     {song.title}
                 </a>

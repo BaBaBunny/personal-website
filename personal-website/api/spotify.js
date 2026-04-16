@@ -20,6 +20,24 @@ export default async function handler(req, res) {
     const tokenData = await tokenResponse.json();
     const access_token = tokenData.access_token;
 
+    let profileUrl = "https://open.spotify.com/";
+
+    try {
+        const profileResponse = await fetch("https://api.spotify.com/v1/me", {
+            headers: {
+                Authorization: `Bearer ${access_token}`,
+            },
+        });
+
+        if (profileResponse.ok) {
+            const profile = await profileResponse.json();
+            profileUrl = profile?.external_urls?.spotify || profileUrl;
+        }
+    }
+    catch (err) {
+        console.error("Error fetching Spotify profile:", err);
+    }
+
     const songResponse = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
         headers: {
             Authorization: `Bearer ${access_token}`,
@@ -27,13 +45,19 @@ export default async function handler(req, res) {
     });
 
     if (songResponse.status === 204 || songResponse.status > 400) {
-        return res.status(200).json({ isPlaying: false });
+        return res.status(200).json({
+            isPlaying: false,
+            profileUrl,
+        });
     }
 
     const song = await songResponse.json();
 
     if (song.item == null) {
-        return res.status(200).json({ isPlaying: false });
+        return res.status(200).json({
+            isPlaying: false,
+            profileUrl,
+        });
     }
 
     const isPlaying = song.is_playing;
@@ -50,5 +74,6 @@ export default async function handler(req, res) {
         album,
         albumImageUrl,
         songUrl,
+        profileUrl,
     });
 }

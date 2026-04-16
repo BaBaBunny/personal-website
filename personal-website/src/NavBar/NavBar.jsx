@@ -26,7 +26,8 @@ const NavBar = () => {
     }, []);
 
     const isMainPage = location.pathname === "/";
-    const navbarClass = (!isMainPage || hasScrolled) ? 'navbar scrolled' : 'navbar';
+    const isIslandMode = !isMainPage || hasScrolled;
+    const navbarClass = isIslandMode ? 'navbar scrolled' : 'navbar';
 
     return(
         <nav className={navbarClass}>
@@ -38,7 +39,7 @@ const NavBar = () => {
                 <li><HashLink smooth to="/#contact">Contact</HashLink></li>
             </ul>
             <div className="navbar-widget-container">
-                <SpotifyWidget />
+                <SpotifyWidget compact={isIslandMode} />
             </div>
         </nav>
     );

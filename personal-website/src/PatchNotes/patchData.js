@@ -91,4 +91,15 @@ export const patchnotes = [
             "Added Spotify widget to navbar (note css is wonky and will be fixed/polished in the future)."
         ]
     },
+    {
+        version: "1.52",
+        date: "April 15th, 2026",
+        title: "Spotify Widget UI Improvements",
+        changes: [
+            "Polished Spotify widget UI, like text, spacing, etc...",
+            "When in island navbar, widget turns into a spotify logo or song thumbnail, rather than displaying the full widget.",
+            "Changed spotify widget for when not listening to music to spotify logo link that redirects to my profile.",
+            "Added subtle border for dark mode island navbar."
+        ]
+    },
 ];
