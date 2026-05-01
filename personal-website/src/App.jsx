@@ -8,7 +8,7 @@ import Home from './Home/Home.jsx';
 import './index.css';
 import NavBar from './NavBar/NavBar.jsx';
 import ArtsCrafts from './Portfolio/Arts&Crafts.jsx';
-import Blender from './Portfolio/Blender.jsx';
+import Blender from './Portfolio/Blender/Blender.jsx';
 import ContentCreation from './Portfolio/Content-Creation.jsx';
 import CS from './Portfolio/CS-Projects/CS-Projects.jsx';
 import Portfolio from './Portfolio/Portfolio.jsx';

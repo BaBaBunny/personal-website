@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import placeholder from '../assets/placeholder.jpg';
+import { blenderProjects } from './Blender/Blender.js';
+import { ModelViewer } from './Blender/Blender.jsx';
 import { csProjects } from './CS-Projects/CS-projects.js';
 import './Portfolio.css';
 
@@ -12,6 +14,8 @@ function Portfolio() {
 
         return images.length ? [...new Set(images)] : [placeholder];
     }, []);
+
+    const blenderPreview = blenderProjects.find((project) => project.modelSrc);
 
     const [csImageIndex, setCsImageIndex] = useState(0);
 
@@ -48,7 +52,15 @@ function Portfolio() {
                         <h2>Blender Projects</h2>
                         <p className="subtitle">3D modeling & animation related</p>
                         <Link to="/blender">
-                            <img src={placeholder} alt="Placeholder" className="portfolio-image"/>
+                            {blenderPreview?.modelSrc ? (
+                                <ModelViewer
+                                    src={blenderPreview.modelSrc}
+                                    scale={blenderPreview.modelScale}
+                                    className="portfolio-image"
+                                />
+                            ) : (
+                                <img src={placeholder} alt="Placeholder" className="portfolio-image" />
+                            )}
                         </Link>
                     </div>
                 </div>

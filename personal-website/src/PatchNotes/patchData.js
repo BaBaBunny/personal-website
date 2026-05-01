@@ -102,4 +102,14 @@ export const patchnotes = [
             "Added subtle border for dark mode island navbar."
         ]
     },
+    {
+        version: "1.6",
+        date: "April 30th, 2026",
+        title: "Blender Portfolio Update & 3js Integration",
+        changes: [
+            "Blender projects section now has viewable blender projects.",
+            "Fixed other title pages also having highlights that was only meant for the resume title.",
+            "Added a metal shield model for temporary placeholder.",
+        ]
+    },
 ];

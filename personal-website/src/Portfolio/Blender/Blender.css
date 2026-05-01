@@ -1,0 +1,218 @@
+.blender-p {
+	margin: 0;
+	color: var(--text-secondary);
+	font-family: 'Nunito', sans-serif;
+}
+
+.blender-project-grid {
+	width: 100%;
+	margin-top: 12px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.blender-folder-panel {
+	border: 2px solid var(--glass-border);
+	border-radius: 16px;
+	background: linear-gradient(145deg, var(--glass-surface), var(--panel-gradient-2));
+	color: var(--text-primary);
+	font-family: 'Nunito', sans-serif;
+	padding: 12px;
+	text-align: left;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blender-model-viewer {
+	width: 100%;
+	border-radius: 12px;
+	border: 1px solid var(--glass-border);
+	background: radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.45)),
+		linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.25));
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 14px 26px rgba(0, 0, 0, 0.32);
+	overflow: hidden;
+	position: relative;
+}
+
+.blender-model-viewer.is-static {
+	pointer-events: none;
+}
+
+.blender-model-viewer canvas {
+	width: 100% !important;
+	height: 100% !important;
+	display: block;
+	filter: saturate(1.08) contrast(1.05);
+}
+
+.blender-model-viewer--card {
+	height: 170px;
+	margin-bottom: 10px;
+}
+
+.blender-model-viewer--popup {
+	height: 260px;
+	margin: 0 0 12px 0;
+}
+
+.blender-model-fallback {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-secondary);
+	font-size: 0.95rem;
+	font-family: 'Nunito', sans-serif;
+	text-align: center;
+	padding: 12px;
+}
+
+.blender-folder-panel h2 {
+	margin: 0 0 8px 0;
+}
+
+.blender-folder-panel p {
+	margin: 0;
+	color: var(--text-secondary);
+	line-height: 1.45;
+}
+
+.blender-folder-panel:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blender-folder-top {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 8px;
+	color: var(--text-secondary);
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+.blender-popup-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.55);
+	backdrop-filter: blur(4px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.blender-popup-card {
+	width: 60vw;
+	height: auto;
+	max-height: 85vh;
+	overflow-y: auto;
+	background-color: var(--glass-surface);
+	border: 1px solid var(--glass-border);
+	border-radius: 15px;
+	padding: 20px;
+	color: var(--text-primary);
+	font-family: 'Nunito', sans-serif;
+}
+
+.blender-popup-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 8px;
+}
+
+.blender-popup-header h2 {
+	margin: 0;
+	line-height: 1.2;
+}
+
+.blender-popup-title-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.blender-popup-project-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 12px;
+	border-radius: 999px;
+	border: 1px solid var(--glass-border);
+	background: var(--bg-sun);
+	color: var(--text-primary);
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: inherit;
+	outline: none;
+	transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.blender-popup-project-link:hover {
+	transform: translateY(-1px);
+	filter: brightness(1.03);
+}
+
+.blender-popup-repo-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	padding: 6px 12px;
+	border-radius: 999px;
+	border: 1px solid var(--glass-border);
+	background: var(--glass-surface);
+	color: var(--text-primary);
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: inherit;
+	outline: none;
+	transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.blender-popup-repo-button:hover {
+	transform: translateY(-1px);
+	filter: brightness(1.05);
+}
+
+.blender-popup-close {
+	border: none;
+	background: none;
+	color: var(--text-secondary);
+	font-size: 2rem;
+	line-height: 1;
+	cursor: pointer;
+	margin-top: 0;
+	padding: 0;
+}
+
+
+.blender-popup-description {
+	margin: 12px 0 8px 0;
+	color: var(--text-secondary);
+	line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+	.blender-project-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.blender-model-viewer--card {
+		height: 160px;
+	}
+
+	.blender-model-viewer--popup {
+		height: 220px;
+	}
+}

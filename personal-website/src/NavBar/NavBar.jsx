@@ -8,10 +8,13 @@ const NavBar = () => {
     const [hasScrolled, setHasScrolled] = useState(false);
 
     const location = useLocation();
+    const isMainPage = location.pathname === "/";
 
     useEffect(() => {
+        const islandTriggerY = isMainPage ? 75 : 0;
+
         const handleScroll = () => {
-            if (window.scrollY > 75) {
+            if (window.scrollY > islandTriggerY) {
                 setHasScrolled(true);
             }
             else {
@@ -20,12 +23,12 @@ const NavBar = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
+        handleScroll();
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
-    }, []);
+    }, [isMainPage]);
 
-    const isMainPage = location.pathname === "/";
     const isIslandMode = !isMainPage || hasScrolled;
     const navbarClass = isIslandMode ? 'navbar scrolled' : 'navbar';
 

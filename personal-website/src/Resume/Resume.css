@@ -1,4 +1,4 @@
-.title {
+.resume-title {
   font-family: 'Nunito', sans-serif;
   font-size: 2rem;
   font-weight: 700;
@@ -6,10 +6,12 @@
   margin-bottom: 0px;
   text-align: center;
   text-decoration: none;
+  display: inline-block;
+  border-bottom: 3px solid var(--text-primary);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.title:hover {
+.resume-title:hover {
   color: rgb(82, 160, 223);
   transform: translate(0, -3px) scale(1.15);
 }

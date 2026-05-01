@@ -8,7 +8,7 @@ function Resume() {
             <a href="https://docs.google.com/document/d/1JZEP4uQv_MWBkUA6Hmpah0GNI2xSC-pV0etKLs6u4o8/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="title"
+                className="title resume-title"
             >
                 Resume
             </a>

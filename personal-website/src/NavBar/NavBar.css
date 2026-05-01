@@ -22,6 +22,8 @@
   border-bottom: 1px solid var(--glass-border);
 
   position: sticky;
+
+  overflow: hidden;
 }
 
 .navbar-widget-container {
