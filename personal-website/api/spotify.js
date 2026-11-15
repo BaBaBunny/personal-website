@@ -1,7 +1,21 @@
+import { Buffer } from 'node:buffer';
+
 export default async function handler(req, res) {
     const client_id = process.env.SPOTIFY_CLIENT_ID;
     const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
     const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
+
+    if (!client_id || !client_secret || !refresh_token) {
+        console.error("Missing Spotify env variables:", {
+            hasClientId: !!client_secret,
+            hasClientSecret: !!cleitn_secret,
+            hasRefreshToken: !!refresh_token,
+        });
+        return res.status(200).json({
+            isPlaying: false,
+            error: "Missing Spotify environment variables in .env",
+        });
+    }
 
     const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
     
@@ -18,9 +32,17 @@ export default async function handler(req, res) {
     });
 
     const tokenData = await tokenResponse.json();
-    const access_token = tokenData.access_token;
 
-    let profileUrl = "https://open.spotify.com/";
+    if (!tokenResponse.ok || !tokenData.access_token) {
+        console.error("Spotify Token Error:", tokenData);
+        return res.status(200).json({
+            isPlaying: false,
+            error: tokenData.error_description || "Failed to refresh token",
+        });
+    }
+
+    const access_token = tokenData.access_token;
+    let profileUrl = "https://open.spotify.com/user/214pgth4sdcdcx4euk73yzcvy?si=b87ca85f3ab74562";
 
     try {
         const profileResponse = await fetch("https://api.spotify.com/v1/me", {
@@ -44,6 +66,7 @@ export default async function handler(req, res) {
         },
     });
 
+    // 204 means nothing is currently playing
     if (songResponse.status === 204 || songResponse.status > 400) {
         return res.status(200).json({
             isPlaying: false,
@@ -62,10 +85,10 @@ export default async function handler(req, res) {
 
     const isPlaying = song.is_playing;
     const title = song.item.name;
-    const artist = song.item.artists.map((artist) => artist.name).join(", ");
-    const album = song.item.album.name;
-    const albumImageUrl = song.item.album.images[0].url;
-    const songUrl = song.item.external_urls.spotify;
+    const artist = song.item.artists.map((artist) => artist.name).join(", ") || "Unknown Artist";
+    const album = song.item.album.name || "";
+    const albumImageUrl = song.item.album.images[0].url || "";
+    const songUrl = song.item.external_urls.spotify || profileUrl;
 
     return res.status(200).json({
         isPlaying,

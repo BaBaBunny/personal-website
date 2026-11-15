@@ -16,6 +16,7 @@ function Resume() {
                 <div className="resume-left">
                     <h2>Experience</h2>
                     <ul className="exp-list">
+                        <li>Front-End Developer - Development Sprint, Queen's Web Development Club</li>
                         <li>please hire me</li>
                         <li>tbd...</li>
                         <li></li>

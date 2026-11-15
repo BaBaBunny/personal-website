@@ -16,30 +16,28 @@ const Footer = () => {
         if (hasRan.current) return;
         hasRan.current = true;
 
-        const namespace = 'bababunny-website-v1';
-        const key = 'visits';
         const storageKey = 'page_viewed';
-
         const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
         const hasVisited = localStorage.getItem(storageKey);
 
+        let endpoint = '/api/visits';
         if (!hasVisited && !isLocal) {
-            console.log("New visitor detected! Incrementing count...")
-
+            console.log("New visitor detected! Incrementing count...");
             localStorage.setItem(storageKey, 'true');
-
-            fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`)
-                .then(response => response.json())
-                .then(data => setVisitCount(data.count))
-                .catch(err => console.error(err));
+            endpoint = '/api/visits?action=up';
         } else {
             console.log("Welcome back! Fetching count...");
-
-            fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/`)
-                .then(response => response.json())
-                .then(data => setVisitCount(data.count))
-                .catch(err => console.error(err));
         }
+
+        fetch(endpoint)
+            .then((res) => res.json())
+            .then((response) => {
+                const count = response?.value ?? response?.data?.up_count ?? response?.count;
+                if (count !== undefined) {
+                    setVisitCount(count);
+                }
+            })
+            .catch((err) => console.error("Visit fetch error:", err));
     }, []);
 
     return(

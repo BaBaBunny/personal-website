@@ -112,4 +112,16 @@ export const patchnotes = [
             "Added a metal shield model for temporary placeholder.",
         ]
     },
+    {
+        version: "1.61",
+        date: "November 15th, 2026",
+        title: "3rd Year Renovation",
+        changes: [
+            "Updated bio in About page to 3rd year.",
+            "Fixed Spotify redirect back to my profile.",
+            "Fixed Spotify song playback on navbar.",
+            "Updated counterAPI to v2 as v1 was deprecated, unique visiters now reset to 0.",
+            "Added itch.io under socials tab in contacts page."
+        ]
+    },
 ];

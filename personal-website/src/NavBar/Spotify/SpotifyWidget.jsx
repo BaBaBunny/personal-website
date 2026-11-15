@@ -4,7 +4,7 @@ import './SpotifyWidget.css';
 export default function SpotifyWidget({ compact = false }) {
     const [song, setStong] = useState(null);
     const [loading, setLoading] = useState(true);
-    const spotifyProfileUrl = song?.profileUrl || "https://open.spotify.com/";
+    const spotifyProfileUrl = song?.profileUrl || "https://open.spotify.com/user/214pgth4sdcdcx4euk73yzcvy?si=47325f27b0c74566";
 
     useEffect(() => {
         const fetchSong = () => {

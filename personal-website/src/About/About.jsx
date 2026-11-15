@@ -51,14 +51,13 @@ const About = () => {
                         Greetings & Salutations!
                     </p>
                     <p>
-                        I'm a 2nd-year Computing student at Queen's University.
-                        This website is actually the very first project I've ever built (officially)!
+                        I'm a 3rd-year Computing student at Queen's University from Waterloo, Ontario.
                     </p>
                     <p>
                         <strong>I like making stuff. </strong>
                         Whether it's digital art, physical art, or video editing and content creation for my YouTube channel, I love the creative process.
                         I play the guitar and violin! And I'm also a huge film guy.
-                        I love movies (and other forms of visual media).
+                        I love movies (and other forms of arts as well).
                         Outside of my room, I enjoy skiing/snowboarding, playing tennis & badminton, or searching up new recipes to cook up in the kitchen.
                     </p>
                     <p>
@@ -67,7 +66,7 @@ const About = () => {
                         And as a I learn and create more, I'm hoping that this site will grow into a library of wealth and knowledge.
                     </p>
                     <p>
-                        (As of January 2nd, 2026)
+                        (As of November 14th, 2026)
                     </p>
                 </div>
             </div>

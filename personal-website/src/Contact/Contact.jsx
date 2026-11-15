@@ -174,6 +174,15 @@ export const Contact = () => {
                                 <i className="fa-brands fa-letterboxd"></i> Letterboxd
                             </a>
                         </li>
+                        <li>
+                            <a href="https://bababunny.itch.io/" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="social-btn itch-io"
+                            >
+                                <i class="fa-brands fa-itch-io"></i> itch.io
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
