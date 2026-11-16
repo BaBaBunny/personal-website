@@ -56,7 +56,7 @@ const Footer = () => {
                 </div>
 
                 <span className="visitor-count">
-                    Unique Visitors: {visitCount}
+                    Visitors: {visitCount}
                 </span>
             </footer>
 
