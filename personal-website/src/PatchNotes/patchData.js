@@ -113,6 +113,7 @@ export const patchnotes = [
         ]
     },
     {
+        
         version: "1.61",
         date: "November 15th, 2026",
         title: "3rd Year Renovation",
