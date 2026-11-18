@@ -139,7 +139,6 @@ export const patchnotes = [
             "Updated visuals and deprecation for WebGL/ShadowRenderer.",
             "Added a shimmer effect on RESUME title.",
             "Added popup when hovering over Spotify circle when navbar is shrunk.",
-            "Added ten rings blender project.",
         ]
     },
 ];
