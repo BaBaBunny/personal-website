@@ -3,7 +3,6 @@ import './SpotifyWidget.css';
 
 export default function SpotifyWidget({ compact = false }) {
     const [song, setStong] = useState(null);
-    const [loading, setLoading] = useState(true);
     const spotifyProfileUrl = song?.profileUrl || "https://open.spotify.com/user/214pgth4sdcdcx4euk73yzcvy?si=47325f27b0c74566";
 
     useEffect(() => {
@@ -12,11 +11,9 @@ export default function SpotifyWidget({ compact = false }) {
                 .then((res) => res.json())
                 .then((data) => {
                     setStong(data);
-                    setLoading(false);
                 })
                 .catch((err) => {
                     console.error("Error fetching Spotify data:", err);
-                    setLoading(false);
                 });
         };
         
@@ -57,19 +54,25 @@ export default function SpotifyWidget({ compact = false }) {
 
     if (compact) {
         return (
-            <a
-                href={song.songUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="spotify-widget compact"
-                aria-label={`Now playing: ${song.title} by ${song.artist}`}
-            >
-                <img
-                    src={song.albumImageUrl}
-                    alt={song.album}
-                    className={`spotify-cover ${!song.isPlaying ? 'paused' : ''}`}
-                />
-            </a>
+            <span className="spotify-compact-wrapper">
+                <a
+                    href={song.songUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="spotify-widget compact"
+                    aria-label={`Now playing: ${song.title} by ${song.artist}`}
+                >
+                    <img
+                        src={song.albumImageUrl}
+                        alt={song.album}
+                        className={`spotify-cover ${!song.isPlaying ? 'paused' : ''}`}
+                    />
+                </a>
+                <span className="spotify-track-popover" role="tooltip">
+                    <span className="spotify-track-title">{song.title}</span>
+                    <span className="spotify-track-artist">{song.artist}</span>
+                </span>
+            </span>
         );
     }
 

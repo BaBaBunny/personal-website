@@ -180,7 +180,7 @@ export const Contact = () => {
                                 rel="noopener noreferrer" 
                                 className="social-btn itch-io"
                             >
-                                <i class="fa-brands fa-itch-io"></i> itch.io
+                                <i className="fa-brands fa-itch-io"></i> itch.io
                             </a>
                         </li>
                     </ul>

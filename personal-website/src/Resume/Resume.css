@@ -3,12 +3,12 @@
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border-bottom: 3px solid var(--text-primary);
   transition: transform 0.3s ease, color 0.3s ease;
+  margin-top: 5px;
 }
 
 .resume-title:hover {
@@ -16,10 +16,35 @@
   transform: translate(0, -3px) scale(1.15);
 }
 
+.shimmer {
+  background: linear-gradient(
+    110deg,
+    #1a1a1a 35%,
+    #5299e0 48%,
+    #a8d5ff 50%,
+    #5299e0 52%,
+    #1a1a1a 65%
+  );
+  background-size: 180% 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shimmer 7s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0%, 65% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: -80% 0;
+  }
+}
+
 .resume-grid {
   display: flex;
   flex-direction: row;
-  margin: 20px;
+  margin: 10px;
 
   width: 100%;
   height: 100%;
@@ -52,11 +77,11 @@
   margin-bottom: 10px;
   font-size: 1.6rem;
   font-weight: 600;
-  border-bottom: 3px solid var(--divider-color);
+  border-bottom: 2.5px solid var(--divider-color);
 
   font-family: 'Nunito', sans-serif;
 
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   margin-bottom: 10px;
 
   width: 90%;
@@ -71,16 +96,49 @@
 
 .exp-list li {
   font-family: 'Nunito', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   color: var(--text-primary);
-  line-height: 1.5;
-  margin-bottom: 15px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.exp-list li:empty {
+  display: none;
+}
+
+.exp-card {
+  line-height: 1.3;
+}
+
+.exp-title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.exp-date,
+.exp-org {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.exp-date {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.exp-org {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .edu-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -99,7 +157,7 @@
   object-fit: contain;
 
   background-color: var(--bg-white);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #7e7e7e;
   border-radius: 50%;
   padding: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);

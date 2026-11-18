@@ -1,23 +1,34 @@
 export const blenderProjects = [
     {
-        title: 'Metal Shield',
-        modelSrc: '/shield.glb',
+        title: 'John Walker\'s Shield',
+        modelSrc: '/jwshield.glb',
+        videoSrc: '/jwshield.mp4',
+        previewSrc: '/jwshieldbanner.png',
         modelScale: 1,
         description: 'The shield wielded by John Walker from Thunderbolts in the MCU.',
         readMore: [
-            'An extension to help remind you to take a break every 20 minutes for 20 seconds by looking at something 20 feet away.',
-            'Start the timer and it will automatically count down 20 minutes.',
-            'After the 20 minutes, you current chrome tab will lock and prevent you from accessing other tabs, ensuring you rest for 20 seconds.',
-            'Users should have this if they are constantly facing a screen. This creates long term strain on eyes, so having this app, is simply a helpful tool to reduce strain.'
+            'A 3D model of John Walker\'s shield inspired by its appearance in Thunderbolts, featuring custom baked procedural metallic rings, surface wear, and leather back straps.',
         ],
-        projectDownload: 'https://chromewebstore.google.com/detail/202020-rest-reminder/molchoajjnbonjheonbagieggidaoile',
+    },
+    {
+        title: 'The Ten Rings',
+        modelSrc: '',
+        videoSrc: '',
+        modelScale: 1,
+        description: 'The Ten Rings from Shang-Chi and the Legend of the Ten Rings in the MCU',
+        readMore: [
+            'A 3D recreation inspired by the Ten Rings from Shang-Chi and the Legend of the Ten Rings.',
+        ],
     },
     {
         title: 'More Projects Coming Soon...',
         modelSrc: '',
+        videoSrc: '',
         modelScale: 1,
         description: 'This panel is a placeholder for upcoming blender work.',
-        readMore: 'This section will expand as more projects are shipped, with development screenshots, progress notes, and links.',
-        projectDownload: 'https://example.com/project-link',
+        isPlaceholder: true,
+        readMore: [
+            'This section will expand as more projects are shipped, with development previews and downloads.'
+        ],
     },
 ];

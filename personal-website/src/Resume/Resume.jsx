@@ -8,17 +8,22 @@ function Resume() {
             <a href="https://docs.google.com/document/d/1JZEP4uQv_MWBkUA6Hmpah0GNI2xSC-pV0etKLs6u4o8/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="title resume-title"
+                className="resume-title"
             >
-                Resume
+                <span className="shimmer">RESUME</span>
             </a>
             <div className="resume-grid">
                 <div className="resume-left">
                     <h2>Experience</h2>
                     <ul className="exp-list">
-                        <li>Front-End Developer - Development Sprint, Queen's Web Development Club</li>
+                        <li>
+                            <div className="exp-card">
+                                <h3 className="exp-title">Front-End Developer - Development Sprint</h3>
+                                <p className="exp-date">January 2026 - April 2026</p>
+                                <p className="exp-org">Queen's Web Development Club</p>
+                            </div>
+                        </li>
                         <li>please hire me</li>
-                        <li>tbd...</li>
                         <li></li>
                         <li></li>
                         <li></li>

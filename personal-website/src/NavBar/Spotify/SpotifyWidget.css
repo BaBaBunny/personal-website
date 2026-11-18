@@ -31,6 +31,59 @@
   transform: translateY(-1px) scale(1.15);
 }
 
+.spotify-compact-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.spotify-track-popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: max-content;
+  max-width: 220px;
+  padding: 8px 11px;
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.2));
+  border-radius: 10px;
+  background: var(--panel-gradient-1, rgba(20, 20, 25, 0.95));
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.spotify-compact-wrapper:hover .spotify-track-popover,
+.spotify-compact-wrapper:focus-within .spotify-track-popover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spotify-track-title,
+.spotify-track-artist {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spotify-track-title {
+  color: #e041d8;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.spotify-track-artist {
+  color: var(--text-secondary, #bbb);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+}
+
 .spotify-widget.compact.spotify-cover {
   width: 40px;
   height: 40px;

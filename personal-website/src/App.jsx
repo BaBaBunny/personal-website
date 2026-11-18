@@ -7,10 +7,9 @@ import Footer from './Footer/Footer.jsx';
 import Home from './Home/Home.jsx';
 import './index.css';
 import NavBar from './NavBar/NavBar.jsx';
-import ArtsCrafts from './Portfolio/Arts&Crafts.jsx';
 import Blender from './Portfolio/Blender/Blender.jsx';
-import ContentCreation from './Portfolio/Content-Creation.jsx';
 import CS from './Portfolio/CS-Projects/CS-Projects.jsx';
+import FilmMedia from './Portfolio/Film&Media.jsx';
 import Portfolio from './Portfolio/Portfolio.jsx';
 import Resume from './Resume/Resume.jsx';
 
@@ -51,8 +50,7 @@ function App() {
         {/* separate pages */}
         <Route path="/cs-projects" element={<CS />} />
         <Route path="/blender" element={<Blender />} />
-        <Route path="/content-creation" element={<ContentCreation />} />
-        <Route path="/arts-crafts" element={<ArtsCrafts />} />
+        <Route path="/film-media" element={<FilmMedia />} />
       </Routes>
     </div>
   );

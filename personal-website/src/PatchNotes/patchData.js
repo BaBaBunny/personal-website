@@ -120,8 +120,26 @@ export const patchnotes = [
         changes: [
             "Updated bio in About page to 3rd year.",
             "Fixed Spotify redirect back to my profile.",
+            "Fixed Spotify song playback on navbar.",
             "Updated counterAPI to v2 as v1 was deprecated, visitors now reset to 0.",
             "Added itch.io under socials tab in contacts page."
+        ]
+    },
+    {
+
+        version: "1.62",
+        date: "November 18th, 2026",
+        title: "UI Updates & Portfolio Revamp",
+        changes: [
+            "Updated UI for experiences in RESUME section.",
+            "Revamped PORTFOLIO section.",
+            "Added game projects (Clean Up at Ronald's & My Bad).",
+            "Updated model for shield project with better textures (migrated to React-3 fiber/drei).",
+            "Added a 3D viewport for the blender projects as well.",
+            "Updated visuals and deprecation for WebGL/ShadowRenderer.",
+            "Added a shimmer effect on RESUME title.",
+            "Added popup when hovering over Spotify circle when navbar is shrunk.",
+            "Added ten rings blender project.",
         ]
     },
 ];
