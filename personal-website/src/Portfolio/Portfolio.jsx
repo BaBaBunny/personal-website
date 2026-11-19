@@ -33,7 +33,7 @@ function Portfolio() {
 
         const intervalId = setInterval(() => {
             setCsImageIndex((prev) => (prev + 1) % csGalleryImages.length);
-        }, 5000);
+        }, 6000);
 
         return () => clearInterval(intervalId);
     }, [csGalleryImages]);
@@ -43,7 +43,7 @@ function Portfolio() {
 
         const intervalId = setInterval(() => {
             setBlenderImageIndex((prev) => (prev + 1) % blenderGalleryImages.length);
-        }, 5000);
+        }, 6000);
 
         return () => clearInterval(intervalId);
     }, [blenderGalleryImages]);
@@ -85,13 +85,19 @@ function Portfolio() {
                             <p>blender stuff</p>
                         </div>
                     </Link>
-                    <Link to="/film-media" className='right-card'>
+                    <div
+                        className="right-card construction-card"
+                        role="link"
+                        aria-disabled="true"
+                        aria-label="Film and Media - under construction"
+                    >
                         <img src={placeholder} alt="Placeholder" className="thumbnail"/>
                         <div className="text">
                             <h3>Film & Media</h3>
                             <p>i make videos</p>
                         </div>
-                    </Link>
+                        <span className="construction-label">Under Construction</span>
+                    </div>
                 </div>
             </div>
         </section>

@@ -141,4 +141,15 @@ export const patchnotes = [
             "Added popup when hovering over Spotify circle when navbar is shrunk.",
         ]
     },
+    {
+        version: "1.63",
+        date: "November 19th, 2026",
+        title: "Experience & Portfolio Additions",
+        changes: [
+            "Updated jwshield render with bending slider + sfx (bend/hum).",
+            "Updated experience & skills section in RESUME page.",
+            "Added the Ten Rings to Blender projects.",
+            "Film & Media section is now under construction."
+        ]
+    },
 ];

@@ -18,18 +18,19 @@ function Resume() {
                     <ul className="exp-list">
                         <li>
                             <div className="exp-card">
-                                <h3 className="exp-title">Front-End Developer - Development Sprint</h3>
+                                <h3 className="exp-title">Front-End Developer | Development Sprint</h3>
                                 <p className="exp-date">January 2026 - April 2026</p>
                                 <p className="exp-org">Queen's Web Development Club</p>
                             </div>
                         </li>
+                        <li>
+                            <div className="exp-card">
+                                <h3 className="exp-title">Cashier & Service | Conestoga Mall</h3>
+                                <p className="exp-date">June 2022 - Aug 2024</p>
+                                <p className="exp-org">Bourbon St. Grill</p>
+                            </div>
+                        </li>
                         <li>please hire me</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
                     </ul>
                 </div>
                 <div className="resume-right">
@@ -62,11 +63,11 @@ function Resume() {
                     <div className="skills-section">
                         <h2>Skills</h2>
                         <ul className="skills-list">
-                            <li>Web Development - JavaScript, React, HTML, CSS</li>
-                            <li>Programming Languages - Python, Java, C</li>
-                            <li>VS Code for as Text Editor, Figma for UI</li>
-                            <li>Game Development - Unity</li>
-                            <li>DaVinci Resolve for video production</li>
+                            <li>Web Development - JavaScript, React, HTML, CSS, Next.js, MV3</li>
+                            <li>Programming Languages - Python, Java, C#, Lua</li>
+                            <li>VS Code for Text Editor, Figma for UI</li>
+                            <li>Game Development - Unity, Roblox Studio</li>
+                            <li>DaVinci Resolve, Shotcut, CapCut for video production</li>
                             <li>Blender for 3D assets & animations</li>
                             <li>Krita, Canva & any other drawing softwares</li>
                             <li>Pixlr or any photo editing/creation softwares</li>

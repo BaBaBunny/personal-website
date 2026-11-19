@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import About from './About/About.jsx';
 import Contact from './Contact/Contact.jsx';
 import DarkMode from './DarkMode/DarkMode.jsx';
@@ -9,7 +9,6 @@ import './index.css';
 import NavBar from './NavBar/NavBar.jsx';
 import Blender from './Portfolio/Blender/Blender.jsx';
 import CS from './Portfolio/CS-Projects/CS-Projects.jsx';
-import FilmMedia from './Portfolio/Film&Media.jsx';
 import Portfolio from './Portfolio/Portfolio.jsx';
 import Resume from './Resume/Resume.jsx';
 
@@ -50,7 +49,7 @@ function App() {
         {/* separate pages */}
         <Route path="/cs-projects" element={<CS />} />
         <Route path="/blender" element={<Blender />} />
-        <Route path="/film-media" element={<FilmMedia />} />
+        <Route path="/film-media" element={<Navigate to="/#portfolio" replace />} />
       </Routes>
     </div>
   );
